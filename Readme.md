@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Оля Петрова](https://up.htmlacademy.ru/adaptive/21/user/378519).
-* Наставник: [Светлана 🎓 Блинова](https://htmlacademy.ru/profile/id1432187).
+* Наставник: [Светлана Блинова](https://htmlacademy.ru/profile/id1432187).
 
 ---
 
