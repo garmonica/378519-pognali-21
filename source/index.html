@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Погнали</title>
+    <title>Главная страница - Сервис для путешествий «Погнали»</title>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+  <body class="page__body">
+    <header class="page-header">
+      <a class="page-header__logo logo">
+        <img class="logo__image logo__image--static" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+        <img class="logo__image logo__image--scroll" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+      </a>
+      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="main-nav">
+        <div class="main-nav__wrapper menu menu--opened">
+          <ul class="menu__list site-nav">
+            <li class="site-nav__item">
+              <a href="blank.html">О сервисе</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="form.html">Направления</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="catalog.html">Попутчики</a>
+            </li>
+          </ul>
+          <a class="menu__login login" href="blank.html">Авторизация</a>
+          <ul class="menu__list contacts">
+            <li class="contacts__item contacts__item--phone">
+              <a href="tel:+78005558628">
+                <span>8 800 555-86-28</span>
+              </a>
+            </li>
+            <li class="contacts__item contacts__item--email">
+              <a href="mailto:mail@htmlacademy.ru">
+                <span>mail@htmlacademy.ru</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="menu__list social">
+            <!-- потом убрать названия соц.сетей, оставить только aria-label, сейчас в разметке для наглядности -->
+            <li class="social__item">
+              <a href="#" aria-label="Фейсбук">Фейсбук</a>
+            </li>
+            <li class="social__item">
+              <a href="#" aria-label="Вконтакте">Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a href="#" aria-label="Инстаграм">Инстаграм</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-nav__wrapper user-nav">
+          <ul class="user-nav__list">
+            <li class="user-nav__item user-nav__item--phone">
+              <a href="tel:+78005558628">
+                <span class="visually-hidden">Контактный телефон</span>
+              </a>
+            </li>
+            <li class="user-nav__item user-nav__item--email">
+              <a href="mailto:mail@htmlacademy.ru">
+                <span class="visually-hidden">Наша электронная почта</span>
+              </a>
+            </li>
+          </ul>
+          <a class="user-nav__login login" href="blank.html">Авторизация</a>
+        </div>
+      </nav>
+    </header>
 
   </body>
 </html>
