@@ -38,15 +38,14 @@
             </li>
           </ul>
           <ul class="menu__list social">
-            <!-- потом убрать названия соц.сетей, оставить только aria-label, сейчас в разметке для наглядности -->
-            <li class="social__item">
-              <a href="#" aria-label="Фейсбук">Фейсбук</a>
+            <li>
+              <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук">Фейсбук</a>
             </li>
-            <li class="social__item">
-              <a href="#" aria-label="Вконтакте">Вконтакте</a>
+            <li>
+              <a class="social__link social__link--vk" href="#" aria-label="Вконтакте">Вконтакте</a>
             </li>
-            <li class="social__item">
-              <a href="#" aria-label="Инстаграм">Инстаграм</a>
+            <li>
+              <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм">Инстаграм</a>
             </li>
           </ul>
         </div>
@@ -266,5 +265,24 @@
         <iframe src="https://yandex.ru/map-widget/v1/-/CCUAVBAUlA" width="560" height="400" allowfullscreen="true"></iframe>
       </section>
     </main>
+    <footer class="page-footer">
+      <a class="page-footer__logo logo">
+        <img class="logo__image" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+      </a>
+      <ul class="page-footer__social social">
+        <li>
+          <a class="page-footer__social-link social__link social__link--facebook" href="#" aria-label="Фейсбук">Фейсбук</a>
+        </li>
+        <li>
+          <a class="page-footer__social-link social__link social__link--vk" href="#" aria-label="Вконтакте">Вконтакте</a>
+        </li>
+        <li>
+          <a class="page-footer__social-link social__link social__link--instagram" href="#" aria-label="Инстаграм">Инстаграм</a>
+        </li>
+      </ul>
+      <p class="page-footer__copyright">Разработано
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Онлайн-курс «Адаптивная вёрстка сайтов и автоматизация»">лого Академии</a>
+      </p>
+    </footer>
   </body>
 </html>
