@@ -75,8 +75,13 @@
           <p class="intro__quote">«Лучшее приложение, что я видел в жизни!»</p>
           <cite class="intro__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
         </blockquote>
+        <ul class="intro__list">
+          <li class="intro_item">Выберите направление</li>
+          <li class="intro_item">Изучите идеи путешественников</li>
+          <li class="intro_item">Находите тех, кто похож на вас</li>
+          <li class="intro_item">Путешествуйте вместе!</li>
+        </ul>
       </section>
-
       <section class="about">
         <h2 class="about__heading">О сервисе</h2>
         <p class="about__text">
@@ -86,9 +91,8 @@
           А если найдете кого-то близкого по духу — скорее зовите в совместный трип
         </p>
       </section>
-
       <section class="routes">
-        <h2 class="routes__heading"></h2>
+        <h2 class="routes__heading">Направления</h2>
         <p class="routes__text">
           Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
         </p>
@@ -129,12 +133,12 @@
         </ul>
         <a class="routes__show-all button" href="form.html">Показать все</a>
       </section>
-
       <section class="companions">
+        <h2 class="companions__heading">Попутчики</h2>
         <p class="companions__text">
           Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
         </p>
-        <p class="companions__text companions__text--emphasis"></p>
+        <p class="companions__text companions__text--emphasis">Теперь можно легко найти единомышленников!</p>
         <ul class="companions__list">
           <li class="companions__item">
             <img class="companions__photo" src="https://via.placeholder.com/270x270" alt="Пользователь Таня Фирсова">
@@ -220,26 +224,26 @@
               </ul>
             </div>
           </li>
-          <a class="companions__show-all button" href="catalog.html">Показать всех</a>
         </ul>
+        <a class="companions__show-all button" href="catalog.html">Показать всех</a>
       </section>
       <section class="profile-add">
         <h2 class="profile-add__heading">Добавьте свой профиль</h2>
-        <ul class="profile-add__list">
-          <li class="profile-add__item">
+        <dl class="profile-add__list">
+          <div class="profile-add__item">
             <dt>Базовое размещение</dt>
             <dd>Бесплатно</dd>
-          </li>
-          <li class="profile-add__item">
+          </div>
+          <div class="profile-add__item">
             <dt>Вывод на первых позициях</dt>
             <dd>99 руб./мес</dd>
-          </li>
-          <li class="profile-add__item">
+          </div>
+          <div class="profile-add__item">
             <dt>Кастомный цвет карточки</dt>
             <dd>59 руб./мес</dd>
-          </li>
-        </ul>
-        <a class="profile-add__business-rates" href="blank.html"></a>
+          </div>
+        </dl>
+        <a class="profile-add__business-rates" href="blank.html">Показать тарифы для бизнеса</a>
       </section>
       <section class="interested">
         <h2 class="interested__heading">Заинтересовались?</h2>
@@ -251,7 +255,7 @@
             <span class="interested__button-text">Регистрация</span>
           </button>
         </form>
-        <p class="interested__text"></p>
+        <p class="interested__text">Остались вопросы? Мы с радостью на них ответим!</p>
         <a class="interested__phone" href="tel:+78005558628">8 800 555-86-28</a>
         <a class="interested__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
       </section>
@@ -261,8 +265,8 @@
           <address class="location__address">ул. Большая Конюшенная, 19/8</address>
           <a href="https://yandex.ru/maps/-/CCUAV4HqtB" target="_blank">Проложить маршрут</a>
         </div>
-        <img src="https://via.placeholder.com/320x424" width="320" height="424">
-        <iframe src="https://yandex.ru/map-widget/v1/-/CCUAVBAUlA" width="560" height="400" allowfullscreen="true"></iframe>
+        <img class="location__map-image" src="https://via.placeholder.com/320x424" width="320" height="424" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        <iframe class="location__map" src="https://yandex.ru/map-widget/v1/-/CCUAVBAUlA" width="560" height="400" allowfullscreen></iframe>
       </section>
     </main>
     <footer class="page-footer">
@@ -284,5 +288,27 @@
         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Онлайн-курс «Адаптивная вёрстка сайтов и автоматизация»">лого Академии</a>
       </p>
     </footer>
+    <section class="modal">
+      <h2 class="modal__heading">Бизнес-тарифы</h2>
+      <dl class="modal__list">
+        <div class="modal__item">
+          <dt class="modal__service">Реклама у блоггера</dt>
+          <dd class="modal__price">300 000 руб./пост</dd>
+        </div>
+        <div class="modal__item">
+          <dt class="modal__service">Накрутка подписчиков</dt>
+          <dd class="modal__price">от 1 руб./шт.</dd>
+        </div>
+        <div class="modal__item">
+          <dt class="modal__service">Лайки от ботов</dt>
+          <dd class="modal__price">от 20 коп./лайк</dd>
+        </div>
+        <div class="modal__item">
+          <dt class="modal__service">Ваш продакт-плейсмент</dt>
+          <dd class="modal__price">Индивидуально</dd>
+        </div>
+      </dl>
+      <button class="modal__button" type="button">Закрыть окно</button>
+    </section>
   </body>
 </html>
