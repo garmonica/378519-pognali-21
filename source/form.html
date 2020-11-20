@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Направления - Сервис для путешествий «Погнали»</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+  </head>
+  <body class="page__body">
+    <header class="page-header">
+      <a class="page-header__logo logo" href="index.html">
+        <img class="logo__image logo__image--static" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+        <img class="logo__image logo__image--scroll" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+      </a>
+      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="main-nav">
+        <div class="main-nav__wrapper menu menu--opened">
+          <ul class="menu__list site-nav">
+            <li class="site-nav__item">
+              <a href="blank.html">О сервисе</a>
+            </li>
+            <li class="site-nav__item">
+              <a>Направления</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="catalog.html">Попутчики</a>
+            </li>
+          </ul>
+          <a class="menu__login login" href="blank.html">Авторизация</a>
+          <ul class="menu__list contacts">
+            <li class="contacts__item contacts__item--phone">
+              <a href="tel:+78005558628">
+                <span>8 800 555-86-28</span>
+              </a>
+            </li>
+            <li class="contacts__item contacts__item--email">
+              <a href="mailto:mail@htmlacademy.ru">
+                <span>mail@htmlacademy.ru</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="menu__list social">
+            <li>
+              <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук">Фейсбук</a>
+            </li>
+            <li>
+              <a class="social__link social__link--vk" href="#" aria-label="Вконтакте">Вконтакте</a>
+            </li>
+            <li>
+              <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм">Инстаграм</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-nav__wrapper user-nav">
+          <ul class="user-nav__list">
+            <li class="user-nav__item user-nav__item--phone">
+              <a href="tel:+78005558628">
+                <span class="visually-hidden">Контактный телефон</span>
+              </a>
+            </li>
+            <li class="user-nav__item user-nav__item--email">
+              <a href="mailto:mail@htmlacademy.ru">
+                <span class="visually-hidden">Наша электронная почта</span>
+              </a>
+            </li>
+          </ul>
+          <a class="user-nav__login login" href="blank.html">Авторизация</a>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="page-main__heading">Направления</h1>
+      <section class="user">
+        <h2 class="visually-hidden">Информация о пользователе</h2>
+        <div class="user__level">
+          <p>80</p>
+          <p>level</p>
+        </div>
+        <img class="user__avatar" src="https://via.placeholder.com/100x100" alt="Пользователь Петя Демин">
+        <a class="user__change-avatar" href="blank.html">Сменить фото</a>
+        <div class="user__block">
+          <form class="user__form" action="https://echo.htmlacademy.ru" method="post">
+            <h3 class="user__title">Тэги</h3>
+            <textarea class="user__tags" aria-label="Поле для ввода тэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+          </form>
+        </div>
+        <div class="user__block">
+          <h3 class="user__title">Транспорт</h3>
+          <ul class="user__transport-list">
+            <li class="user__transport-item user__transport-item--plane user__transport-item--active">
+              <a href="#">
+                <span class="user__tooltip">Авиаперелет</span>
+              </a>
+            </li>
+            <li class="user__transport-item user__transport-item--bus user__transport-item--active">
+              <a href="#">
+                <span class="user__tooltip">Автотранспорт</span>
+              </a>
+            </li>
+            <li class="user__transport-item user__transport-item--bicycle">
+              <a href="#">
+                <span class="user__tooltip">Велосипед</span>
+              </a>
+            </li>
+            <li class="user__transport-item user__transport-item--run user__transport-item--active">
+              <a href="#">
+                <span class="user__tooltip">Пешком</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="plans">
+        <h2 class="plans__heading">Мои планы:</h2>
+        <ul class="plans__list">
+          <li class="plans__item">
+            <h3 class="plans__countries"><span class="plans__number">1.</span> Франция, Италия</h3>
+            <p class="plans__companions">3 попутчика</p>
+            <time class="plans__dates" datetime="2021-03-26">26 мар — 29 мар</time>
+            <a class="plans__edit" href="blank.html">Изменить</a>
+          </li>
+          <li class="plans__item">
+            <h3 class="plans__countries"><span class="plans__number">2.</span> Таиланд, Индонезия</h3>
+            <p class="plans__companions">1 попутчик</p>
+            <time class="plans__dates" datetime="2021-07-01">1 июл — 15 июл</time>
+            <a class="plans__edit" href="blank.html">Изменить</a>
+          </li>
+        </ul>
+      </section>
+      <section class="new-plan">
+        <h2 class="new-plan__heading">Добавить план:</h2>
+        <div class="new-plan__buttons">
+          <button class="new-plan__button" aria-label="Первый шаг"></button>
+          <button class="new-plan__button" aria-label="Второй шаг"></button>
+          <button class="new-plan__button" aria-label="Третий шаг"></button>
+        </div>
+        <form class="new-plan__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="new-plan__step" id="step-one">
+            <legend class="new-plan__title">Шаг 1. Даты пребывания</legend>
+            <p class="new-plan__description">
+              Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.
+            </p>
+            <label class="new-plan__label" for="companions-number-field">Ищу попутчиков:</label>
+            <p class="new-plan__unit">чел.</p>
+            <input class="new-plan__input" type="number" name="companions-number" id="companions-number-field" value="2" min="1" max="5">
+            <label class="new-plan__label" for="period-field">Длительность:</label>
+            <p class="new-plan__unit">дн.</p>
+            <input class="new-plan__input" type="number" name="period" id="period-field" value="3" min="1" max="14">
+            <input class="new-plan__checkbox" type="checkbox" name="with-children" id="with-children-field">
+            <label class="new-plan__checkbox-label" for="with-children-field">Можно с детьми</label>
+            <table class="new-plan__calendar">
+              <caption class="new-plan__month">Март 2019</caption>
+              <tr>
+                <th>П</th><th>В</th><th>С</th><th>Ч</th><th>П</th><th>С</th><th>В</th>
+              </tr>
+              <tr>
+                <td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>1</td>
+              </tr>
+              <tr>
+                <td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+              </tr>
+              <tr>
+                <td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+              </tr>
+              <tr>
+                <td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td>
+              </tr>
+              <tr>
+                <td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
+              </tr>
+              <tr>
+                <td>30</td><td>31</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+              </tr>
+            </table>
+            <a href="#step-two">Следующий шаг</a>
+          </fieldset>
+          <fieldset class="new-plan__step" id="step-two">
+            <legend class="new-plan__title">Шаг 2. Маршрут</legend>
+            <p class="new-plan__description">
+              Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
+            </p>
+            <ul class="new-plan__countries-list">
+              <li class="new-plan__countries-item new-plan__countries-item--selected">
+                <select class="new-plan__select-country" name="selected-country">
+                  <option class="new-plan__option new-plan__option--bosnia-and-herzegovina" value="bosnia-and-herzegovina">Босния и герцеговина</option>
+                </select>
+                <div class="new-plan__flag">
+                  <img class="new-plan__img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Генцеговины">
+                </div>
+                <button class="new-plan__remove" aria-label="Убрать из списка"></button>
+              </li>
+              <li class="new-plan__countries-item new-plan__countries-item--selected">
+                <select class="new-plan__select-country" name="selected-country">
+                  <option class="new-plan__option new-plan__option--czech" value="czech">Чехия</option>
+                </select>
+                <div class="new-plan__flag">
+                  <img class="new-plan__img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+                </div>
+                <button class="new-plan__remove" aria-label="Убрать из списка"></button>
+              </li>
+              <li class="new-plan__countries-item new-plan__countries-item--not-selected">
+                <select class="new-plan__select-country">
+                  <option class="new-plan__option">Выберите страну</option>
+                </select>
+                <div class="new-plan__country-selection country-selection">
+                  <table class="country-selection__alphabet">
+                    <tr>
+                      <td>а</td><td>б</td><td>в</td><td>г</td><td>д</td>
+                    </tr>
+                    <tr>
+                      <td>е</td><td>з</td><td>и</td><td>к</td><td>л</td>
+                    </tr>
+                    <tr>
+                      <td>м</td><td>н</td><td>о</td><td>п</td><td>р</td>
+                    </tr>
+                    <tr>
+                      <td>с</td><td>т</td><td>у</td><td>ф</td><td>х</td>
+                    </tr>
+                    <tr>
+                      <td>ч</td><td>ш</td><td>щ</td><td>э</td><td>ю</td>
+                    </tr>
+                  </table>
+                  <ul class="country-selection__list">
+                    <li class="country-selection__item">Австралия</li>
+                    <li class="country-selection__item">Австрия</li>
+                    <li class="country-selection__item">Азербайджан</li>
+                    <li class="country-selection__item">Албания</li>
+                    <li class="country-selection__item">Алжир</li>
+                    <li class="country-selection__item">Ангола</li>
+                    <li class="country-selection__item">Андорра</li>
+                    <li class="country-selection__item">Антигуа и Барбуда</li>
+                    <li class="country-selection__item">Аргентина</li>
+                    <li class="country-selection__item">Армения</li>
+                    <li class="country-selection__item">Афганистан</li>
+                  </ul>
+                </div>
+                <button class="new-plan__remove" aria-label="Убрать из списка"></button>
+              </li>
+            </ul>
+            <button class="new-plan__new-country">Добавить страну</button>
+            <a href="#step-three">Следующий шаг</a>
+            <a href="#step-one">На шаг назад</a>
+          </fieldset>
+          <fieldset class="new-plan__step entertainment" id="step-three">
+            <legend class="new-plan__title">Шаг 3. Развлечения</legend>
+            <p class="new-plan__description">
+              Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+            </p>
+            <ul class="entertainment__list">
+              <li class="entertainment__item">
+                <label class="entertainment__country entertainment__country--bosnia-and-herzegovina">Босния и Герцеговина
+                  <textarea class="entertainment__plan entertainment__plan--bosnia-and-herzegovina" name="entertainment-bosnia-and-herzegovina" placeholder="План действий"></textarea>
+                </label>
+                <img class="entertainment__flag entertainment__flag--bosnia-and-herzegovina" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+              </li>
+              <li class="entertainment__item">
+                <label class="entertainment__country entertainment__country--czech">Чехия
+                  <textarea class="entertainment__plan entertainment__plan--czech" name="entertainment-czech" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                </label>
+                <img class="entertainment__flag entertainment__flag--czech" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+              </li>
+            </ul>
+            <button class="new-plan__submit" type="submit">Отправить</button>
+            <a href="#step-two">На шаг назад</a>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <a class="page-footer__logo logo" href="index.html">
+        <img class="logo__image" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+      </a>
+      <ul class="page-footer__social social">
+        <li>
+          <a class="page-footer__social-link social__link social__link--facebook" href="#" aria-label="Фейсбук">Фейсбук</a>
+        </li>
+        <li>
+          <a class="page-footer__social-link social__link social__link--vk" href="#" aria-label="Вконтакте">Вконтакте</a>
+        </li>
+        <li>
+          <a class="page-footer__social-link social__link social__link--instagram" href="#" aria-label="Инстаграм">Инстаграм</a>
+        </li>
+      </ul>
+      <p class="page-footer__copyright">Разработано
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Онлайн-курс «Адаптивная вёрстка сайтов и автоматизация»">лого Академии</a>
+      </p>
+    </footer>
+  </body>
+</html>
