@@ -1,0 +1,67 @@
+.interested__heading {
+  .offset();
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: @special-orange;
+  text-align: center;
+}
+
+.interested__text {
+  .offset();
+  font-weight: 300;
+  text-align: center;
+}
+
+.interested__login {
+  color: @basic-yellow;
+}
+
+.interested__wrapper {
+  display: flex;
+  position: relative;
+}
+
+.interested__input {
+  position: relative;
+  padding: 18px 22px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  background-color: @basic-white;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+
+  &::placeholder {
+    color: fade(@special-grey, 30%);
+  }
+}
+
+.interested__button {
+  display: block;
+  min-width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: inherit;
+  background-color: @basic-yellow;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.interested__button-text {
+  display: none;
+}
+
+.interested__contact {
+  display: block;
+  font-weight: 700;
+  color: @basic-yellow;
+  text-transform: uppercase;
+  text-decoration: none;
+}
