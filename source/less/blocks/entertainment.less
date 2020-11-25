@@ -1,0 +1,30 @@
+.entertainment__list {
+  .offset();
+  list-style: none;
+}
+
+.entertainment__country {
+  display: block;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: @basic-blue-light;
+}
+
+.entertainment__plan {
+  padding: 10px;
+  width: 220px;
+  height: 220px;
+  resize: none;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 22px;
+  color: @special-grey;
+  border: 1px solid @light-grey;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: fade(@special-grey, 30%);
+  }
+}

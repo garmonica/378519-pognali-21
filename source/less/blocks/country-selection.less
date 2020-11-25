@@ -1,0 +1,33 @@
+.country-selection {
+  color: @basic-blue-light;
+  background-color: @basic-white;
+}
+
+.country-selection__alphabet {
+  border-collapse: collapse;
+}
+
+.country-selection__letter {
+  width: 43px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid @light-grey;
+}
+
+.country-selection__letter--chosen {
+  background-color: @light-blue;
+}
+
+.country-selection__list {
+  .offset();
+  list-style: none;
+  border: 1px solid @light-grey;
+}
+
+.country-selection__item {
+  color: @special-grey;
+}
