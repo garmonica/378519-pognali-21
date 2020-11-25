@@ -1,0 +1,27 @@
+.page-header__toggle {
+  position: relative;
+  width: 25px;
+  height: 11px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: @basic-white;
+    left: 0;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
