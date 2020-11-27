@@ -6,65 +6,67 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.png" type="image/png">
   </head>
-  <body class="page__body">
+  <body class="page__body page__body--inner">
     <header class="page-header">
-      <a class="page-header__logo logo" href="index.html">
-        <img class="logo__image logo__image--static" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
-        <img class="logo__image logo__image--scroll" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
-      </a>
-      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo logo" href="index.html">
+          <img class="logo__image logo__image--static" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          <img class="logo__image logo__image--scroll" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+        </a>
+        <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
       <nav class="main-nav">
         <div class="main-nav__wrapper menu menu--opened">
           <ul class="menu__list site-nav">
             <li class="site-nav__item">
-              <a href="blank.html">О сервисе</a>
+              <a class="site-nav__link" href="blank.html">О сервисе</a>
             </li>
             <li class="site-nav__item">
-              <a>Направления</a>
+              <a class="site-nav__link">Направления</a>
             </li>
             <li class="site-nav__item">
-              <a href="catalog.html">Попутчики</a>
+              <a class="site-nav__link" href="catalog.html">Попутчики</a>
             </li>
           </ul>
-          <a class="menu__login login" href="blank.html">Авторизация</a>
+          <a class="menu__login button button--login" href="blank.html">Авторизация</a>
           <ul class="menu__list contacts">
             <li class="contacts__item contacts__item--phone">
-              <a href="tel:+78005558628">
+              <a class="contacts__link" href="tel:+78005558628">
                 <span>8 800 555-86-28</span>
               </a>
             </li>
             <li class="contacts__item contacts__item--email">
-              <a href="mailto:mail@htmlacademy.ru">
+              <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
                 <span>mail@htmlacademy.ru</span>
               </a>
             </li>
           </ul>
           <ul class="menu__list social">
             <li>
-              <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук">Фейсбук</a>
+              <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
             </li>
             <li>
-              <a class="social__link social__link--vk" href="#" aria-label="Вконтакте">Вконтакте</a>
+              <a class="social__link social__link--vk" href="#" aria-label="Вконтакте"></a>
             </li>
             <li>
-              <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм">Инстаграм</a>
+              <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
             </li>
           </ul>
         </div>
-        <div class="main-nav__wrapper user-nav">
+        <div class="main-nav__wrapper user-nav user-nav--inner-page">
           <ul class="user-nav__list">
-            <li class="user-nav__item user-nav__item--phone">
-              <a href="tel:+78005558628">
+            <li class="user-nav__item">
+              <a class="user-nav__link user-nav__link--phone" href="tel:+78005558628">
                 <span class="visually-hidden">Контактный телефон</span>
               </a>
             </li>
-            <li class="user-nav__item user-nav__item--email">
-              <a href="mailto:mail@htmlacademy.ru">
+            <li class="user-nav__item">
+              <a class="user-nav__link user-nav__link--email" href="mailto:mail@htmlacademy.ru">
                 <span class="visually-hidden">Наша электронная почта</span>
               </a>
             </li>
           </ul>
-          <a class="user-nav__login login" href="blank.html">Авторизация</a>
+          <a class="user-nav__login button button--login" href="blank.html">Авторизация</a>
         </div>
       </nav>
     </header>
@@ -73,8 +75,8 @@
       <section class="user">
         <h2 class="visually-hidden">Информация о пользователе</h2>
         <div class="user__level">
-          <p>80</p>
-          <p>level</p>
+          <p class="user__level-number">80</p>
+          <p class="user__level-text">level</p>
         </div>
         <img class="user__avatar" src="https://via.placeholder.com/100x100" alt="Пользователь Петя Демин">
         <a class="user__change-avatar" href="blank.html">Сменить фото</a>
@@ -86,25 +88,25 @@
         </div>
         <div class="user__block">
           <h3 class="user__title">Транспорт</h3>
-          <ul class="user__transport-list">
-            <li class="user__transport-item user__transport-item--plane user__transport-item--active">
-              <a href="#">
-                <span class="user__tooltip">Авиаперелет</span>
+          <ul class="user__transport-list transport">
+            <li class="user__transport-item transport__item">
+              <a class="user__transport-link transport__link transport__link--plane transport__link--active" href="#">
+                <p class="transport__tooltip">Авиаперелет</p>
               </a>
             </li>
-            <li class="user__transport-item user__transport-item--bus user__transport-item--active">
-              <a href="#">
-                <span class="user__tooltip">Автотранспорт</span>
+            <li class="user__transport-item transport__item">
+              <a class="user__transport-link transport__link transport__link--bus  transport__link--active" href="#">
+                <p class="transport__tooltip">Автотранспорт</p>
               </a>
             </li>
-            <li class="user__transport-item user__transport-item--bicycle">
-              <a href="#">
-                <span class="user__tooltip">Велосипед</span>
+            <li class="user__transport-item transport__item">
+              <a class="user__transport-link transport__link transport__link--bicycle" href="#">
+                <p class="transport__tooltip">Велосипед</p>
               </a>
             </li>
-            <li class="user__transport-item user__transport-item--run user__transport-item--active">
-              <a href="#">
-                <span class="user__tooltip">Пешком</span>
+            <li class="user__transport-item transport__item">
+              <a class="user__transport-link transport__link transport__link--run transport__link--active" href="#">
+                <p class="transport__tooltip">Пешком</p>
               </a>
             </li>
           </ul>
@@ -130,7 +132,7 @@
       <section class="new-plan">
         <h2 class="new-plan__heading">Добавить план:</h2>
         <div class="new-plan__buttons">
-          <button class="new-plan__button" aria-label="Первый шаг"></button>
+          <button class="new-plan__button new-plan__button--active" aria-label="Первый шаг"></button>
           <button class="new-plan__button" aria-label="Второй шаг"></button>
           <button class="new-plan__button" aria-label="Третий шаг"></button>
         </div>
@@ -140,39 +142,98 @@
             <p class="new-plan__description">
               Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.
             </p>
-            <label class="new-plan__label" for="companions-number-field">Ищу попутчиков:</label>
-            <p class="new-plan__unit">чел.</p>
-            <input class="new-plan__input" type="number" name="companions-number" id="companions-number-field" value="2" min="1" max="5">
-            <label class="new-plan__label" for="period-field">Длительность:</label>
-            <p class="new-plan__unit">дн.</p>
-            <input class="new-plan__input" type="number" name="period" id="period-field" value="3" min="1" max="14">
+            <div class="new-plan__field-wrapper">
+              <label class="new-plan__label" for="companions-number-field">Ищу попутчиков:</label>
+              <p class="new-plan__unit">чел.</p>
+              <div class="new-plan__input-wrapper">
+                <button class="new-plan__input-less" type="button" aria-label="Меньше">-</button>
+                <input class="new-plan__input" type="number" name="companions-number" id="companions-number-field" value="2" min="1" max="5">
+                <button class="new-plan__input-more" type="button" aria-label="Больше">+</button>
+              </div>
+            </div>
+            <div class="new-plan__field-wrapper">
+              <label class="new-plan__label" for="period-field">Длительность:</label>
+              <p class="new-plan__unit">дн.</p>
+              <div>
+              <div class="new-plan__input-wrapper">
+                <button class="new-plan__input-less" type="button" aria-label="Меньше">-</button>
+                <input class="new-plan__input" type="number" name="period" id="period-field" value="3" min="1" max="14">
+                <button class="new-plan__input-more" type="button" aria-label="Больше">+</button>
+              </div>
+            </div>
             <input class="new-plan__checkbox" type="checkbox" name="with-children" id="with-children-field">
             <label class="new-plan__checkbox-label" for="with-children-field">Можно с детьми</label>
             <table class="new-plan__calendar">
-              <caption class="new-plan__month">Март 2019</caption>
+              <caption class="new-plan__month">
+                <button class="new-plan__month-previous" type="button" aria-label="Предыдущий месяц">&lt;</button>
+                Март 2019
+                <button class="new-plan__month-next" type="button" aria-label="Следующий месяц">  &gt;</button>
+              </caption>
               <tr>
-                <th>П</th><th>В</th><th>С</th><th>Ч</th><th>П</th><th>С</th><th>В</th>
+                <th class="new-plan__weekday">П</th>
+                <th class="new-plan__weekday">В</th>
+                <th class="new-plan__weekday">С</th>
+                <th class="new-plan__weekday">Ч</th>
+                <th class="new-plan__weekday">П</th>
+                <th class="new-plan__weekday">С</th>
+                <th class="new-plan__weekday">В</th>
               </tr>
               <tr>
-                <td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>1</td>
+                <td class="new-plan__day">23</td>
+                <td class="new-plan__day">24</td>
+                <td class="new-plan__day">25</td>
+                <td class="new-plan__day">26</td>
+                <td class="new-plan__day">27</td>
+                <td class="new-plan__day">28</td>
+                <td class="new-plan__day">1</td>
               </tr>
               <tr>
-                <td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+                <td class="new-plan__day">2</td>
+                <td class="new-plan__day">3</td>
+                <td class="new-plan__day">4</td>
+                <td class="new-plan__day">5</td>
+                <td class="new-plan__day">6</td>
+                <td class="new-plan__day">7</td>
+                <td class="new-plan__day">8</td>
               </tr>
               <tr>
-                <td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+                <td class="new-plan__day">9</td>
+                <td class="new-plan__day">10</td>
+                <td class="new-plan__day">11</td>
+                <td class="new-plan__day">12</td>
+                <td class="new-plan__day">13</td>
+                <td class="new-plan__day">14</td>
+                <td class="new-plan__day">15</td>
               </tr>
               <tr>
-                <td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td>
+                <td class="new-plan__day">16</td>
+                <td class="new-plan__day">17</td>
+                <td class="new-plan__day">18</td>
+                <td class="new-plan__day">19</td>
+                <td class="new-plan__day">20</td>
+                <td class="new-plan__day">21</td>
+                <td class="new-plan__day">22</td>
               </tr>
               <tr>
-                <td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
+                <td class="new-plan__day">23</td>
+                <td class="new-plan__day">24</td>
+                <td class="new-plan__day">25</td>
+                <td class="new-plan__day new-plan__day--chosen new-plan__day--current">26</td>
+                <td class="new-plan__day new-plan__day--chosen">27</td>
+                <td class="new-plan__day new-plan__day--chosen">28</td>
+                <td class="new-plan__day new-plan__day--after">29</td>
               </tr>
               <tr>
-                <td>30</td><td>31</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+                <td class="new-plan__day new-plan__day--after">30</td>
+                <td class="new-plan__day new-plan__day--after">31</td>
+                <td class="new-plan__day new-plan__day--after">1</td>
+                <td class="new-plan__day new-plan__day--after">2</td>
+                <td class="new-plan__day new-plan__day--after">3</td>
+                <td class="new-plan__day new-plan__day--after">4</td>
+                <td class="new-plan__day new-plan__day--after">5</td>
               </tr>
             </table>
-            <a href="#step-two">Следующий шаг</a>
+            <a class="button button--next-step" href="#step-two">Следующий шаг</a>
           </fieldset>
           <fieldset class="new-plan__step" id="step-two">
             <legend class="new-plan__title">Шаг 2. Маршрут</legend>
@@ -185,18 +246,18 @@
                   <option class="new-plan__option new-plan__option--bosnia-and-herzegovina" value="bosnia-and-herzegovina">Босния и герцеговина</option>
                 </select>
                 <div class="new-plan__flag">
-                  <img class="new-plan__img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Генцеговины">
+                  <img class="new-plan__flag-img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Генцеговины">
                 </div>
-                <button class="new-plan__remove" aria-label="Убрать из списка"></button>
+                <button class="new-plan__remove" aria-label="Убрать из списка">x</button>
               </li>
               <li class="new-plan__countries-item new-plan__countries-item--selected">
                 <select class="new-plan__select-country" name="selected-country">
                   <option class="new-plan__option new-plan__option--czech" value="czech">Чехия</option>
                 </select>
                 <div class="new-plan__flag">
-                  <img class="new-plan__img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+                  <img class="new-plan__flag-img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
                 </div>
-                <button class="new-plan__remove" aria-label="Убрать из списка"></button>
+                <button class="new-plan__remove" aria-label="Убрать из списка">x</button>
               </li>
               <li class="new-plan__countries-item new-plan__countries-item--not-selected">
                 <select class="new-plan__select-country">
@@ -205,19 +266,39 @@
                 <div class="new-plan__country-selection country-selection">
                   <table class="country-selection__alphabet">
                     <tr>
-                      <td>а</td><td>б</td><td>в</td><td>г</td><td>д</td>
+                      <td class="country-selection__letter country-selection__letter--chosen">а</td>
+                      <td class="country-selection__letter">б</td>
+                      <td class="country-selection__letter">в</td>
+                      <td class="country-selection__letter">г</td>
+                      <td class="country-selection__letter">д</td>
                     </tr>
                     <tr>
-                      <td>е</td><td>з</td><td>и</td><td>к</td><td>л</td>
+                      <td class="country-selection__letter">е</td>
+                      <td class="country-selection__letter">з</td>
+                      <td class="country-selection__letter">и</td>
+                      <td class="country-selection__letter">к</td>
+                      <td class="country-selection__letter">л</td>
                     </tr>
                     <tr>
-                      <td>м</td><td>н</td><td>о</td><td>п</td><td>р</td>
+                      <td class="country-selection__letter">м</td>
+                      <td class="country-selection__letter">н</td>
+                      <td class="country-selection__letter">о</td>
+                      <td class="country-selection__letter">п</td>
+                      <td class="country-selection__letter">р</td>
                     </tr>
                     <tr>
-                      <td>с</td><td>т</td><td>у</td><td>ф</td><td>х</td>
+                      <td class="country-selection__letter">с</td>
+                      <td class="country-selection__letter">т</td>
+                      <td class="country-selection__letter">у</td>
+                      <td class="country-selection__letter">ф</td>
+                      <td class="country-selection__letter">х</td>
                     </tr>
                     <tr>
-                      <td>ч</td><td>ш</td><td>щ</td><td>э</td><td>ю</td>
+                      <td class="country-selection__letter">ч</td>
+                      <td class="country-selection__letter">ш</td>
+                      <td class="country-selection__letter">щ</td>
+                      <td class="country-selection__letter">э</td>
+                      <td class="country-selection__letter">ю</td>
                     </tr>
                   </table>
                   <ul class="country-selection__list">
@@ -234,12 +315,12 @@
                     <li class="country-selection__item">Афганистан</li>
                   </ul>
                 </div>
-                <button class="new-plan__remove" aria-label="Убрать из списка"></button>
+                <button class="new-plan__remove" aria-label="Убрать из списка">x</button>
               </li>
             </ul>
             <button class="new-plan__new-country">Добавить страну</button>
-            <a href="#step-three">Следующий шаг</a>
-            <a href="#step-one">На шаг назад</a>
+            <a class="button button--next-step" href="#step-three">Следующий шаг</a>
+            <a class="new-plan__previous-step" href="#step-one">На шаг назад</a>
           </fieldset>
           <fieldset class="new-plan__step entertainment" id="step-three">
             <legend class="new-plan__title">Шаг 3. Развлечения</legend>
@@ -248,20 +329,18 @@
             </p>
             <ul class="entertainment__list">
               <li class="entertainment__item">
-                <label class="entertainment__country entertainment__country--bosnia-and-herzegovina">Босния и Герцеговина
-                  <textarea class="entertainment__plan entertainment__plan--bosnia-and-herzegovina" name="entertainment-bosnia-and-herzegovina" placeholder="План действий"></textarea>
-                </label>
+                <label class="entertainment__country entertainment__country--bosnia-and-herzegovina" for="text-field-bosnia">Босния и Герцеговина</label>
+                <textarea class="entertainment__plan entertainment__plan--bosnia-and-herzegovina" name="entertainment-bosnia-and-herzegovina" id="text-field-bosnia" placeholder="План действий"></textarea>
                 <img class="entertainment__flag entertainment__flag--bosnia-and-herzegovina" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
               </li>
               <li class="entertainment__item">
-                <label class="entertainment__country entertainment__country--czech">Чехия
-                  <textarea class="entertainment__plan entertainment__plan--czech" name="entertainment-czech" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-                </label>
+                <label class="entertainment__country entertainment__country--czech" for="text-field-czech">Чехия</label>
+                <textarea class="entertainment__plan entertainment__plan--czech" name="entertainment-czech" id="text-field-czech" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 <img class="entertainment__flag entertainment__flag--czech" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
               </li>
             </ul>
-            <button class="new-plan__submit" type="submit">Отправить</button>
-            <a href="#step-two">На шаг назад</a>
+            <button class="new-plan__submit button button--submit" type="submit">Отправить</button>
+            <a class="new-plan__previous-step" href="#step-two">На шаг назад</a>
           </fieldset>
         </form>
       </section>
@@ -272,13 +351,13 @@
       </a>
       <ul class="page-footer__social social">
         <li>
-          <a class="page-footer__social-link social__link social__link--facebook" href="#" aria-label="Фейсбук">Фейсбук</a>
+          <a class="page-footer__social-link social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
         </li>
         <li>
-          <a class="page-footer__social-link social__link social__link--vk" href="#" aria-label="Вконтакте">Вконтакте</a>
+          <a class="page-footer__social-link social__link social__link--vk" href="#" aria-label="Вконтакте"></a>
         </li>
         <li>
-          <a class="page-footer__social-link social__link social__link--instagram" href="#" aria-label="Инстаграм">Инстаграм</a>
+          <a class="page-footer__social-link social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
         </li>
       </ul>
       <p class="page-footer__copyright">Разработано

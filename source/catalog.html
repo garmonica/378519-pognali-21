@@ -6,65 +6,67 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.png" type="image/png">
   </head>
-  <body class="page__body">
+  <body class="page__body page__body--inner">
     <header class="page-header">
-      <a class="page-header__logo logo" href="index.html">
-        <img class="logo__image logo__image--static" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
-        <img class="logo__image logo__image--scroll" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
-      </a>
-      <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo logo" href="index.html">
+          <img class="logo__image logo__image--static" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          <img class="logo__image logo__image--scroll" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+        </a>
+        <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
       <nav class="main-nav">
         <div class="main-nav__wrapper menu menu--opened">
           <ul class="menu__list site-nav">
             <li class="site-nav__item">
-              <a href="blank.html">О сервисе</a>
+              <a class="site-nav__link" href="blank.html">О сервисе</a>
             </li>
             <li class="site-nav__item">
-              <a href="form.html">Направления</a>
+              <a class="site-nav__link" href="form.html">Направления</a>
             </li>
             <li class="site-nav__item">
-              <a>Попутчики</a>
+              <a class="site-nav__link">Попутчики</a>
             </li>
           </ul>
-          <a class="menu__login login" href="blank.html">Авторизация</a>
+          <a class="menu__login button button--login" href="blank.html">Авторизация</a>
           <ul class="menu__list contacts">
             <li class="contacts__item contacts__item--phone">
-              <a href="tel:+78005558628">
+              <a class="contacts__link" href="tel:+78005558628">
                 <span>8 800 555-86-28</span>
               </a>
             </li>
             <li class="contacts__item contacts__item--email">
-              <a href="mailto:mail@htmlacademy.ru">
+              <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
                 <span>mail@htmlacademy.ru</span>
               </a>
             </li>
           </ul>
           <ul class="menu__list social">
             <li>
-              <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук">Фейсбук</a>
+              <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
             </li>
             <li>
-              <a class="social__link social__link--vk" href="#" aria-label="Вконтакте">Вконтакте</a>
+              <a class="social__link social__link--vk" href="#" aria-label="Вконтакте"></a>
             </li>
             <li>
-              <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм">Инстаграм</a>
+              <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
             </li>
           </ul>
         </div>
-        <div class="main-nav__wrapper user-nav">
+        <div class="main-nav__wrapper user-nav--inner-page">
           <ul class="user-nav__list">
-            <li class="user-nav__item user-nav__item--phone">
-              <a href="tel:+78005558628">
+            <li class="user-nav__item">
+              <a class="user-nav__link user-nav__link--phone" href="tel:+78005558628">
                 <span class="visually-hidden">Контактный телефон</span>
               </a>
             </li>
-            <li class="user-nav__item user-nav__item--email">
-              <a href="mailto:mail@htmlacademy.ru">
+            <li class="user-nav__item">
+              <a class="user-nav__link user-nav__link--email" href="mailto:mail@htmlacademy.ru">
                 <span class="visually-hidden">Наша электронная почта</span>
               </a>
             </li>
           </ul>
-          <a class="user-nav__login login" href="blank.html">Авторизация</a>
+          <a class="user-nav__login button button--login" href="blank.html">Авторизация</a>
         </div>
       </nav>
     </header>
@@ -72,36 +74,58 @@
       <h1 class="page-main__heading">Попутчики</h1>
       <section class="filter">
         <h2 class="filter__heading">Фильтрация по странам:</h2>
-        <button class="filter__toggle">Показать все</button>
+        <button class="filter__toggle">
+          <span class="filter__toggle-text">Показать все</span>
+        </button>
         <ul class="filter__category-list">
           <li class="filter__category-item">
-            <a class="filter__category-link filter__category-link--active">Европа</a>
+            <a class="filter__category-link filter__category-link--active" href="#">Европа</a>
           </li>
           <li class="filter__category-item">
-            <a>Азия</a>
+            <a class="filter__category-link" href="#">Азия</a>
           </li>
           <li class="filter__category-item">
-            <a>Америка</a>
+            <a class="filter__category-link" href="#">Америка</a>
           </li>
           <li class="filter__category-item">
-            <a>Острова</a>
+            <a class="filter__category-link" href="#">Острова</a>
           </li>
         </ul>
         <table class="filter_alphabet">
           <tr>
-            <td>а</td><td>б</td><td>в</td><td>г</td><td>д</td>
+            <td class="filter_letter filter_letter--chosen">а</td>
+            <td class="filter_letter">б</td>
+            <td class="filter_letter">в</td>
+            <td class="filter_letter">г</td>
+            <td class="filter_letter">д</td>
           </tr>
           <tr>
-            <td>е</td><td>з</td><td>и</td><td>к</td><td>л</td>
+            <td class="filter_letter">е</td>
+            <td class="filter_letter">з</td>
+            <td class="filter_letter">и</td>
+            <td class="filter_letter">к</td>
+            <td class="filter_letter">л</td>
           </tr>
           <tr>
-            <td>м</td><td>н</td><td>о</td><td>п</td><td>р</td>
+            <td class="filter_letter">м</td>
+            <td class="filter_letter">н</td>
+            <td class="filter_letter">о</td>
+            <td class="filter_letter">п</td>
+            <td class="filter_letter">р</td>
           </tr>
           <tr>
-            <td>с</td><td>т</td><td>у</td><td>ф</td><td>х</td>
+            <td class="filter_letter">с</td>
+            <td class="filter_letter">т</td>
+            <td class="filter_letter">у</td>
+            <td class="filter_letter">ф</td>
+            <td class="filter_letter">х</td>
           </tr>
           <tr>
-            <td>ч</td><td>ш</td><td>э</td><td>ю</td><td>я</td>
+            <td class="filter_letter">ч</td>
+            <td class="filter_letter">ш</td>
+            <td class="filter_letter">э</td>
+            <td class="filter_letter">ю</td>
+            <td class="filter_letter">я</td>
           </tr>
         </table>
         <ul class="filter__country-list">
@@ -168,21 +192,21 @@
               <span>Пешком</span>
             </label>
           </fieldset>
-          <fieldset class="preferences__fieldset level">
+          <fieldset class="preferences__fieldset">
             <legend class="preferences__title">Левел</legend>
-            <div class="level__output">
-              <input class="level__min" type="number" name="min-level" min="0" max="100" value="30" step="10" aria-label="Значение минимального уровня">
-              <input class="level__max" type="number" name="max-level" min="0" max="100" value="100" step="10" aria-label="Значение максимального уровня">
+            <div class="preferences__level-output">
+              <input class="preferences__level-input preferences__level-min" type="number" name="min-level" min="0" max="100" value="30" step="10" aria-label="Значение минимального уровня">
+              <input class="preferences__level-input preferences__level-max" type="number" name="max-level" min="0" max="100" value="100" step="10" aria-label="Значение максимального уровня">
             </div>
-            <div class="level__range">
-              <div class="level__scale">
-                <div class="level__bar" style="width: 70%; margin-left: 30%"></div>
+            <div class="preferences__level-range">
+              <div class="preferences__level-scale">
+                <div class="preferences__level-bar" style="width: 70%; margin-left: 30%"></div>
               </div>
-              <button class="level__toggle level__toggle--min" type="button" style="left: 30%;" aria-label="Минимальный уровень"></button>
-              <button class="level__toggle level__toggle--max" type="button" style="left: 100%;" aria-label="Максимальный уровень"></button>
+              <button class="preferences__level-toggle preferences__level-toggle--min" type="button" style="left: 30%;" aria-label="Минимальный уровень"></button>
+              <button class="preferences__level-toggle preferences__level-toggle--max" type="button" style="left: 100%;" aria-label="Максимальный уровень"></button>
             </div>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="preferences__submit" type="submit">Показать</button>
         </form>
       </section>
       <section class="result">
@@ -195,12 +219,12 @@
               <span class="result__likes-number">1,5 М</span>
             </button>
             <div class="result__tags">
-              <a href="#">#ЗОЖ</a>
-              <a href="#">#ПП</a>
-              <a href="#">#Фитнес</a>
-              <a href="#">#пляж</a>
-              <a href="#">#авокадо</a>
-              <a href="#">#смузи</a>
+              <a class="result__tags-link" href="#">#ЗОЖ</a>
+              <a class="result__tags-link" href="#">#ПП</a>
+              <a class="result__tags-link" href="#">#Фитнес</a>
+              <a class="result__tags-link" href="#">#пляж</a>
+              <a class="result__tags-link" href="#">#авокадо</a>
+              <a class="result__tags-link" href="#">#смузи</a>
             </div>
             <div class="result__visit">
               <p class="result__description">хочет посетить:</p>
@@ -222,24 +246,24 @@
             <div class="result__transport">
               <p class="result__description">транспорт:</p>
               <ul class="result__transport-list transport">
-                <li class="result__transport-item transport__item transport__item--plane transport__item--active">
-                  <a href="#">
-                    <span class="transport__tooltip">Авиаперелет</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--plane transport__link--active" href="#">
+                    <p class="transport__tooltip">Авиаперелет</p>
                   </a>
                 </li>
-                <li class="result__transport-item transport__item transport__item--bus">
-                  <a href="#">
-                    <span class="transport__tooltip">Автотранспорт</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--bus" href="#">
+                    <p class="transport__tooltip">Автотранспорт</p>
                   </a>
                 </li>
-                <li class="result__transport-item transport__item transport__item--bicycle">
-                  <a href="#">
-                    <span class="transport__tooltip">Велосипед</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--bicycle" href="#">
+                    <p class="transport__tooltip">Велосипед</p>
                   </a>
                 </li>
-                <li class="result__transport-item transport__item transport__item--run">
-                  <a href="#">
-                    <span class="transport__tooltip">Пешком</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--run" href="#">
+                    <p class="transport__tooltip">Пешком</p>
                   </a>
                 </li>
               </ul>
@@ -247,11 +271,11 @@
             <div class="result__level">
               <p class="result__description">левел:</p>
               <div class="result__level-value">
-                <p>99</p>
-                <p>level</p>
+                <p class="result__level-number">99</p>
+                <p class="result__level-text">level</p>
               </div>
             </div>
-            <a class="result__invite" href="blank.html">Позвать!</a>
+            <a class="result__invite button button--invite" href="blank.html">Позвать!</a>
           </li>
           <li class="result__item">
             <img class="result__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар пользователя Петя Демин">
@@ -260,11 +284,11 @@
               <span class="result__likes-number">1500</span>
             </button>
             <div class="result__tags">
-              <a href="#">#бургер</a>
-              <a href="#">#бар</a>
-              <a href="#">#футбол</a>
-              <a href="#">#концерт</a>
-              <a href="#">#крафт</a>
+              <a class="result__tags-link" href="#">#бургер</a>
+              <a class="result__tags-link" href="#">#бар</a>
+              <a class="result__tags-link" href="#">#футбол</a>
+              <a class="result__tags-link" href="#">#концерт</a>
+              <a class="result__tags-link" href="#">#крафт</a>
             </div>
             <div class="result__visit">
               <p class="result__description">хочет посетить:</p>
@@ -282,24 +306,24 @@
             <div class="result__transport">
               <p class="result__description">транспорт:</p>
               <ul class="result__transport-list transport">
-                <li class="result__transport-item transport__item transport__item--plane transport__item--active">
-                  <a href="#">
-                    <span class="transport__tooltip">Авиаперелет</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--plane transport__link--active" href="#">
+                    <p class="transport__tooltip">Авиаперелет</p>
                   </a>
                 </li>
-                <li class="result__transport-item transport__item transport__item--bus transport__item--active">
-                  <a href="#">
-                    <span class="transport__tooltip">Автотранспорт</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--bus transport__link--active" href="#">
+                    <p class="transport__tooltip">Автотранспорт</p>
                   </a>
                 </li>
-                <li class="result__transport-item transport__item transport__item--bicycle">
-                  <a href="#">
-                    <span class="transport__tooltip">Велосипед</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--bicycle" href="#">
+                    <p class="transport__tooltip">Велосипед</p>
                   </a>
                 </li>
-                <li class="result__transport-item transport__item transport__item--run transport__item--active">
-                  <a href="#">
-                    <span class="transport__tooltip">Пешком</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--run transport__link--active" href="#">
+                    <p class="transport__tooltip">Пешком</p>
                   </a>
                 </li>
               </ul>
@@ -307,11 +331,11 @@
             <div class="result__level">
               <p class="result__description">левел:</p>
               <div class="result__level-value">
-                <p>80</p>
-                <p>level</p>
+                <p class="result__level-number">80</p>
+                <p class="result__level-text">level</p>
               </div>
             </div>
-            <a class="result__invite" href="blank.html">Позвать!</a>
+            <a class="result__invite button button--invite" href="blank.html">Позвать!</a>
           </li>
           <li class="result__item">
             <img class="result__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар пользователя Марк Смолов">
@@ -320,11 +344,11 @@
               <span class="result__likes-number">170</span>
             </button>
             <div class="result__tags">
-              <a href="#">#рэп</a>
-              <a href="#">#тату</a>
-              <a href="#">#хайпбист</a>
-              <a href="#">#кроссовки</a>
-              <a href="#">#суприм</a>
+              <a class="result__tags-link" href="#">#рэп</a>
+              <a class="result__tags-link" href="#">#тату</a>
+              <a class="result__tags-link" href="#">#хайпбист</a>
+              <a class="result__tags-link" href="#">#кроссовки</a>
+              <a class="result__tags-link" href="#">#суприм</a>
             </div>
             <div class="result__visit">
               <p class="result__description">хочет посетить:</p>
@@ -346,24 +370,24 @@
             <div class="result__transport">
               <p class="result__description">транспорт:</p>
               <ul class="result__transport-list transport">
-                <li class="result__transport-item transport__item transport__item--plane transport__item--active">
-                  <a href="#">
-                    <span class="transport__tooltip">Авиаперелет</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--plane transport__link--active" href="#">
+                    <p class="transport__tooltip">Авиаперелет</p>
                   </a>
                 </li>
-                <li class="result__transport-item transport__item transport__item--bus">
-                  <a href="#">
-                    <span class="transport__tooltip">Автотранспорт</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--bus" href="#">
+                    <p class="transport__tooltip">Автотранспорт</p>
                   </a>
                 </li>
-                <li class="result__transport-item transport__item transport__item--bicycle transport__item--active">
-                  <a href="#">
-                    <span class="transport__tooltip">Велосипед</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--bicycle transport__link--active" href="#">
+                    <p class="transport__tooltip">Велосипед</p>
                   </a>
                 </li>
-                <li class="result__transport-item transport__item transport__item--run">
-                  <a href="#">
-                    <span class="transport__tooltip">Пешком</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--run" href="#">
+                    <p class="transport__tooltip">Пешком</p>
                   </a>
                 </li>
               </ul>
@@ -371,11 +395,11 @@
             <div class="result__level">
               <p class="result__description">левел:</p>
               <div class="result__level-value">
-                <p>25</p>
-                <p>level</p>
+                <p class="result__level-number">25</p>
+                <p class="result__level-text">level</p>
               </div>
             </div>
-            <a class="result__invite" href="blank.html">Позвать!</a>
+            <a class="result__invite button button--invite" href="blank.html">Позвать!</a>
           </li>
           <li class="result__item">
             <img class="result__avatar" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар пользователя Лариса Роговая">
@@ -384,10 +408,10 @@
               <span class="result__likes-number">23</span>
             </button>
             <div class="result__tags">
-              <a href="#">#образование</a>
-              <a href="#">#карьера</a>
-              <a href="#">#учеба</a>
-              <a href="#">#линкедин</a>
+              <a class="result__tags-link" href="#">#образование</a>
+              <a class="result__tags-link" href="#">#карьера</a>
+              <a class="result__tags-link" href="#">#учеба</a>
+              <a class="result__tags-link" href="#">#линкедин</a>
             </div>
             <div class="result__visit">
               <p class="result__description">хочет посетить:</p>
@@ -405,24 +429,24 @@
             <div class="result__transport">
               <p class="result__description">транспорт:</p>
               <ul class="result__transport-list transport">
-                <li class="result__transport-item transport__item transport__item--plane transport__item--active">
-                  <a href="#">
-                    <span class="transport__tooltip">Авиаперелет</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--plane transport__link--active" href="#">
+                    <p class="transport__tooltip">Авиаперелет</p>
                   </a>
                 </li>
-                <li class="result__transport-item transport__item transport__item--bus transport__item--active">
-                  <a href="#">
-                    <span class="transport__tooltip">Автотранспорт</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--bus transport__link--active" href="#">
+                    <p class="transport__tooltip">Автотранспорт</p>
                   </a>
                 </li>
-                <li class="result__transport-item transport__item transport__item--bicycle">
-                  <a href="#">
-                    <span class="transport__tooltip">Велосипед</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--bicycle" href="#">
+                    <p class="transport__tooltip">Велосипед</p>
                   </a>
                 </li>
-                <li class="result__transport-item transport__item transport__item--run">
-                  <a href="#">
-                    <span class="transport__tooltip">Пешком</span>
+                <li class="result__transport-item transport__item">
+                  <a class="transport__link transport__link--run" href="#">
+                    <p class="transport__tooltip">Пешком</p>
                   </a>
                 </li>
               </ul>
@@ -430,11 +454,11 @@
             <div class="result__level">
               <p class="result__description">левел:</p>
               <div class="result__level-value">
-                <p>50</p>
-                <p>level</p>
+                <p class="result__level-number">50</p>
+                <p class="result__level-text">level</p>
               </div>
             </div>
-            <a class="result__invite" href="blank.html">Позвать!</a>
+            <a class="result__invite button button--invite" href="blank.html">Позвать!</a>
           </li>
         </ul>
         <button class="result__more">Показать еще</button>
@@ -466,13 +490,13 @@
       </a>
       <ul class="page-footer__social social">
         <li>
-          <a class="page-footer__social-link social__link social__link--facebook" href="#" aria-label="Фейсбук">Фейсбук</a>
+          <a class="page-footer__social-link social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
         </li>
         <li>
-          <a class="page-footer__social-link social__link social__link--vk" href="#" aria-label="Вконтакте">Вконтакте</a>
+          <a class="page-footer__social-link social__link social__link--vk" href="#" aria-label="Вконтакте"></a>
         </li>
         <li>
-          <a class="page-footer__social-link social__link social__link--instagram" href="#" aria-label="Инстаграм">Инстаграм</a>
+          <a class="page-footer__social-link social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
         </li>
       </ul>
       <p class="page-footer__copyright">Разработано

@@ -1,0 +1,34 @@
+.transport {
+  .offset();
+  list-style: none;
+  display: flex;
+}
+
+.transport__link {
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  text-decoration: none;
+  border: 1px solid orange;
+  border-radius: 50%;
+}
+
+.transport__tooltip {
+  .offset();
+  padding: 15px 20px;
+  display: none;
+  position: absolute;
+  top: 35px;
+  font-size: 20px;
+  line-height: 20px;
+  color: @basic-white;
+  text-align: center;
+  background-color: @blue-tooltip;
+  border-radius: 4px;
+}
+
+.transport__link:hover .transport__tooltip {
+  display: block;
+  z-index: 1;
+}

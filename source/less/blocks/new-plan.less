@@ -1,0 +1,199 @@
+.new-plan {
+  background-color: @special-blue;
+  color: @basic-blue-light;
+}
+
+.new-plan__heading {
+  .offset();
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.new-plan__button {
+  .offset();
+  width: 5px;
+  height: 5px;
+  background-color: fade(@basic-blue-light, 30%);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.new-plan__button--active {
+  background-color: @basic-blue-light;
+  cursor: default;
+}
+
+.new-plan__step {
+  background-color: @basic-white;
+  border: none;
+  border-radius: 10px;
+}
+
+.new-plan__title {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.new-plan__description {
+  .offset();
+  color: @special-grey;
+}
+
+.new-plan__label {
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.new-plan__unit {
+  .offset();
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: fade(@basic-blue-light, 30%);
+}
+
+.new-plan__input {
+  min-width: 200px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  color: inherit;
+  text-align: center;
+  border: 1px solid @light-grey;
+  box-sizing: border-box;
+  border-radius: 4px;
+  appearance: textfield;
+}
+
+.new-plan__input::-webkit-outer-spin-button,
+.new-plan__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.new-plan__checkbox-label {
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.new-plan__calendar {
+  border-collapse: collapse;
+}
+
+.new-plan__month {
+  padding: 10px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  border-top: 1px solid @blue-table;
+  border-bottom: 1px solid @blue-table;
+}
+
+.new-plan__weekday {
+  font-size: 14px;
+  line-height: 18px;
+  color: @special-grey;
+  font-weight: 400;
+}
+
+.new-plan__weekday:nth-child(6),
+.new-plan__weekday:nth-child(7) {
+  color: @calendar-red;
+}
+
+.new-plan__day {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 18px;
+  color: fade(@special-grey, 30%);
+  border: 1px solid @blue-table;
+  text-align: center;
+}
+
+.new-plan__day--chosen {
+  font-weight: 500;
+  color: @basic-white;
+  background-color: @basic-blue-light;
+}
+
+.new-plan__day--current {
+  outline: 2px solid @calendar-red;
+  outline-offset: -1.5px;
+}
+
+.new-plan__day--after {
+  font-weight: 500;
+  color: @basic-blue-light;
+  background-color: @light-blue;
+}
+
+.new-plan__countries-list {
+  .offset();
+  list-style: none;
+}
+
+.new-plan__select-country {
+  padding: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: @basic-blue-light;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: 1px solid @light-grey;
+  border-radius: 4px;
+}
+
+.new-plan__flag {
+  width: 53px;
+  height: 42px;
+  border: 1px solid @light-grey;
+  border-radius: 4px;
+}
+
+.new-plan__remove {
+  width: 21px;
+  height: 21px;
+  background-color: @light-blue;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.new-plan__new-country {
+  padding: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: inherit;
+  text-transform: uppercase;
+  background-color: @light-blue;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-plan__previous-step {
+  font-size: 17px;
+  line-height: 30px;
+  color: @basic-blue-light;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.new-plan__submit {
+  font-family: inherit;
+  font-size: 17px;
+  border: none;
+  text-transform: uppercase;
+}

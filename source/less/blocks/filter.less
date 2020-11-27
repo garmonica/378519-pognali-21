@@ -1,0 +1,86 @@
+.filter {
+  background-color: @filter-blue;
+  color: @menu-blue;
+}
+
+.filter__heading {
+  .offset();
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter__toggle {
+  width: 17px;
+  height: 3px;
+  outline: 1px solid orange;
+  background-color: transparent;
+  border: none;
+}
+
+.filter__toggle-text {
+  display: none;
+}
+
+.filter__category-list {
+  .offset();
+  list-style: none;
+}
+
+.filter__category-link {
+  font-weight: 700;
+  color: @menu-blue;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 30%;
+}
+
+.filter__category-link--active {
+  opacity: 100%;
+}
+
+.filter_alphabet {
+  border-collapse: collapse;
+  background-color: @basic-white;
+}
+
+.filter_letter {
+  width: 43px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: @basic-blue-light;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid @light-grey;
+}
+
+.filter_letter--chosen {
+  background-color: @basic-blue-light;
+  color: @basic-white;
+}
+
+.filter__country-list {
+  .offset();
+  list-style: none;
+}
+
+.filter__country-item {
+  color: @special-grey;
+}
+
+.filter__hide {
+  padding: 10px 30px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: @menu-blue;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: @filter-blue-button;
+  border: none;
+  border-radius: 20px;
+}
