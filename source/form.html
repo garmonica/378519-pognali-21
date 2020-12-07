@@ -2,46 +2,45 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Направления - Сервис для путешествий «Погнали»</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.png" type="image/png">
   </head>
   <body class="page__body page__body--inner">
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo logo" href="index.html">
-          <img class="logo__image logo__image--static" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
-          <img class="logo__image logo__image--scroll" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+      <nav class="main-nav main-nav--closed">
+        <a class="main-nav__logo logo" href="index.html">
+          <img class="logo__image logo__image--static logo__image--shown" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          <img class="logo__image logo__image--scroll" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип сервиса для путешествий «Погнали»">
         </a>
-        <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      </div>
-      <nav class="main-nav">
-        <div class="main-nav__wrapper menu menu--opened">
-          <ul class="menu__list site-nav">
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="blank.html">О сервисе</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link">Направления</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="catalog.html">Попутчики</a>
-            </li>
-          </ul>
-          <a class="menu__login button button--login" href="blank.html">Авторизация</a>
-          <ul class="menu__list contacts">
-            <li class="contacts__item contacts__item--phone">
-              <a class="contacts__link" href="tel:+78005558628">
-                <span>8 800 555-86-28</span>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <a class="main-nav__login button button--menu-login" href="blank.html">Авторизация</a>
+        <ul class="main-nav__list site-nav">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="blank.html">О сервисе</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="">Направления</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="catalog.html">Попутчики</a>
+          </li>
+        </ul>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__contacts contacts">
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--phone" href="tel:+78005558628">
+                <span class="contacts__text">8 800 555-86-28</span>
               </a>
             </li>
-            <li class="contacts__item contacts__item--email">
-              <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
-                <span>mail@htmlacademy.ru</span>
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru">
+                <span class="contacts__text">mail@htmlacademy.ru</span>
               </a>
             </li>
           </ul>
-          <ul class="menu__list social">
+          <ul class="main-nav__social social">
             <li>
               <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
             </li>
@@ -52,21 +51,6 @@
               <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
             </li>
           </ul>
-        </div>
-        <div class="main-nav__wrapper user-nav user-nav--inner-page">
-          <ul class="user-nav__list">
-            <li class="user-nav__item">
-              <a class="user-nav__link user-nav__link--phone" href="tel:+78005558628">
-                <span class="visually-hidden">Контактный телефон</span>
-              </a>
-            </li>
-            <li class="user-nav__item">
-              <a class="user-nav__link user-nav__link--email" href="mailto:mail@htmlacademy.ru">
-                <span class="visually-hidden">Наша электронная почта</span>
-              </a>
-            </li>
-          </ul>
-          <a class="user-nav__login button button--login" href="blank.html">Авторизация</a>
         </div>
       </nav>
     </header>

@@ -1,32 +1,124 @@
 .page-header {
-  background-color: @basic-blue;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: @basic-white;
   color: @basic-white;
+  padding: 27px 0 28px;
+  z-index: 10;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 0 83px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 49px 0;
+    background-color: transparent;
+  }
 }
 
-.page-header__toggle {
-  position: relative;
-  width: 25px;
-  height: 11px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+.page-header--nojs {
+  position: static;
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 3px;
-    border-radius: 1.5px;
-    background-color: @basic-white;
-    left: 0;
+  .logo__image--opened,
+  .main-nav__login,
+  .main-nav__list,
+  .main-nav__wrapper {
+    display: block;
   }
 
-  &::before {
-    top: 0;
+  .logo__image--closed {
+    display: none;
   }
 
-  &::after {
-    bottom: 0;
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+.page-header--opened {
+  .logo__image--opened {
+    display: block;
+  }
+
+  .logo__image--closed {
+    display: none;
+  }
+
+  .main-nav__toggle {
+    &::before,
+    &::after {
+      height: 2px;
+      background-color: @grey-menu-toggle;
+    }
+
+    &::before {
+      top: 7px;
+      transform: rotate(46deg);
+    }
+
+    &::after {
+      bottom: 11px;
+      transform: rotate(-46deg);
+    }
+  }
+}
+
+.page-header--closed {
+  padding-bottom: 26px;
+  background-color: @basic-blue;
+
+  .main-nav__logo {
+    margin-bottom: 0;
+  }
+
+  .logo__image--opened,
+  .main-nav__login,
+  .main-nav__list,
+  .main-nav__wrapper {
+    display: none;
+  }
+
+  .logo__image--closed {
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 42px;
+
+    .main-nav__login {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .main-nav__login,
+    .main-nav__list,
+    .main-nav__wrapper {
+      display: flex;
+    }
+  }
+}
+
+.page-header--scroll {
+  background-color: @basic-white;
+
+  .logo__image--opened {
+    display: block;
+  }
+
+  .logo__image--closed {
+    display: none;
+  }
+
+  .site-nav__link {
+    color: @menu-blue;
+  }
+
+  .main-nav__toggle {
+    &::before,
+    &::after {
+      background-color: @grey-menu-toggle;
+    }
   }
 }

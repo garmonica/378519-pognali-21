@@ -1,7 +1,16 @@
 .site-nav {
-  .offset();
   list-style: none;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+}
+
+.site-nav__item {
+  @media (min-width: @desktop-width) {
+    margin-right: 30px;
+  }
 }
 
 .site-nav__link {
@@ -10,4 +19,16 @@
   font-weight: 500;
   color: @menu-blue;
   text-decoration: none;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 71px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @basic-white;
+  }
 }

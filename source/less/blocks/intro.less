@@ -1,34 +1,125 @@
+.intro {
+  padding: 90px 25px 38px 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 64px;
+    padding: 158px 40px 38px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 158px 60px 38px 60px;
+    margin-bottom: 182px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .intro__slogan {
   .offset();
+  max-width: 400px;
+  min-height: 367px;
+  margin: 0 auto;
   font-size: 36px;
   line-height: 40px;
   font-weight: 700;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    min-height: 249px;
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 67px;
+    padding: 46px 67px 0;
+    min-width: 400px;
+    text-align: left;
+  }
 }
 
 .intro__review {
   .offset();
+  padding: 26px 75px 47px 26px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 166px;
+    padding: 50px 10px 46px 33px;
+    width: 270px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    padding: 60px 16px 30px 30px;
+  }
 }
 
 .intro__quote {
   .offset();
+  margin-bottom: 20px;
   font-weight: 300;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 44px;
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .intro__author {
   font-weight: 700;
   font-style: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }
 
 .intro__list {
   .offset();
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .intro__item {
+  margin-top: -16px;
+  padding: 22px 65px 38px 24px;
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
   color: @basic-blue;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    width: 50%;
+    min-height: 140px;
+    box-sizing: border-box;
+    padding: 28px 65px 38px 33px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 25%;
+    min-height: 107px;
+    padding: 28px 65px 31px 33px;
+  }
+}
+
+.intro__item:last-child {
+  padding-bottom: 26px;
 }
 
 .intro__item-1 {

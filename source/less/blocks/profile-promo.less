@@ -1,23 +1,86 @@
 .profile-promo {
+  margin-top: -30px;
+  padding: 81px 25px 36px 25px;
   background-color: @light-blue;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+  z-index: 3;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+    padding: 131px 40px 87px 40px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 162px 60px 189px 60px;
+  }
 }
 
 .profile-promo__heading {
   .offset();
+  margin-bottom: 56px;
+  padding: 0 100px 0 25px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
   color: @special-orange;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 95px;
+    padding: 0;
+    font-size: 45px;
+    line-height: 45px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 135px;
+  }
 }
 
 .profile-promo__list {
   .offset();
+  margin-bottom: 43px;
+  padding-left: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+    padding-left: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 60px;
+    padding-left: 70px;
+  }
 }
 
 .profile-promo__item {
+  margin-bottom: 28px;
   line-height: 16px;
   font-weight: 300;
   color: @special-grey;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    padding: 20px 345px 18px 91px;
+  }
+}
+
+.profile-promo__service {
+  margin-bottom: 6px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .profile-promo__price {
@@ -25,7 +88,20 @@
 }
 
 .profile-promo__business-rates {
+  display: block;
   font-weight: 700;
   text-decoration: none;
   color: @blue-link;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 89px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 160px;
+  }
 }

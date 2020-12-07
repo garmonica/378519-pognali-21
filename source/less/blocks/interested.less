@@ -1,16 +1,73 @@
+.interested {
+  margin-top: -30px;
+  padding: 100px 25px 17px 25px;
+  background-color: @menu-blue;
+  text-align: center;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+    padding: 132px 40px 60px 40px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 166px 60px 106px 60px;
+  }
+}
+
 .interested__heading {
   .offset();
+  margin-bottom: 20px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
   color: @special-orange;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 61px;
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 58px;
+  }
 }
 
 .interested__text {
   .offset();
+  margin-bottom: 31px;
+  padding: 0 32px;
   font-weight: 300;
   text-align: center;
+  letter-spacing: 0.01em;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 67px;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 61px;
+  }
+}
+
+.interested__text--questions {
+  padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .interested__login {
@@ -20,11 +77,20 @@
 .interested__wrapper {
   display: flex;
   position: relative;
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 35px 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 73px 67px;
+  }
 }
 
 .interested__input {
   position: relative;
-  padding: 18px 22px;
+  padding: 21px 24px;
   font-family: inherit;
   font-size: 18px;
   line-height: 18px;
@@ -34,9 +100,17 @@
   border: none;
   border-radius: 10px;
   width: 100%;
+  box-sizing: border-box;
 
   &::placeholder {
     color: fade(@special-grey, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 24px 115px 28px 37px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
   }
 }
 
@@ -52,16 +126,45 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    min-width: 80px;
+    border-radius: 0 20px 20px 0;
+  }
 }
 
 .interested__button-text {
   display: none;
 }
 
+.interested__contact-wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 875px;
+    margin: 0 auto;
+  }
+}
+
 .interested__contact {
   display: block;
+  padding: 0 10px 23px 61px;
   font-weight: 700;
   color: @basic-yellow;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    padding: 20px 10px 20px 125px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 35px 10px 29px 125px;
+  }
 }
