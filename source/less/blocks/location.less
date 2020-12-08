@@ -1,30 +1,78 @@
 .location {
+  min-height: 500px;
+  margin-top: -30px;
   position: relative;
-  min-height: 424px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 850px;
+    margin-top: -60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 655px;
+  }
 }
 
 .location__content {
+  padding: 62px 25px 35px 25px;
   position: relative;
   background-color: @basic-yellow;
   z-index: 1;
+  border-radius: 0 0 30px 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 128px 40px 82px 40px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 120px 60px 56px 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
 }
 
 .location__address {
+  margin-bottom: 34px;
+  padding: 0 10px 0 61px;
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+    padding: 0 10px 0 129px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    padding: 23px 15px 33px 121px;
+  }
 }
 
 .location__map-image {
   position: absolute;
-  top: 0;
+  bottom: -30px;
+  width: 100%;
+  height: auto;
+
+  @media (min-width: @tablet-width) {
+    bottom: -60px;
+  }
 }
 
 .location__map {
   position: absolute;
-  top: 0;
+  bottom: -30px;
   border: none;
   width: 100%;
-  height: 424px;
+  height: 100%;
+
+  @media (min-width: @tablet-width) {
+    bottom: -60px;
+  }
 }

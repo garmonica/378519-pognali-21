@@ -1,5 +1,11 @@
 .user-nav {
+  max-width: 380px;
+  margin: 0 auto;
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .user-nav--inner-page {
@@ -28,6 +34,8 @@
 }
 
 .user-nav__login {
+  padding: 10px;
+  flex-grow: 1;
   font-size: 17px;
   line-height: 20px;
 }
