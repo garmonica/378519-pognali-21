@@ -1,19 +1,53 @@
 .user {
+  padding: 25px 25px 10px 25px;
   background-color: @light-blue;
   color: @basic-blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    align-items: flex-start;
+    padding: 66px 75px 60px 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    padding: 73px 60px 64px 125px;
+  }
 }
 
 .user__level {
   width: 100px;
   height: 100px;
+  margin-left: 17px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 94px;
+    height: 94px;
+    order: -2;
+    margin-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: -147px;
+    right: 390px;
+  }
 }
 
 .user__level-number {
   .offset();
+  padding: 15px 0 10px;
   font-size: 38px;
   line-height: 38px;
   font-weight: 700;
+
+  @media (min-width: @desktop-width) {
+    padding: 19px 0 5px;
+    color: @basic-white;
+  }
 }
 
 .user__level-text {
@@ -21,14 +55,37 @@
   font-size: 18px;
   line-height: 18px;
   color: @special-grey;
+
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+  }
 }
 
 .user__avatar {
+  margin-right: 18px;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 94px;
+    height: 94px;
+    margin-right: 0;
+    border-radius: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    top: -190px;
+    right: 155px;
+    border-radius: 7px 7px 0 0;
+  }
 }
 
 .user__change-avatar {
   display: block;
+  width: 100%;
+  margin: 15px 0 34px;
   padding: 10px 30px;
   font-size: 20px;
   font-weight: 500;
@@ -38,23 +95,113 @@
   text-align: center;
   background-color: @special-blue-light;
   border-radius: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 50px 0 53px;
+    padding: 20px 30px;
+    letter-spacing: 0.09em;
+    border-radius: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 13px 30px;
+    position: absolute;
+    max-width: 190px;
+    box-sizing: border-box;
+    top: 0;
+    right: 155px;
+    border-radius: 0 0 10px 10px;
+    letter-spacing: 0;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.user__form {
+  width: 100%;
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    flex-grow: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 140px;
+  }
 }
 
 .user__block {
-  border: 1px solid @light-grey;
+  margin-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
   box-sizing: border-box;
+  border: 1px solid @light-grey;
   border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    .offset();
+  }
+}
+
+.user__block--transport {
+  @media (min-width: @tablet-width) {
+    order: -1;
+    width: auto;
+    flex-grow: 1;
+    align-self: center;
+    margin: 0 65px 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: initial;
+    flex-grow: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 0 103px;
+  }
 }
 
 .user__title {
+  .offset();
+  margin: -11px auto 0;
+  padding: 0 5px;
+  font-size: 16px;
+  line-height: 18px;
   font-weight: 700;
+  background-color: @light-blue;
   color: @basic-blue-light;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    order: 5;
+    margin: 0 auto -10px;
+    padding: 0 18px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+}
+
+.user__title--tags {
+  @media (min-width: @desktop-width) {
+    margin: 0 auto -10px 20px;
+  }
 }
 
 .user__tags {
   width: 100%;
+  box-sizing: border-box;
+  padding: 17px 25px 28px;
   font-family: inherit;
   font-size: 16px;
   line-height: 18px;
@@ -63,8 +210,32 @@
   border: none;
   resize: none;
   outline: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 31px 39px 7px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 33px 39px 7px;
+    width: auto;
+  }
 }
 
 .user__transport-list {
+  width: 100%;
+  margin: 6px 0 14px;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 25px 0 12px;
+  }
+}
+
+.user__transport-link {
+  @media (min-width: @tablet-width) {
+    width: 42px;
+    height: 42px;
+  }
 }

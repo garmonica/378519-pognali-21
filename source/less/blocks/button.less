@@ -11,6 +11,8 @@
   border-radius: 10px;
 
   @media (min-width: @tablet-width) {
+    padding: 27px 33px 28px;
+    text-align: left;
     font-size: 24px;
     line-height: 24px;
     border-radius: 20px;
@@ -28,6 +30,25 @@
   color: @basic-blue;
   text-transform: uppercase;
   border-radius: 25px;
+}
+
+.button--next-step {
+  margin-bottom: 10px;
+  padding: 10px;
+
+  @media (min-width: @tablet-width) {
+    width: 41%;
+    padding: 28px 33px;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+    text-align: left;
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 22%;
+  }
 }
 
 .button--menu-login {

@@ -1,8 +1,21 @@
 .page-main__heading {
   .offset();
+  padding: 92px 25px 15px 25px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
   background-color: @basic-blue;
   color: @basic-white;
+  border-radius: 0 0 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 220px 40px 70px 75px;
+    font-size: 60px;
+    line-height: 60px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 218px 530px 73px 124px;
+  }
 }
