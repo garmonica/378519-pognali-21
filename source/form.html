@@ -8,11 +8,11 @@
     <link rel="icon" href="img/favicon.png" type="image/png">
   </head>
   <body class="page__body page__body--inner">
-    <header class="page-header">
-      <nav class="main-nav main-nav--closed">
+    <header class="page-header page-header--closed page-header--nojs">
+      <nav class="main-nav container">
         <a class="main-nav__logo logo" href="index.html">
-          <img class="logo__image logo__image--static logo__image--shown" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип сервиса для путешествий «Погнали»">
-          <img class="logo__image logo__image--scroll" src="https://via.placeholder.com/100x15" width="100" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          <img class="logo__image logo__image--closed" src="img/logo-mobile.png" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          <img class="logo__image logo__image--opened" src="img/logo-mobile-scroll.png" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
         </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <a class="main-nav__login button button--menu-login" href="blank.html">Авторизация</a>
@@ -21,7 +21,7 @@
             <a class="site-nav__link" href="blank.html">О сервисе</a>
           </li>
           <li class="site-nav__item">
-            <a class="site-nav__link" href="">Направления</a>
+            <a class="site-nav__link" href="form.html">Направления</a>
           </li>
           <li class="site-nav__item">
             <a class="site-nav__link" href="catalog.html">Попутчики</a>
@@ -63,14 +63,14 @@
           <p class="user__level-text">level</p>
         </div>
         <img class="user__avatar" src="https://via.placeholder.com/100x100" alt="Пользователь Петя Демин">
-        <a class="user__change-avatar" href="blank.html">Сменить фото</a>
-        <div class="user__block">
-          <form class="user__form" action="https://echo.htmlacademy.ru" method="post">
-            <h3 class="user__title">Тэги</h3>
+        <a class="user__change-avatar" href="blank.html"><span>Сменить</span> фото</a>
+        <form class="user__form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="user__block user__block--tags">
+            <h3 class="user__title user__title--tags">Тэги</h3>
             <textarea class="user__tags" aria-label="Поле для ввода тэгов">#бургер #бар #футбол #концерт #крафт</textarea>
-          </form>
-        </div>
-        <div class="user__block">
+          </div>
+        </form>
+        <div class="user__block user__block--transport">
           <h3 class="user__title">Транспорт</h3>
           <ul class="user__transport-list transport">
             <li class="user__transport-item transport__item">
@@ -115,52 +115,72 @@
       </section>
       <section class="new-plan">
         <h2 class="new-plan__heading">Добавить план:</h2>
-        <div class="new-plan__buttons">
-          <button class="new-plan__button new-plan__button--active" aria-label="Первый шаг"></button>
-          <button class="new-plan__button" aria-label="Второй шаг"></button>
-          <button class="new-plan__button" aria-label="Третий шаг"></button>
-        </div>
         <form class="new-plan__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="new-plan__step" id="step-one">
-            <legend class="new-plan__title">Шаг 1. Даты пребывания</legend>
-            <p class="new-plan__description">
-              Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.
-            </p>
-            <div class="new-plan__field-wrapper">
-              <label class="new-plan__label" for="companions-number-field">Ищу попутчиков:</label>
-              <p class="new-plan__unit">чел.</p>
-              <div class="new-plan__input-wrapper">
-                <button class="new-plan__input-less" type="button" aria-label="Меньше">-</button>
-                <input class="new-plan__input" type="number" name="companions-number" id="companions-number-field" value="2" min="1" max="5">
-                <button class="new-plan__input-more" type="button" aria-label="Больше">+</button>
+          <div class="new-plan__step" id="step-one">
+            <div class="new-plan__top-wrapper">
+              <div class="new-plan__description-wrapper">
+                <h3 class="new-plan__title">Шаг 1.<br> Даты пребывания</h3>
+                <p class="new-plan__description">
+                  Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую длительность.
+                </p>
+              </div>
+              <div class="new-plan__indicator-wrapper">
+                <div class="new-plan__indicator new-plan__indicator--current">
+                  <div class="new-plan__marker">
+                    <span class="visually-hidden">Первый шаг</span>
+                  </div>
+                  <span class="new-plan__indicator-text">Даты</span>
+                </div>
+                <div class="new-plan__indicator">
+                  <div class="new-plan__marker">
+                    <span class="visually-hidden">Второй шаг</span>
+                  </div>
+                  <span class="new-plan__indicator-text">Маршрут</span>
+                </div>
+                <div class="new-plan__indicator">
+                  <div class="new-plan__marker">
+                    <span class="visually-hidden">Третий шаг</span>
+                  </div>
+                  <span class="new-plan__indicator-text">Развлечения</span>
+                </div>
               </div>
             </div>
-            <div class="new-plan__field-wrapper">
-              <label class="new-plan__label" for="period-field">Длительность:</label>
-              <p class="new-plan__unit">дн.</p>
-              <div>
-              <div class="new-plan__input-wrapper">
-                <button class="new-plan__input-less" type="button" aria-label="Меньше">-</button>
-                <input class="new-plan__input" type="number" name="period" id="period-field" value="3" min="1" max="14">
-                <button class="new-plan__input-more" type="button" aria-label="Больше">+</button>
+            <div class="new-plan__wrapper">
+              <div class="new-plan__field-wrapper new-plan__field-wrapper--companions">
+                <label class="new-plan__label" for="companions-number-field">Ищу попутчиков:</label>
+                <p class="new-plan__unit">чел.</p>
+                <div class="new-plan__input-wrapper">
+                  <button class="new-plan__input-button new-plan__input-button--less" type="button" aria-label="Меньше">-</button>
+                  <input class="new-plan__input" type="number" name="companions-number" id="companions-number-field" value="2" min="1" max="5">
+                  <button class="new-plan__input-button new-plan__input-button--more" type="button" aria-label="Больше">+</button>
+                </div>
               </div>
+              <div class="new-plan__field-wrapper">
+                <label class="new-plan__label" for="period-field">Длительность:</label>
+                <p class="new-plan__unit">дн.</p>
+                <div class="new-plan__input-wrapper">
+                  <button class="new-plan__input-button new-plan__input-button--less" type="button" aria-label="Меньше">-</button>
+                  <input class="new-plan__input" type="number" name="period" id="period-field" value="3" min="1" max="14">
+                  <button class="new-plan__input-button new-plan__input-button--more" type="button" aria-label="Больше">+</button>
+                </div>
+              </div>
+              <input class="new-plan__checkbox visually-hidden" type="checkbox" name="with-children" id="with-children-field">
+              <label class="new-plan__checkbox-label" for="with-children-field">Можно с детьми</label>
             </div>
-            <input class="new-plan__checkbox" type="checkbox" name="with-children" id="with-children-field">
-            <label class="new-plan__checkbox-label" for="with-children-field">Можно с детьми</label>
             <table class="new-plan__calendar">
               <caption class="new-plan__month">
-                <button class="new-plan__month-previous" type="button" aria-label="Предыдущий месяц">&lt;</button>
+                <button class="new-plan__month-button new-plan__month-button--previous" type="button" aria-label="Предыдущий месяц">&lt;</button>
                 Март 2019
-                <button class="new-plan__month-next" type="button" aria-label="Следующий месяц">  &gt;</button>
+                <button class="new-plan__month-button new-plan__month-button--next" type="button" aria-label="Следующий месяц">  &gt;</button>
               </caption>
-              <tr>
-                <th class="new-plan__weekday">П</th>
-                <th class="new-plan__weekday">В</th>
-                <th class="new-plan__weekday">С</th>
-                <th class="new-plan__weekday">Ч</th>
-                <th class="new-plan__weekday">П</th>
-                <th class="new-plan__weekday">С</th>
-                <th class="new-plan__weekday">В</th>
+              <tr class="new-plan__week">
+                <th class="new-plan__weekday">П<span>н</span></th>
+                <th class="new-plan__weekday">В<span>т</span></th>
+                <th class="new-plan__weekday">С<span>р</span></th>
+                <th class="new-plan__weekday">Ч<span>т</span></th>
+                <th class="new-plan__weekday">П<span>т</span></th>
+                <th class="new-plan__weekday">С<span>б</span></th>
+                <th class="new-plan__weekday">В<span>с</span></th>
               </tr>
               <tr>
                 <td class="new-plan__day">23</td>
@@ -202,15 +222,19 @@
                 <td class="new-plan__day">23</td>
                 <td class="new-plan__day">24</td>
                 <td class="new-plan__day">25</td>
-                <td class="new-plan__day new-plan__day--selected new-plan__day--current">26</td>
+                <td class="new-plan__day new-plan__day--selected new-plan__day--current">26
+                  <span>Заезд</span>
+                </td>
                 <td class="new-plan__day new-plan__day--selected">27</td>
-                <td class="new-plan__day new-plan__day--selected">28</td>
+                <td class="new-plan__day new-plan__day--selected">28
+                  <span>Выезд</span>
+                </td>
                 <td class="new-plan__day new-plan__day--after">29</td>
               </tr>
               <tr>
                 <td class="new-plan__day new-plan__day--after">30</td>
                 <td class="new-plan__day new-plan__day--after">31</td>
-                <td class="new-plan__day new-plan__day--after">1</td>
+                <td class="new-plan__day new-plan__day--after">1 <span>апр</span></td>
                 <td class="new-plan__day new-plan__day--after">2</td>
                 <td class="new-plan__day new-plan__day--after">3</td>
                 <td class="new-plan__day new-plan__day--after">4</td>
@@ -218,33 +242,51 @@
               </tr>
             </table>
             <a class="button button--next-step" href="#step-two">Следующий шаг</a>
-          </fieldset>
-          <fieldset class="new-plan__step" id="step-two">
-            <legend class="new-plan__title">Шаг 2. Маршрут</legend>
-            <p class="new-plan__description">
-              Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
-            </p>
+          </div>
+          <div class="new-plan__step" id="step-two">
+            <div class="new-plan__top-wrapper">
+              <div class="new-plan__description-wrapper">
+                <h3 class="new-plan__title">Шаг 2.<br> Маршрут</h3>
+                <p class="new-plan__description">
+                  Укажите страны, которые вы хотели бы посетить.<br> Это&nbsp;может быть одна или сразу несколько.
+                </p>
+              </div>
+              <div class="new-plan__indicator-wrapper">
+                <div class="new-plan__indicator">
+                  <div class="new-plan__marker">
+                    <span class="visually-hidden">Первый шаг</span>
+                  </div>
+                  <span class="new-plan__indicator-text">Даты</span>
+                </div>
+                <div class="new-plan__indicator new-plan__indicator--current">
+                  <div class="new-plan__marker">
+                    <span class="visually-hidden">Второй шаг</span>
+                  </div>
+                  <span class="new-plan__indicator-text">Маршрут</span>
+                </div>
+                <div class="new-plan__indicator">
+                  <div class="new-plan__marker">
+                    <span class="visually-hidden">Третий шаг</span>
+                  </div>
+                  <span class="new-plan__indicator-text">Развлечения</span>
+                </div>
+              </div>
+            </div>
             <ul class="new-plan__countries-list">
               <li class="new-plan__countries-item new-plan__countries-item--selected">
-                <select class="new-plan__select-country" name="selected-country">
+                <select class="new-plan__select-country new-plan__select-country--selected" name="selected-country">
                   <option class="new-plan__option" value="bosnia-and-herzegovina">Босния и герцеговина</option>
                 </select>
-                <div class="new-plan__flag">
-                  <img class="new-plan__flag-img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Генцеговины">
-                </div>
                 <button class="new-plan__remove" aria-label="Убрать из списка">x</button>
               </li>
               <li class="new-plan__countries-item new-plan__countries-item--selected">
-                <select class="new-plan__select-country" name="selected-country">
+                <select class="new-plan__select-country new-plan__select-country--selected" name="selected-country">
                   <option class="new-plan__option" value="czech">Чехия</option>
                 </select>
-                <div class="new-plan__flag">
-                  <img class="new-plan__flag-img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
-                </div>
                 <button class="new-plan__remove" aria-label="Убрать из списка">x</button>
               </li>
               <li class="new-plan__countries-item new-plan__countries-item--not-selected">
-                <select class="new-plan__select-country">
+                <select class="new-plan__select-country new-plan__select-country--not-selected">
                   <option class="new-plan__option">Выберите страну</option>
                 </select>
                 <div class="new-plan__country-selection country-selection">
@@ -280,12 +322,12 @@
                     <tr>
                       <td class="country-selection__letter">ч</td>
                       <td class="country-selection__letter">ш</td>
-                      <td class="country-selection__letter">щ</td>
                       <td class="country-selection__letter">э</td>
                       <td class="country-selection__letter">ю</td>
+                      <td class="country-selection__letter">я</td>
                     </tr>
                   </table>
-                  <ul class="country-selection__list">
+                  <ul class="new-plan__country-selection-list country-selection__list">
                     <li class="country-selection__item">Австралия</li>
                     <li class="country-selection__item">Австрия</li>
                     <li class="country-selection__item">Азербайджан</li>
@@ -303,35 +345,61 @@
               </li>
             </ul>
             <button class="new-plan__new-country">Добавить страну</button>
-            <a class="button button--next-step" href="#step-three">Следующий шаг</a>
-            <a class="new-plan__previous-step" href="#step-one">На шаг назад</a>
-          </fieldset>
-          <fieldset class="new-plan__step entertainment" id="step-three">
-            <legend class="new-plan__title">Шаг 3. Развлечения</legend>
-            <p class="new-plan__description">
-              Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
-            </p>
+            <div class="new-plan__buttons-wrapper">
+              <a class="button button--next-step" href="#step-three">Следующий шаг</a>
+              <a class="new-plan__previous-step" href="#step-one">На шаг назад</a>
+            </div>
+          </div>
+          <div class="new-plan__step entertainment" id="step-three">
+            <div class="new-plan__top-wrapper">
+              <div class="new-plan__description-wrapper">
+                <h3 class="new-plan__title">Шаг 3.<br> Развлечения</h3>
+                <p class="new-plan__description">
+                  Наконец, расскажите о своих планах времяпровождения.<br> Можно писать в свободной форме и ставить тэги.
+                </p>
+              </div>
+              <div class="new-plan__indicator-wrapper">
+                <div class="new-plan__indicator">
+                  <div class="new-plan__marker">
+                    <span class="visually-hidden">Первый шаг</span>
+                  </div>
+                  <span class="new-plan__indicator-text">Даты</span>
+                </div>
+                <div class="new-plan__indicator">
+                  <div class="new-plan__marker">
+                    <span class="visually-hidden">Второй шаг</span>
+                  </div>
+                  <span class="new-plan__indicator-text">Маршрут</span>
+                </div>
+                <div class="new-plan__indicator new-plan__indicator--current">
+                  <div class="new-plan__marker">
+                    <span class="visually-hidden">Третий шаг</span>
+                  </div>
+                  <span class="new-plan__indicator-text">Развлечения</span>
+                </div>
+              </div>
+            </div>
             <ul class="entertainment__list">
               <li class="entertainment__item">
                 <label class="entertainment__country" for="text-field-bosnia">Босния и Герцеговина</label>
                 <textarea class="entertainment__plan" name="entertainment-bosnia-and-herzegovina" id="text-field-bosnia" placeholder="План действий"></textarea>
-                <img class="entertainment__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
               </li>
               <li class="entertainment__item">
                 <label class="entertainment__country" for="text-field-czech">Чехия</label>
-                <textarea class="entertainment__plan" name="entertainment-czech" id="text-field-czech" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-                <img class="entertainment__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+                <textarea class="entertainment__plan" name="entertainment-czech" id="text-field-czech" placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
               </li>
             </ul>
-            <button class="new-plan__submit button button--submit" type="submit">Отправить</button>
-            <a class="new-plan__previous-step" href="#step-two">На шаг назад</a>
-          </fieldset>
+            <div class="new-plan__buttons-wrapper">
+              <button class="new-plan__submit button button--submit" type="submit">Отправить</button>
+              <a class="new-plan__previous-step" href="#step-two">На шаг назад</a>
+            </div>
+          </div>
         </form>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--form">
       <a class="page-footer__logo logo" href="index.html">
-        <img class="logo__image" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+        <img class="page-footer__logo-image" src="img/logo-mobile-scroll.png" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
       </a>
       <ul class="page-footer__social social">
         <li>
@@ -348,5 +416,6 @@
         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Онлайн-курс «Адаптивная вёрстка сайтов и автоматизация»">лого Академии</a>
       </p>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
