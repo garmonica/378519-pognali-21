@@ -1,0 +1,53 @@
+.input-wrapper {
+  position: relative;
+}
+
+.input-number {
+  width: 100%;
+  padding: 11px 50px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  color: inherit;
+  text-align: center;
+  border: 1px solid @light-grey;
+  box-sizing: border-box;
+  border-radius: 4px;
+  appearance: textfield;
+
+  @media (min-width: @tablet-width) {
+    padding: 22px 50px;
+    font-size: 20px;
+  }
+}
+
+.input-number::-webkit-outer-spin-button,
+.input-number::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.input-button-number {
+  padding: 0 18px;
+  border: none;
+  position: absolute;
+  font-family: inherit;
+  height: 100%;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 25px;
+  }
+}
+
+.input-button-number--less {
+  left: 0;
+}
+
+.input-button-number--more {
+  right: 0;
+}

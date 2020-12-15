@@ -1,51 +1,115 @@
+.result {
+  @media (min-width: @desktop-width) {
+    width: 72%;
+    flex-shrink: 0;
+    margin-right: 85px;
+  }
+}
+
 .result__list {
   .offset();
   list-style: none;
 }
 
 .result__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 10px;
+  padding: 15px 16px 15px 20px;
+  position: relative;
   background-color: @basic-white;
   border-radius: 20px;
-}
 
-.result__avatar {
-  border-radius: 50%;
-}
+  @media (min-width: @tablet-width) {
+    margin-bottom: 39px;
+    padding: 32px 24px 20px 35px;
+  }
 
-.result__name {
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: bold;
-  color: @basic-blue-light;
-}
-
-.result__heart {
-  padding-left: 40px;
-  position: relative;
-  font-family: inherit;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -7px;
-    width: 31px;
-    height: 31px;
-    border-radius: 50%;
-    background-color: @likes-bg;
+  @media (min-width: @desktop-width) {
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    padding: 45px 42px 38px 35px;
   }
 }
 
-.result__likes-number {
-  font-size: 14px;
-  line-height: 16px;
+.result__avatar {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border-radius: 50%;
+  top: 15px;
+  left: 18px;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    width: 190px;
+    height: 190px;
+    top: 35px;
+    left: 35px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 20px 0 0 20px;
+  }
+}
+
+.result__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.result__wrapper {
+  @media (min-width: @tablet-width) {
+    width: 49%;
+    padding-left: 223px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 38%;
+    min-height: 135px;
+  }
+}
+
+.result__name {
+  .offset();
+  min-height: 80px;
+  padding: 0 43px 0 85px;
+  font-size: 20px;
+  line-height: 20px;
   font-weight: 700;
-  text-transform: uppercase;
-  color: @basic-blue;
+  color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    min-height: auto;
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 6px;
+  }
+}
+
+.result__tags {
+  margin-bottom: 7px;
+  padding: 0 38px 0 6px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px 0 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 25px 0 6px;
+  }
 }
 
 .result__tags-link {
@@ -53,33 +117,220 @@
   line-height: 18px;
   color: @special-grey;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.result__visit {
+  width: 100%;
+  margin-bottom: 2px;
+
+  @media (min-width: @tablet-width) {
+    order: 7;
+    padding-top: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: initial;
+    width: 27%;
+    padding-top: 0;
+  }
+
+  .result__description {
+    @media (min-width: @tablet-width) {
+      display: inline-block;
+      margin-left: 43px;
+      margin-bottom: 17px;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
 }
 
 .result__description {
+  display: inline-block;
   .offset();
+  margin-bottom: 15px;
+  padding: 0 6px;
   font-size: 15px;
   line-height: 16px;
+  vertical-align: baseline;
   color: @special-grey;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .result__countries-list {
   .offset();
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
 
 .result__country-title {
+  display: block;
   .offset();
+  padding: 6px 20px 6px 45px;
   font-size: 15px;
   line-height: 16px;
   font-weight: 500;
   text-transform: uppercase;
+  text-decoration: none;
   color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    padding: 6px 25px 6px 48px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 6px 25px 11px 54px;
+  }
+}
+
+.result__transport {
+  @media (min-width: @tablet-width) {
+    padding: 0 14px 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 6;
+    width: 20%;
+    padding: 0;
+  }
+}
+
+.result__transport-list {
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.result__transport-link {
+  width: 31px;
+  height: 31px;
+
+  @media (min-width: @tablet-width) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.result__button-wrapper {
+  order: 7;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    order: initial;
+    display: flex;
+    width: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 38%;
+  }
+}
+
+.result__invite {
+  margin: 13px 3px 8px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 7px 3px 8px 220px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.result__heart {
+  padding-left: 40px;
+  position: absolute;
+  top: 62px;
+  left: 64px;
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    align-self: flex-start;
+    position: static;
+    padding: 22px 10px 17px 54px;
+  }
+}
+
+.result__likes-number {
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @basic-blue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -36px;
+    top: -9px;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background-color: @likes-bg;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      top: -14px;
+      left: -56px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.result__level {
+  @media (min-width: @desktop-width) {
+    order: 7;
+    width: 7%;
+  }
+
+  .result__description {
+    margin-bottom: 11px;
+  }
 }
 
 .result__level-value {
   width: 45px;
   height: 45px;
   outline: 1px solid orange;
+
+  @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .result__level-number {
@@ -96,7 +347,12 @@
   display: none;
 }
 
+// Pagination
 .result__more {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  padding: 8px 10px 8px 40px;
   font-family: inherit;
   font-size: 17px;
   line-height: 30px;
@@ -105,15 +361,89 @@
   color: @basic-blue-light;
   background-color: transparent;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 47px;
+    padding: 8px 11px 8px 54px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 35px 87px 27px 61px;
+  }
+}
+
+.result__pagination {
+  margin-bottom: 52px;
+  background-color: @basic-white;
+  border-radius: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 85px;
+    padding: 25px 25px 23px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 52px;
+  }
 }
 
 .result__pagination-list {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    .offset();
+    list-style: none;
+  }
+}
+
+.result__pagination-page {
+  @media (min-width: @tablet-width) {
+    display: block;
+    min-width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 14px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    color: @basic-blue-light;
+    text-decoration: none;
+    text-align: center;
+  }
 }
 
 .result__page-direction {
-  width: 270px;
-  height: 50px;
+  display: flex;
+  width: 100%;
+  height: 52px;
   background-color: @basic-white;
   border-radius: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
+}
+
+.result__previous,
+.result__next {
+  display: block;
+  width: 50%;
+  height: 100%;
+  outline: 1px solid tomato;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    height: auto;
+    padding: 10px 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 22px;
+  }
 }

@@ -1,0 +1,129 @@
+.calendar {
+  border-collapse: collapse;
+}
+
+.calendar__month {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 10px 0 12px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  border-top: 1px solid @blue-table;
+  border-bottom: 1px solid @blue-table;
+
+  @media (min-width: @tablet-width) {
+    padding: 24px 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.calendar__month-button {
+  position: absolute;
+}
+
+.calendar__month-button--previous {
+  left: 0;
+}
+
+.calendar__month-button--next {
+  right: 0;
+}
+
+.calendar__weekday {
+  padding: 2px 0 8px;
+  font-size: 14px;
+  line-height: 18px;
+  color: @special-grey;
+  font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    padding: 19px 0 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 19px 16px;
+    text-align: left;
+  }
+
+  span {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: inline;
+    }
+  }
+}
+
+.calendar__weekday:nth-child(6),
+.calendar__weekday:nth-child(7) {
+  color: @calendar-red;
+}
+
+.calendar__day {
+  width: 100%/7;
+  box-sizing: border-box;
+  height: 31px;
+  font-size: 14px;
+  line-height: 18px;
+  color: fade(@special-grey, 30%);
+  border: 1px solid @blue-table;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    height: 69px;
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 71px;
+    padding: 12px 0 0 15px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  span {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: inline;
+    }
+  }
+}
+
+.calendar__day--selected {
+  font-weight: 500;
+  color: @basic-white;
+  background-color: @basic-blue-light;
+
+  @media (min-width: @desktop-width) {
+    font-weight: 400;
+  }
+
+  span {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+      padding-top: 10px;
+    }
+  }
+}
+
+.calendar__day--current {
+  outline: 4px solid @calendar-red;
+  outline-offset: -3px;
+}
+
+.calendar__day--after {
+  font-weight: 500;
+  color: @basic-blue-light;
+  background-color: @light-blue;
+
+  @media (min-width: @desktop-width) {
+    font-weight: 400;
+    color: @special-grey;
+  }
+}
