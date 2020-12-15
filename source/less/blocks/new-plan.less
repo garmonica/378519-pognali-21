@@ -297,7 +297,6 @@
 .new-plan__input-wrapper {
   width: 100%;
   margin-top: 7px;
-  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-top: 24px;
@@ -311,84 +310,9 @@
   }
 }
 
-.new-plan__input {
-  width: 100%;
-  padding: 11px 50px;
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 500;
-  color: inherit;
-  text-align: center;
-  border: 1px solid @light-grey;
-  box-sizing: border-box;
-  border-radius: 4px;
-  appearance: textfield;
-
-  @media (min-width: @tablet-width) {
-    padding: 22px 50px;
-    font-size: 20px;
-  }
-}
-
-.new-plan__input::-webkit-outer-spin-button,
-.new-plan__input::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
-}
-
-.new-plan__input-button {
-  padding: 0 18px;
-  border: none;
-  position: absolute;
-  font-family: inherit;
-  height: 100%;
-  cursor: pointer;
-
-  @media (min-width: @tablet-width) {
-    padding: 0 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0 25px;
-  }
-}
-
-.new-plan__input-button--less {
-  left: 0;
-}
-
-.new-plan__input-button--more {
-  right: 0;
-}
-
-.new-plan__checkbox-label {
-  display: block;
-  margin-bottom: 18px;
-  padding: 10px 40px;
-  font-size: 15px;
-  line-height: 15px;
-
-  @media (min-width: @tablet-width) {
-    order: -1;
-    margin-bottom: 22px;
-    padding: 10px 40px 10px 58px;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 30px;
-    padding: 10px 0 10px 58px;
-  }
-}
-
 .new-plan__calendar {
   width: 100%;
   margin-bottom: 21px;
-  border-collapse: collapse;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 48px;
@@ -396,132 +320,6 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 57px;
-  }
-}
-
-.new-plan__month {
-  position: relative;
-  margin-bottom: 20px;
-  padding: 10px 0 12px;
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: 700;
-  border-top: 1px solid @blue-table;
-  border-bottom: 1px solid @blue-table;
-
-  @media (min-width: @tablet-width) {
-    padding: 24px 0;
-    font-size: 36px;
-    line-height: 36px;
-  }
-}
-
-.new-plan__month-button {
-  position: absolute;
-}
-
-.new-plan__month-button--previous {
-  left: 0;
-}
-
-.new-plan__month-button--next {
-  right: 0;
-}
-
-.new-plan__weekday {
-  padding: 2px 0 8px;
-  font-size: 14px;
-  line-height: 18px;
-  color: @special-grey;
-  font-weight: 400;
-
-  @media (min-width: @tablet-width) {
-    font-size: 18px;
-    padding: 19px 0 10px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0 0 19px 16px;
-    text-align: left;
-  }
-
-  span {
-    display: none;
-
-    @media (min-width: @tablet-width) {
-      display: inline;
-    }
-  }
-}
-
-.new-plan__weekday:nth-child(6),
-.new-plan__weekday:nth-child(7) {
-  color: @calendar-red;
-}
-
-.new-plan__day {
-  width: 100%/7;
-  box-sizing: border-box;
-  height: 31px;
-  font-size: 14px;
-  line-height: 18px;
-  color: fade(@special-grey, 30%);
-  border: 1px solid @blue-table;
-  text-align: center;
-
-  @media (min-width: @tablet-width) {
-    height: 69px;
-    font-size: 18px;
-  }
-
-  @media (min-width: @desktop-width) {
-    height: 71px;
-    padding: 12px 0 0 15px;
-    text-align: left;
-    vertical-align: top;
-  }
-
-  span {
-    display: none;
-
-    @media (min-width: @desktop-width) {
-      display: inline;
-    }
-  }
-}
-
-.new-plan__day--selected {
-  font-weight: 500;
-  color: @basic-white;
-  background-color: @basic-blue-light;
-
-  @media (min-width: @desktop-width) {
-    font-weight: 400;
-  }
-
-  span {
-    display: none;
-
-    @media (min-width: @desktop-width) {
-      display: block;
-      padding-top: 10px;
-    }
-  }
-}
-
-.new-plan__day--current {
-  outline: 4px solid @calendar-red;
-  outline-offset: -3px;
-}
-
-.new-plan__day--after {
-  font-weight: 500;
-  color: @basic-blue-light;
-  background-color: @light-blue;
-
-  @media (min-width: @desktop-width) {
-    font-weight: 400;
-    color: @special-grey;
   }
 }
 
@@ -667,7 +465,7 @@
     width: 100%;
     padding-left: 30px;
     box-sizing: border-box;
-    // display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     top: 70px;

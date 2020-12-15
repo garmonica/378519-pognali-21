@@ -1,0 +1,53 @@
+.checkbox__label {
+  display: block;
+  font-size: 15px;
+  line-height: 15px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+
+.checkbox__label--new-plan {
+  margin-bottom: 18px;
+  padding: 10px 40px;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+    margin-bottom: 22px;
+    padding: 10px 40px 10px 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 30px;
+    padding: 10px 0 10px 58px;
+  }
+}
+
+.checkbox__label--preferences {
+  line-height: 20px;
+  color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+}
+
+.checkbox__label--transport {
+  display: block;
+  width: 32px;
+  height: 31px;
+  border-radius: 50%;
+  background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
+}

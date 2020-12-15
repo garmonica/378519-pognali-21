@@ -149,96 +149,96 @@
               <div class="new-plan__field-wrapper new-plan__field-wrapper--companions">
                 <label class="new-plan__label" for="companions-number-field">Ищу попутчиков:</label>
                 <p class="new-plan__unit">чел.</p>
-                <div class="new-plan__input-wrapper">
-                  <button class="new-plan__input-button new-plan__input-button--less" type="button" aria-label="Меньше">-</button>
-                  <input class="new-plan__input" type="number" name="companions-number" id="companions-number-field" value="2" min="1" max="5">
-                  <button class="new-plan__input-button new-plan__input-button--more" type="button" aria-label="Больше">+</button>
+                <div class="new-plan__input-wrapper input-wrapper">
+                  <button class="new-plan__input-button-number input-button-number input-button-number--less" type="button" aria-label="Меньше">-</button>
+                  <input class="new-plan__input-number input-number" type="number" name="companions-number" id="companions-number-field" value="2" min="1" max="5">
+                  <button class="new-plan__input-button-number input-button-number input-button-number--more" type="button" aria-label="Больше">+</button>
                 </div>
               </div>
               <div class="new-plan__field-wrapper">
                 <label class="new-plan__label" for="period-field">Длительность:</label>
                 <p class="new-plan__unit">дн.</p>
-                <div class="new-plan__input-wrapper">
-                  <button class="new-plan__input-button new-plan__input-button--less" type="button" aria-label="Меньше">-</button>
-                  <input class="new-plan__input" type="number" name="period" id="period-field" value="3" min="1" max="14">
-                  <button class="new-plan__input-button new-plan__input-button--more" type="button" aria-label="Больше">+</button>
+                <div class="new-plan__input-wrapper input-wrapper">
+                  <button class="new-plan__input-button-number input-button-number input-button-number--less" type="button" aria-label="Меньше">-</button>
+                  <input class="new-plan__input-number input-number" type="number" name="period" id="period-field" value="3" min="1" max="14">
+                  <button class="new-plan__input-button-number input-button-number input-button-number--more" type="button" aria-label="Больше">+</button>
                 </div>
               </div>
-              <input class="new-plan__checkbox visually-hidden" type="checkbox" name="with-children" id="with-children-field">
-              <label class="new-plan__checkbox-label" for="with-children-field">Можно с детьми</label>
+              <input class="checkbox__input visually-hidden" type="checkbox" name="with-children" id="with-children-field">
+              <label class="checkbox__label checkbox__label--new-plan" for="with-children-field">Можно с детьми</label>
             </div>
-            <table class="new-plan__calendar">
-              <caption class="new-plan__month">
-                <button class="new-plan__month-button new-plan__month-button--previous" type="button" aria-label="Предыдущий месяц">&lt;</button>
+            <table class="new-plan__calendar calendar">
+              <caption class="calendar__month">
+                <button class="calendar__month-button calendar__month-button--previous" type="button" aria-label="Предыдущий месяц">&lt;</button>
                 Март 2019
-                <button class="new-plan__month-button new-plan__month-button--next" type="button" aria-label="Следующий месяц">  &gt;</button>
+                <button class="calendar__month-button calendar__month-button--next" type="button" aria-label="Следующий месяц">  &gt;</button>
               </caption>
-              <tr class="new-plan__week">
-                <th class="new-plan__weekday">П<span>н</span></th>
-                <th class="new-plan__weekday">В<span>т</span></th>
-                <th class="new-plan__weekday">С<span>р</span></th>
-                <th class="new-plan__weekday">Ч<span>т</span></th>
-                <th class="new-plan__weekday">П<span>т</span></th>
-                <th class="new-plan__weekday">С<span>б</span></th>
-                <th class="new-plan__weekday">В<span>с</span></th>
+              <tr class="calendar__week">
+                <th class="calendar__weekday">П<span>н</span></th>
+                <th class="calendar__weekday">В<span>т</span></th>
+                <th class="calendar__weekday">С<span>р</span></th>
+                <th class="calendar__weekday">Ч<span>т</span></th>
+                <th class="calendar__weekday">П<span>т</span></th>
+                <th class="calendar__weekday">С<span>б</span></th>
+                <th class="calendar__weekday">В<span>с</span></th>
               </tr>
               <tr>
-                <td class="new-plan__day">23</td>
-                <td class="new-plan__day">24</td>
-                <td class="new-plan__day">25</td>
-                <td class="new-plan__day">26</td>
-                <td class="new-plan__day">27</td>
-                <td class="new-plan__day">28</td>
-                <td class="new-plan__day">1</td>
+                <td class="calendar__day">23</td>
+                <td class="calendar__day">24</td>
+                <td class="calendar__day">25</td>
+                <td class="calendar__day">26</td>
+                <td class="calendar__day">27</td>
+                <td class="calendar__day">28</td>
+                <td class="calendar__day">1</td>
               </tr>
               <tr>
-                <td class="new-plan__day">2</td>
-                <td class="new-plan__day">3</td>
-                <td class="new-plan__day">4</td>
-                <td class="new-plan__day">5</td>
-                <td class="new-plan__day">6</td>
-                <td class="new-plan__day">7</td>
-                <td class="new-plan__day">8</td>
+                <td class="calendar__day">2</td>
+                <td class="calendar__day">3</td>
+                <td class="calendar__day">4</td>
+                <td class="calendar__day">5</td>
+                <td class="calendar__day">6</td>
+                <td class="calendar__day">7</td>
+                <td class="calendar__day">8</td>
               </tr>
               <tr>
-                <td class="new-plan__day">9</td>
-                <td class="new-plan__day">10</td>
-                <td class="new-plan__day">11</td>
-                <td class="new-plan__day">12</td>
-                <td class="new-plan__day">13</td>
-                <td class="new-plan__day">14</td>
-                <td class="new-plan__day">15</td>
+                <td class="calendar__day">9</td>
+                <td class="calendar__day">10</td>
+                <td class="calendar__day">11</td>
+                <td class="calendar__day">12</td>
+                <td class="calendar__day">13</td>
+                <td class="calendar__day">14</td>
+                <td class="calendar__day">15</td>
               </tr>
               <tr>
-                <td class="new-plan__day">16</td>
-                <td class="new-plan__day">17</td>
-                <td class="new-plan__day">18</td>
-                <td class="new-plan__day">19</td>
-                <td class="new-plan__day">20</td>
-                <td class="new-plan__day">21</td>
-                <td class="new-plan__day">22</td>
+                <td class="calendar__day">16</td>
+                <td class="calendar__day">17</td>
+                <td class="calendar__day">18</td>
+                <td class="calendar__day">19</td>
+                <td class="calendar__day">20</td>
+                <td class="calendar__day">21</td>
+                <td class="calendar__day">22</td>
               </tr>
               <tr>
-                <td class="new-plan__day">23</td>
-                <td class="new-plan__day">24</td>
-                <td class="new-plan__day">25</td>
-                <td class="new-plan__day new-plan__day--selected new-plan__day--current">26
+                <td class="calendar__day">23</td>
+                <td class="calendar__day">24</td>
+                <td class="calendar__day">25</td>
+                <td class="calendar__day calendar__day--selected calendar__day--current">26
                   <span>Заезд</span>
                 </td>
-                <td class="new-plan__day new-plan__day--selected">27</td>
-                <td class="new-plan__day new-plan__day--selected">28
+                <td class="calendar__day calendar__day--selected">27</td>
+                <td class="calendar__day calendar__day--selected">28
                   <span>Выезд</span>
                 </td>
-                <td class="new-plan__day new-plan__day--after">29</td>
+                <td class="calendar__day calendar__day--after">29</td>
               </tr>
               <tr>
-                <td class="new-plan__day new-plan__day--after">30</td>
-                <td class="new-plan__day new-plan__day--after">31</td>
-                <td class="new-plan__day new-plan__day--after">1 <span>апр</span></td>
-                <td class="new-plan__day new-plan__day--after">2</td>
-                <td class="new-plan__day new-plan__day--after">3</td>
-                <td class="new-plan__day new-plan__day--after">4</td>
-                <td class="new-plan__day new-plan__day--after">5</td>
+                <td class="calendar__day calendar__day--after">30</td>
+                <td class="calendar__day calendar__day--after">31</td>
+                <td class="calendar__day calendar__day--after">1 <span>апр</span></td>
+                <td class="calendar__day calendar__day--after">2</td>
+                <td class="calendar__day calendar__day--after">3</td>
+                <td class="calendar__day calendar__day--after">4</td>
+                <td class="calendar__day calendar__day--after">5</td>
               </tr>
             </table>
             <a class="button button--next-step" href="#step-two">Следующий шаг</a>
