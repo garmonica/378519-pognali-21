@@ -1,6 +1,6 @@
 .routes {
   margin-top: -30px;
-  padding: 98px 25px 35px;
+  padding: 100px 25px 35px;
   background-color: @light-blue;
   border-radius: 0 0 30px 30px;
   position: relative;
@@ -48,7 +48,7 @@
 
 .routes__text {
   .offset();
-  margin-bottom: 67px;
+  margin-bottom: 64px;
   padding: 0 46px 0 25px;
   font-weight: 300;
   color: @special-grey;
@@ -108,8 +108,11 @@
 }
 
 .routes__image {
+  border-radius: 10px 10px 0 0;
+
   @media (min-width: @tablet-width) {
     order: 2;
+    border-radius: 0 20px 20px 0;
   }
 }
 
@@ -130,6 +133,7 @@
     width: 70%;
     box-sizing: border-box;
     margin-top: 0;
+    padding: 28px 29px 23px;
     position: absolute;
     top: 0;
     left: 0;
@@ -137,18 +141,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 70%;
-  }
-}
-
-.routes__country-flag {
-  position: absolute;
-  top: -13px;
-  left: 25px;
-
-  @media (min-width: @tablet-width) {
-    top: 0;
-    right: 0;
+    width: 67%;
+    padding: 22px 50px 23px 31px;
   }
 }
 
@@ -161,6 +155,7 @@
   color: @basic-black;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 5px;
     font-size: 24px;
     line-height: 24px;
   }
@@ -178,6 +173,18 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
 }
 
 .routes__users-number {
@@ -188,6 +195,7 @@
   opacity: 30%;
 
   @media (min-width: @tablet-width) {
+    padding-left: 29px;
     font-size: 20px;
     line-height: 20px;
   }

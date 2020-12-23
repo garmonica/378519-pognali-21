@@ -55,7 +55,9 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__heading">Направления</h1>
+      <div class="page-main__heading-wrapper">
+        <h1 class="page-main__heading">Направления</h1>
+      </div>
       <section class="user">
         <h2 class="visually-hidden">Информация о пользователе</h2>
         <div class="user__level">
@@ -148,30 +150,32 @@
             <div class="new-plan__wrapper">
               <div class="new-plan__field-wrapper new-plan__field-wrapper--companions">
                 <label class="new-plan__label" for="companions-number-field">Ищу попутчиков:</label>
-                <p class="new-plan__unit">чел.</p>
-                <div class="new-plan__input-wrapper input-wrapper">
-                  <button class="new-plan__input-button-number input-button-number input-button-number--less" type="button" aria-label="Меньше">-</button>
-                  <input class="new-plan__input-number input-number" type="number" name="companions-number" id="companions-number-field" value="2" min="1" max="5">
-                  <button class="new-plan__input-button-number input-button-number input-button-number--more" type="button" aria-label="Больше">+</button>
+                <p class="new-plan__unit new-plan__unit--men">чел.</p>
+                <div class="new-plan__input-wrapper input">
+                  <button class="new-plan__input-button input__button input__button--less" type="button" aria-label="Меньше"></button>
+                  <input class="new-plan__input-number input__number" type="number" name="companions-number" id="companions-number-field" value="2" min="1" max="5">
+                  <button class="new-plan__input-button input__button input__button--more" type="button" aria-label="Больше"></button>
                 </div>
               </div>
               <div class="new-plan__field-wrapper">
                 <label class="new-plan__label" for="period-field">Длительность:</label>
-                <p class="new-plan__unit">дн.</p>
-                <div class="new-plan__input-wrapper input-wrapper">
-                  <button class="new-plan__input-button-number input-button-number input-button-number--less" type="button" aria-label="Меньше">-</button>
-                  <input class="new-plan__input-number input-number" type="number" name="period" id="period-field" value="3" min="1" max="14">
-                  <button class="new-plan__input-button-number input-button-number input-button-number--more" type="button" aria-label="Больше">+</button>
+                <p class="new-plan__unit new-plan__unit--days">дн.</p>
+                <div class="new-plan__input-wrapper input">
+                  <button class="new-plan__input-button input__button input__button--less" type="button" aria-label="Меньше"></button>
+                  <input class="new-plan__input-number input__number" type="number" name="period" id="period-field" value="3" min="1" max="14">
+                  <button class="new-plan__input-button input__button input__button--more" type="button" aria-label="Больше"></button>
                 </div>
               </div>
-              <input class="checkbox__input visually-hidden" type="checkbox" name="with-children" id="with-children-field">
-              <label class="checkbox__label checkbox__label--new-plan" for="with-children-field">Можно с детьми</label>
+              <div class="new-plan__checkbox checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="with-children" id="with-children-field">
+                <label class="checkbox__label checkbox__label--new-plan" for="with-children-field">Можно с детьми</label>
+              </div>
             </div>
             <table class="new-plan__calendar calendar">
               <caption class="calendar__month">
-                <button class="calendar__month-button calendar__month-button--previous" type="button" aria-label="Предыдущий месяц">&lt;</button>
+                <button class="calendar__month-button calendar__month-button--previous" type="button" aria-label="Предыдущий месяц"></button>
                 Март 2019
-                <button class="calendar__month-button calendar__month-button--next" type="button" aria-label="Следующий месяц">  &gt;</button>
+                <button class="calendar__month-button calendar__month-button--next" type="button" aria-label="Следующий месяц"></button>
               </caption>
               <tr class="calendar__week">
                 <th class="calendar__weekday">П<span>н</span></th>
@@ -277,13 +281,13 @@
                 <select class="new-plan__select-country new-plan__select-country--selected" name="selected-country">
                   <option class="new-plan__option" value="bosnia-and-herzegovina">Босния и герцеговина</option>
                 </select>
-                <button class="new-plan__remove" aria-label="Убрать из списка">x</button>
+                <button class="new-plan__remove" aria-label="Убрать из списка"></button>
               </li>
               <li class="new-plan__countries-item new-plan__countries-item--selected">
                 <select class="new-plan__select-country new-plan__select-country--selected" name="selected-country">
                   <option class="new-plan__option" value="czech">Чехия</option>
                 </select>
-                <button class="new-plan__remove" aria-label="Убрать из списка">x</button>
+                <button class="new-plan__remove" aria-label="Убрать из списка"></button>
               </li>
               <li class="new-plan__countries-item new-plan__countries-item--not-selected">
                 <select class="new-plan__select-country new-plan__select-country--not-selected">
@@ -341,7 +345,7 @@
                     <li class="country-selection__item">Афганистан</li>
                   </ul>
                 </div>
-                <button class="new-plan__remove" aria-label="Убрать из списка">x</button>
+                <button class="new-plan__remove" aria-label="Убрать из списка"></button>
               </li>
             </ul>
             <button class="new-plan__new-country">Добавить страну</button>
@@ -397,7 +401,7 @@
         </form>
       </section>
     </main>
-    <footer class="page-footer page-footer--form">
+    <footer class="page-footer page-footer--inner">
       <a class="page-footer__logo logo" href="index.html">
         <img class="page-footer__logo-image" src="img/logo-mobile-scroll.png" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
       </a>

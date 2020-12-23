@@ -128,7 +128,7 @@
 
 .new-plan__step {
   .offset();
-  margin-bottom: 8px;
+  margin-bottom: 9px;
   padding: 23px 25px 13px 25px;
   background-color: @basic-white;
   border: none;
@@ -142,18 +142,30 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 42px;
-    padding: 97px 160px 96px 160px;
+    padding: 97px 160px 106px 160px;
     border-radius: 60px;
   }
 }
 
 .new-plan__step:nth-child(2) {
   @media (min-width: @tablet-width) {
-    margin-bottom: 47px;
+    margin-bottom: 50px;
+    padding: 45px 40px 42px 43px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 42px;
+    padding: 97px 160px 102px 160px;
+  }
+}
+
+.new-plan__step:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    padding: 45px 40px 49px 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 97px 160px 100px 160px;
   }
 }
 
@@ -188,7 +200,7 @@
 
 .new-plan__description {
   .offset();
-  margin-bottom: 19px;
+  margin-bottom: 18px;
   color: @special-grey;
 
   br {
@@ -196,7 +208,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 38px;
+    margin-bottom: 39px;
     padding-right: 38px;
     font-size: 20px;
     line-height: 24px;
@@ -294,6 +306,18 @@
   }
 }
 
+.new-plan__unit--men {
+  @media (min-width: @tablet-width) {
+    margin-right: 4px;
+  }
+}
+
+.new-plan__unit--days {
+  @media (min-width: @tablet-width) {
+    letter-spacing: normal;
+  }
+}
+
 .new-plan__input-wrapper {
   width: 100%;
   margin-top: 7px;
@@ -307,6 +331,12 @@
     margin-top: 0;
     margin-right: 36px;
     min-width: 177px;
+  }
+}
+
+.new-plan__checkbox {
+  @media (min-width: @tablet-width) {
+    order: -1;
   }
 }
 
@@ -343,10 +373,10 @@
 .new-plan__countries-item {
   display: flex;
   position: relative;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 14px;
+    margin-bottom: 15px;
   }
 }
 
@@ -359,6 +389,10 @@
   border-radius: 4px;
   border: 1px solid @light-grey;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .new-plan__countries-item--not-selected {
@@ -368,7 +402,7 @@
 }
 
 .new-plan__select-country {
-  padding: 10px 11px 11px 5px;
+  padding: 11px 37px 12px 9px;
   font-family: inherit;
   font-size: 14px;
   line-height: 18px;
@@ -378,9 +412,10 @@
   text-transform: uppercase;
   border: 1px solid @light-grey;
   border-radius: 4px;
+  appearance: none;
 
   @media (min-width: @tablet-width) {
-    padding: 23px 59px 21px 23px;
+    padding: 23px 59px 25px 23px;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
@@ -413,19 +448,59 @@
 
 .new-plan__remove {
   position: absolute;
-  right: 0;
+  top: -12px;
+  right: -10px;
   width: 21px;
   height: 21px;
   background-color: @light-blue;
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  z-index: @zindex-new-plan-remove;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 4px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 7px;
+    width: 7px;
+    height: 1px;
+    background-color: @grey-remove;
+    transform: rotate(45deg);
+    border-radius: 1px;
+
+    @media (min-width: @tablet-width) {
+      width: 26px;
+      height: 2px;
+      top: 9px;
+      right: -2px;
+      background-color: fade(@basic-black, 10%);
+    }
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 .new-plan__new-country {
   width: 100%;
   margin-bottom: 25px;
   padding: 12px;
+  position: relative;
   font-family: inherit;
   font-size: 14px;
   line-height: 18px;
@@ -450,7 +525,30 @@
 
   @media (min-width: @desktop-width) {
     width: 73%;
-    margin-bottom: 57px;
+    margin-bottom: 54px;
+    letter-spacing: 0.1em;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    background-color: @grey-add;
+    top: 0;
+    right: 15px;
+    bottom: 0;
+    margin: auto;
+
+    @media (min-width: @tablet-width) {
+      width: 20px;
+      right: 26px;
+    }
+  }
+
+  &::after {
+    transform: rotate(90deg);
   }
 }
 
@@ -511,6 +609,11 @@
     padding: 28px 0;
     font-size: 24px;
     text-transform: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 26px 3px 30px 36px;
+    letter-spacing: normal;
   }
 }
 

@@ -17,14 +17,39 @@
     font-size: 36px;
     line-height: 36px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 18px;
+  }
 }
 
 .calendar__month-button {
   position: absolute;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  background-image: url("../img/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  opacity: 30%;
+
+  @media (min-width: @tablet-width) {
+    width: 56px;
+    background-size: 19px 34px;
+    background-position: 50% 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-size: 16px 28px;
+    background-position: 100% 50%;
+  }
 }
 
 .calendar__month-button--previous {
   left: 0;
+  transform: rotate(180deg);
 }
 
 .calendar__month-button--next {
@@ -32,7 +57,7 @@
 }
 
 .calendar__weekday {
-  padding: 2px 0 8px;
+  padding: 0 0 8px;
   font-size: 14px;
   line-height: 18px;
   color: @special-grey;
@@ -40,11 +65,11 @@
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
-    padding: 19px 0 10px;
+    padding: 20px 0 10px 2px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 0 19px 16px;
+    padding: 0 0 20px 16px;
     text-align: left;
   }
 

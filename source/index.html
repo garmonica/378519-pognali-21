@@ -79,10 +79,22 @@
           <cite class="intro__author">Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»</cite>
         </blockquote>
         <ul class="intro__list">
-          <li class="intro__item intro__item-1">Выберите направление</li>
-          <li class="intro__item intro__item-2">Изучите идеи путешественников</li>
-          <li class="intro__item intro__item-3">Находите тех, кто&nbsp;похож на вас</li>
-          <li class="intro__item intro__item-4">Путешествуйте вместе!</li>
+          <li class="intro__item">
+            <span class="intro__item-number">1</span>
+            <span class="intro__item-text">Выберите направление</span>
+          </li>
+          <li class="intro__item">
+            <span class="intro__item-number">2</span>
+            <span class="intro__item-text">Изучите идеи путешественников</span>
+          </li>
+          <li class="intro__item">
+            <span class="intro__item-number">3</span>
+            <span class="intro__item-text">Находите тех, кто&nbsp;похож на вас</span>
+          </li>
+          <li class="intro__item">
+            <span class="intro__item-number">4</span>
+            <span class="intro__item-text">Путешествуйте вместе!</span>
+          </li>
         </ul>
       </section>
       <section class="about">
@@ -104,7 +116,6 @@
           <li class="routes__item">
             <img class="routes__image" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Побережье Таиланда">
             <div class="routes__content">
-              <img class="routes__country-flag" src="https://via.placeholder.com/35x24" alt="Флаг Таиланда">
               <div class="routes__country">
                 <h3 class="routes__title">Таиланд</h3>
                 <p class="routes__description">Джунгли зовут!</p>
@@ -115,7 +126,6 @@
           <li class="routes__item">
             <img class="routes__image" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Улица в городе Франции">
             <div class="routes__content">
-              <img class="routes__country-flag" src="https://via.placeholder.com/35x24" alt="Флаг Франции">
               <div class="routes__country">
                 <h3 class="routes__title">Франция</h3>
                 <p class="routes__description">Трэ бьен, манифик!</p>
@@ -126,10 +136,9 @@
           <li class="routes__item">
             <img class="routes__image" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Набережная в городе Чехии">
             <div class="routes__content">
-              <img class="routes__country-flag" src="https://via.placeholder.com/35x24" alt="Флаг Чехии">
               <div class="routes__country">
                 <h3 class="routes__title">Чехия</h3>
-                <p class="routes__description">Закоулки старой Европы</p>
+                <p class="routes__description">Закоулки<br> старой Европы</p>
               </div>
               <p class="routes__users-number">5326</p>
             </div>
@@ -147,7 +156,9 @@
         </div>
         <ul class="companions__list">
           <li class="companions__item">
-            <img class="companions__photo" src="https://via.placeholder.com/270x270" alt="Пользователь Таня Фирсова">
+            <div class="companions__photo">
+              <img class="companions__img" src="https://via.placeholder.com/270x270" alt="Пользователь Таня Фирсова">
+            </div>
             <div class="companions__level">
               <p class="companions__level-number">99</p>
               <p class="companions__level-text">level</p>
@@ -192,7 +203,9 @@
             </div>
           </li>
           <li class="companions__item">
-            <img class="companions__photo" src="https://via.placeholder.com/270x270" alt="Пользователь Петя Демин">
+            <div class="companions__photo">
+              <img class="companions__img" src="https://via.placeholder.com/270x270" alt="Пользователь Таня Фирсова">
+            </div>
             <div class="companions__level">
               <p class="companions__level-number">80</p>
               <p class="companions__level-text">level</p>
@@ -241,14 +254,17 @@
         <h2 class="profile-promo__heading">Добавьте свой профиль</h2>
         <dl class="profile-promo__list">
           <div class="profile-promo__item">
+            <span class="profile-promo__item-number">1</span>
             <dt class="profile-promo__service">Базовое размещение</dt>
             <dd class="profile-promo__price">Бесплатно</dd>
           </div>
           <div class="profile-promo__item">
+            <span class="profile-promo__item-number">2</span>
             <dt class="profile-promo__service">Вывод на первых позициях</dt>
             <dd class="profile-promo__price">99 руб./мес</dd>
           </div>
           <div class="profile-promo__item">
+            <span class="profile-promo__item-number">3</span>
             <dt class="profile-promo__service">Кастомный цвет карточки</dt>
             <dd class="profile-promo__price">59 руб./мес</dd>
           </div>
@@ -257,7 +273,7 @@
       </section>
       <section class="interested">
         <h2 class="interested__heading">Заинтересовались?</h2>
-        <p class="interested__text">Зарегистрируйтесь, это&nbsp;быстро и бесплатно!<br> Уже зарегистрированы? Тогда скорее <a class="interested__login" href="blank.html">авторизуйтесь</a>.</p>
+        <p class="interested__text"><span>Зарегистрируйтесь, это&nbsp;быстро и бесплатно!</span><br> Уже зарегистрированы? Тогда скорее <a class="interested__login" href="blank.html">авторизуйтесь</a>.</p>
         <form action="https://echo.htmlacademy.ru" method="post">
           <div class="interested__wrapper">
             <label class="visually-hidden" for="email-field">Введите адрес электронной почты</label>

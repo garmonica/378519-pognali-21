@@ -1,10 +1,10 @@
-.input-wrapper {
+.input {
   position: relative;
 }
 
-.input-number {
+.input__number {
   width: 100%;
-  padding: 11px 50px;
+  padding: 12px 50px;
   font-family: inherit;
   font-size: 15px;
   font-weight: 500;
@@ -19,21 +19,26 @@
     padding: 22px 50px;
     font-size: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 22px 50px 23px;
+  }
 }
 
-.input-number::-webkit-outer-spin-button,
-.input-number::-webkit-inner-spin-button {
+.input__number::-webkit-outer-spin-button,
+.input__number::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
 
-.input-button-number {
+.input__button {
   padding: 0 18px;
   border: none;
   position: absolute;
   font-family: inherit;
   height: 100%;
   cursor: pointer;
+  background-color: transparent;
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
@@ -42,12 +47,52 @@
   @media (min-width: @desktop-width) {
     padding: 0 25px;
   }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    background-color: @grey-menu-toggle;
+    top: 0;
+    bottom: 0;
+    left: 14px;
+    margin: auto;
+
+    @media (min-width: @tablet-width) {
+      width: 20px;
+      left: 23px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 18px;
+    }
+  }
 }
 
-.input-button-number--less {
+.input__button--less {
   left: 0;
 }
 
-.input-button-number--more {
+.input__button--more {
   right: 0;
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  &::before,
+  &::after {
+    left: auto;
+    right: 14px;
+
+    @media (min-width: @tablet-width) {
+      right: 23px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 18px;
+    }
+  }
 }

@@ -55,7 +55,9 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__heading">Попутчики</h1>
+      <div class="page-main__heading-wrapper">
+        <h1 class="page-main__heading">Попутчики</h1>
+      </div>
       <section class="filter filter--closed filter--nojs">
         <h2 class="filter__heading">Фильтрация по странам:</h2>
         <ul class="filter__category-list">
@@ -415,90 +417,78 @@
           <form class="preferences__form" action="https://echo.htmlacademy.ru" method="get" target="_blank">
             <div class="preferences__wrapper">
               <div class="preferences__block">
-                <h3 class="preferences__title">Хобби</h3>
-                <button class="preferences__toggle">
-                  <span class="visually-hidden">Показать или скрыть</span>
-                </button>
+                <button class="preferences__toggle" type="button">Хобби</button>
                 <ul class="preferences__list">
-                  <li class="preferences__item">
+                  <li class="preferences__item checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="hobby-gym" id="gym-field" checked>
                     <label class="checkbox__label checkbox__label--preferences" for="gym-field">Спортзал</label>
                   </li>
-                  <li class="preferences__item">
+                  <li class="preferences__item checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="hobby-hookah" id="hookah-field">
                     <label class="checkbox__label checkbox__label--preferences" for="hookah-field">Кальян</label>
                   </li>
-                  <li class="preferences__item">
+                  <li class="preferences__item checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="hobby-couch" id="couch-field">
                     <label class="checkbox__label checkbox__label--preferences" for="couch-field">Диван</label>
                   </li>
                 </ul>
               </div>
               <div class="preferences__block">
-                <h3 class="preferences__title">Музыка</h3>
-                <button class="preferences__toggle">
-                  <span class="visually-hidden">Показать или скрыть</span>
-                </button>
+                <button class="preferences__toggle" type="button">Музыка</button>
                 <ul class="preferences__list">
-                  <li class="preferences__item">
+                  <li class="preferences__item checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="music-rock" id="rock-field" checked>
                     <label class="checkbox__label checkbox__label--preferences" for="rock-field">Тяжелый рок</label>
                   </li>
-                  <li class="preferences__item">
+                  <li class="preferences__item checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="music-rap" id="rap-field" checked>
                     <label class="checkbox__label checkbox__label--preferences" for="rap-field">Русский рэп</label>
                   </li>
-                  <li class="preferences__item">
+                  <li class="preferences__item checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="music-eurodance" id="eurodance-field">
                     <label class="checkbox__label checkbox__label--preferences" for="eurodance-field">Евроденс</label>
                   </li>
                 </ul>
               </div>
               <div class="preferences__block">
-                <h3 class="preferences__title">Еда</h3>
-                <button class="preferences__toggle">
-                  <span class="visually-hidden">Показать или скрыть</span>
-                </button>
+                <button class="preferences__toggle" type="button">Еда</button>
                 <ul class="preferences__list">
-                  <li class="preferences__item">
+                  <li class="preferences__item checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="food-meat-eater" id="meat-eater-field" checked>
                     <label class="checkbox__label checkbox__label--preferences" for="meat-eater-field">Мясоед</label>
                   </li>
-                  <li class="preferences__item">
+                  <li class="preferences__item checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="food-healthy-eater" id="healthy-eater-field">
                     <label class="checkbox__label checkbox__label--preferences" for="healthy-eater-field">Сидит на ПП</label>
                   </li>
-                  <li class="preferences__item">
+                  <li class="preferences__item checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="food-vegan" id="vegan-field">
                     <label class="checkbox__label checkbox__label--preferences" for="vegan-field">Веган-сыроед</label>
                   </li>
                 </ul>
               </div>
               <div class="preferences__block preferences__block--transport">
-                <h3 class="preferences__title">Транспорт</h3>
-                <button class="preferences__toggle">
-                  <span class="visually-hidden">Показать или скрыть</span>
-                </button>
+                <button class="preferences__toggle" type="button">Транспорт</button>
                 <ul class="preferences__list preferences__list--transport">
-                  <li class="preferences__item">
+                  <li class="preferences__item checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="transport-avia" id="avia-field" checked>
                     <label class="checkbox__label checkbox__label--transport" for="avia-field">
                       <span class="visually-hidden">Авиаперелет</span>
                     </label>
                   </li>
-                  <li class="preferences__item">
+                  <li class="preferences__item checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="transport-motor-transport" id="motor-transport-field" checked>
                     <label class="checkbox__label checkbox__label--transport" for="motor-transport-field">
                       <span class="visually-hidden">Автотранспорт</span>
                     </label>
                   </li>
-                  <li class="preferences__item">
+                  <li class="preferences__item checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="transport-bicycle" id="bicycle-field">
                     <label class="checkbox__label checkbox__label--transport" for="bicycle-field">
                       <span class="visually-hidden">Велосипед</span>
                     </label>
                   </li>
-                  <li class="preferences__item">
+                  <li class="preferences__item checkbox">
                     <input class="checkbox__input visually-hidden" type="checkbox" name="transport-on-foot" id="on-foot-field" checked>
                     <label class="checkbox__label checkbox__label--transport" for="on-foot-field">
                       <span class="visually-hidden">Пешком</span>
@@ -507,10 +497,7 @@
                 </ul>
               </div>
               <div class="preferences__block preferences__block--level">
-                <h3 class="preferences__title">Левел</h3>
-                <button class="preferences__toggle">
-                  <span class="visually-hidden">Показать или скрыть</span>
-                </button>
+                <button class="preferences__toggle" type="button">Левел</button>
                 <div class="preferences__level-output">
                   <input class="preferences__level-input preferences__level-input--min" type="number" name="min-level" min="0" max="100" value="30" step="10" aria-label="Значение минимального уровня">
                   <input class="preferences__level-input preferences__level-input--max" type="number" name="max-level" min="0" max="100" value="100" step="10" aria-label="Значение максимального уровня">
@@ -520,7 +507,7 @@
                     <div class="preferences__level-bar" style="width: 70%; margin-left: 30%"></div>
                   </div>
                   <button class="preferences__level-toggle preferences__level-toggle--min" type="button" style="left: 30%;" aria-label="Минимальный уровень"></button>
-                  <button class="preferences__level-toggle preferences__level-toggle--max" type="button" style="left: 100%;" aria-label="Максимальный уровень"></button>
+                  <button class="preferences__level-toggle preferences__level-toggle--max" type="button" style="left: 96%;" aria-label="Максимальный уровень"></button>
                 </div>
               </div>
             </div>
@@ -530,7 +517,6 @@
         <section class="result">
           <h2 class="visually-hidden">Результат подбора</h2>
           <ul class="result__list">
-
             <li class="result__item">
               <div class="result__avatar">
                 <img class="result__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар пользователя Таня Фирсова">
@@ -800,7 +786,7 @@
           <div class="result__pagination">
             <ul class="result__pagination-list">
               <li class="result__pagination-item">
-                <a class="result__pagination-page" href="#">1</a>
+                <a class="result__pagination-page result__pagination-page--current" href="#">1</a>
               </li>
               <li class="result__pagination-item">
                 <a class="result__pagination-page" href="#">2</a>
@@ -821,7 +807,7 @@
       </div>
 
     </main>
-    <footer class="page-footer page-footer--form">
+    <footer class="page-footer page-footer--inner">
       <a class="page-footer__logo logo" href="index.html">
         <img class="page-footer__logo-image" src="img/logo-mobile-scroll.png" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
       </a>
