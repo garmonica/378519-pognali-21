@@ -1,19 +1,30 @@
 .user {
-  padding: 25px 25px 10px 25px;
+  padding: 25px 0 10px;
   background-color: @light-blue;
   color: @basic-blue;
+
+  @media (min-width: @tablet-width) {
+    padding: 66px 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 64px;
+  }
+}
+
+.user__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
     align-items: flex-start;
-    padding: 66px 75px 60px 75px;
+    padding: 0 75px;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
-    padding: 73px 60px 64px 125px;
+    padding: 73px 60px 0;
   }
 }
 
@@ -158,6 +169,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: 65px;
     margin-right: 140px;
   }
 }
@@ -194,7 +206,7 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding: 0 103px;
+    padding: 0 105px;
   }
 }
 
@@ -264,7 +276,8 @@
 
 .user__transport-link {
   @media (min-width: @tablet-width) {
-    width: 42px;
-    height: 42px;
+    width: 43px;
+    height: 44px;
+    background-color: @basic-white;
   }
 }

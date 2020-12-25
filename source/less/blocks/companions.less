@@ -1,5 +1,5 @@
 .companions {
-  padding: 65px 25px 30px;
+  padding: 65px 0 30px;
   background-color: @menu-blue;
   position: relative;
   z-index: @zindex-companions;
@@ -7,15 +7,20 @@
 
   @media (min-width: @tablet-width) {
     margin-top: -60px;
-    padding: 198px 40px 87px;
+    padding: 198px 0 87px;
     border-radius: 0 0 60px 60px;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 185px 0 134px;
+  }
+}
+
+.companions__container {
+  @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
-    padding: 185px 60px 134px;
   }
 }
 

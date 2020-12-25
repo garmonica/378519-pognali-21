@@ -1,6 +1,6 @@
 .routes {
   margin-top: -30px;
-  padding: 100px 25px 35px;
+  padding: 100px 0 35px;
   background-color: @light-blue;
   border-radius: 0 0 30px 30px;
   position: relative;
@@ -8,15 +8,20 @@
 
   @media (min-width: @tablet-width) {
     margin-top: -60px;
-    padding: 130px 40px 81px;
+    padding: 130px 0 81px;
     border-radius: 0 0 60px 60px;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 220px 0 140px;
+  }
+}
+
+.routes__container {
+  @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content min-content;
-    padding: 220px 60px 140px;
   }
 }
 

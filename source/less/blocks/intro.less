@@ -1,14 +1,19 @@
 .intro {
-  padding: 90px 25px 38px 25px;
+  padding: 90px 0 38px 0;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 64px;
-    padding: 158px 40px 38px 40px;
+    padding: 158px 0 38px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 158px 60px 38px 60px;
+    padding: 158px 0 38px 0;
     margin-bottom: 182px;
+  }
+}
+
+.intro__container {
+  @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -132,14 +137,7 @@
   }
 }
 
-.intro__item:nth-child(even) {
-  @media (min-width: @tablet-width) {
-    width: 50%;
-  }
-}
-
-// Первый элемент
-.intro__item:nth-child(4n-3) {
+.intro__item:nth-child(1) {
   background-color: @special-orange;
 
   @media (min-width: @tablet-width) {
@@ -147,13 +145,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 26%;
+    flex-basis: 345px;
     border-radius: 20px 0 0 20px;
   }
 }
 
-// Второй элемент
-.intro__item:nth-child(4n-2) {
+.intro__item:nth-child(2) {
   background-color: @special-orange-light;
 
   @media (min-width: @tablet-width) {
@@ -161,14 +158,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 28%;
+    flex-basis: 375px;
     padding: 28px 60px 31px 30px;
     border-radius: 20px 0 0 20px;
   }
 }
 
-// Третий элемент
-.intro__item:nth-child(4n-1) {
+.intro__item:nth-child(3) {
   background-color: @special-yellow-dark;
 
   @media (min-width: @tablet-width) {
@@ -176,14 +172,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 28%;
+    flex-basis: 375px;
     padding: 28px 58px 31px 30px;
     border-radius: 20px 0 0 20px;
   }
 }
 
-// Каждый четвертый элемент
-.intro__item:nth-child(4n) {
+.intro__item:nth-child(4) {
   padding-bottom: 26px;
   background-color: @basic-yellow;
 
@@ -192,22 +187,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 24%;
+    flex-basis: 315px;
     padding-right: 33px;
     border-radius: 20px;
   }
 }
 
-.intro__item:last-child {
+.intro__item + .intro__item {
   @media (min-width: @desktop-width) {
-    border-radius: 20px;
-  }
-}
-
-// Все элементы, кроме первого в ряду
-.intro__item:not(:nth-child(4n-3)) {
-  @media (min-width: @desktop-width) {
-    margin-left: -2%;
+    margin-left: -30px;
   }
 }
 

@@ -1,20 +1,32 @@
 .new-plan {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   margin-top: -30px;
-  padding: 28px 25px 63px 25px;
+  padding: 28px 0 63px;
   background-color: @special-blue;
   color: @basic-blue-light;
   border-radius: 30px 30px 0 0;
 
   @media (min-width: @tablet-width) {
-    padding: 50px 75px 84px 75px;
+    padding: 50px 0 84px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 50px 60px 90px 60px;
+    margin-top: -60px;
+    padding: 50px 0 90px;
     border-radius: 60px 60px 0 0;
+  }
+}
+
+.new-plan__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 60px;
   }
 }
 

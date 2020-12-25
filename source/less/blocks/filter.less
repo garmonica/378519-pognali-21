@@ -1,19 +1,25 @@
 .filter {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 21px 25px 15px;
-  position: relative;
+  padding: 21px 0 15px;
   background-color: @filter-blue;
   color: @menu-blue;
 
   @media (min-width: @tablet-width) {
-    padding: 51px 40px 45px;
+    padding: 51px 0 45px;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 51px 0 12px;
+  }
+}
+
+.filter__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
     align-items: center;
-    padding: 51px 60px 12px;
   }
 }
 
@@ -133,7 +139,7 @@
   padding-top: 31px;
   padding-bottom: 20px;
   position: absolute;
-  top: 38px;
+  top: 18px;
   left: 0;
   list-style: none;
   background-color: @filter-blue;
@@ -182,18 +188,18 @@
   box-sizing: border-box;
   padding: 0 25px;
   position: absolute;
-  top: 193px;
+  top: 171px;
   left: 0;
   background-color: @filter-blue;
-  border-radius: 0 0 30px 30px;
+  border-radius: 0 0 20px 20px;
   z-index: @zindex-filter-country;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    top: 115px;
-    padding: 25px 75px 0;
+    top: 65px;
+    padding: 25px 60px 0;
     border-radius: 0 0 60px 60px;
   }
 
@@ -211,6 +217,10 @@
     padding: 0;
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 14px;
   }
 }
 
@@ -286,7 +296,13 @@
   @media (min-width: @desktop-width) {
     display: block;
     min-width: 253px;
-    margin-bottom: 60px;
+    margin-bottom: 51px;
+  }
+}
+
+.filter__country-block:nth-child(5n) {
+  @media (min-width: @desktop-width) {
+    margin-left: -9px;
   }
 }
 
@@ -337,14 +353,13 @@
   border-radius: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 78px;
+    margin: 0 15px 78px 15px;
     padding: 40px 30px;
     font-size: 20px;
     line-height: 20px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: -32px;
-    margin-bottom: 35px;
+    margin: 0 0 35px;
   }
 }

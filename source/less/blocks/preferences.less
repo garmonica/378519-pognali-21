@@ -135,6 +135,18 @@
     background-repeat: no-repeat;
     background-position: 100% 19px;
   }
+
+  span {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: inline;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
 }
 
 .preferences__list {
