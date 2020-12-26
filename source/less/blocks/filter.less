@@ -1,19 +1,25 @@
 .filter {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 21px 25px 15px;
-  position: relative;
+  padding: 21px 0 15px;
   background-color: @filter-blue;
   color: @menu-blue;
 
   @media (min-width: @tablet-width) {
-    padding: 51px 40px 45px;
+    padding: 51px 0 45px;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 51px 0 12px;
+  }
+}
+
+.filter__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
     align-items: center;
-    padding: 51px 75px 45px;
   }
 }
 
@@ -91,9 +97,9 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    padding-left: 49px;
+    padding-left: 65px;
     font-size: 20px;
-    list-style: 20px;
+    line-height: 20px;
   }
 }
 
@@ -102,7 +108,6 @@
   width: 14px;
   height: 14px;
   margin-right: 6px;
-  outline: 1px solid orange;
   background-color: transparent;
   border: none;
   font-family: inherit;
@@ -134,7 +139,7 @@
   padding-top: 31px;
   padding-bottom: 20px;
   position: absolute;
-  top: 38px;
+  top: 18px;
   left: 0;
   list-style: none;
   background-color: @filter-blue;
@@ -183,23 +188,23 @@
   box-sizing: border-box;
   padding: 0 25px;
   position: absolute;
-  top: 193px;
+  top: 171px;
   left: 0;
   background-color: @filter-blue;
-  border-radius: 0 0 30px 30px;
+  border-radius: 0 0 20px 20px;
   z-index: @zindex-filter-country;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    top: 115px;
-    padding: 25px 75px 0;
+    top: 65px;
+    padding: 25px 60px 0;
     border-radius: 0 0 60px 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 60px 20px 0;
+    padding: 60px 0;
   }
 }
 
@@ -212,6 +217,10 @@
     padding: 0;
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 14px;
   }
 }
 
@@ -277,6 +286,7 @@
     flex-wrap: wrap;
     width: auto;
     margin-bottom: 0;
+    padding-left: 35px;
   }
 }
 
@@ -285,8 +295,14 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    width: 20%;
-    margin-bottom: 60px;
+    min-width: 253px;
+    margin-bottom: 51px;
+  }
+}
+
+.filter__country-block:nth-child(5n) {
+  @media (min-width: @desktop-width) {
+    margin-left: -9px;
   }
 }
 
@@ -300,7 +316,7 @@
   @media (min-width: @desktop-width) {
     display: block;
     .offset();
-    margin-bottom: 35px;
+    margin-bottom: 36px;
     font-size: 60px;
     line-height: 60px;
     font-weight: 700;
@@ -337,13 +353,13 @@
   border-radius: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 78px;
+    margin: 0 15px 78px 15px;
     padding: 40px 30px;
     font-size: 20px;
     line-height: 20px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 35px;
+    margin: 0 0 35px;
   }
 }

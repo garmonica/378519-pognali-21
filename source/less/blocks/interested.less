@@ -1,6 +1,6 @@
 .interested {
   margin-top: -30px;
-  padding: 100px 25px 17px 25px;
+  padding: 100px 0 17px;
   background-color: @menu-blue;
   text-align: center;
   border-radius: 0 0 30px 30px;
@@ -9,12 +9,12 @@
 
   @media (min-width: @tablet-width) {
     margin-top: -60px;
-    padding: 132px 40px 60px 40px;
+    padding: 132px 0 60px;
     border-radius: 0 0 60px 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 166px 60px 106px 60px;
+    padding: 166px 0 106px;
   }
 }
 
@@ -51,10 +51,15 @@
     font-size: 28px;
     line-height: 32px;
     letter-spacing: 0;
+
+    span {
+      margin-left: -21px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 61px;
+    padding-left: 53px;
   }
 }
 
@@ -63,10 +68,16 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 40px;
+    padding: 0 27px 0 35px;
+    letter-spacing: 0.01em;
 
     br {
       display: none;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 27px;
   }
 }
 
@@ -131,25 +142,37 @@
     min-width: 80px;
     border-radius: 0 20px 20px 0;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 151px 0 36px;
+  }
 }
 
 .interested__button-text {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    color: @basic-blue-light;
+  }
 }
 
 .interested__contact-wrapper {
   @media (min-width: @desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 875px;
-    margin: 0 auto;
+    justify-content: flex-start;
+    padding: 0 222px;
   }
 }
 
 .interested__contact {
   display: block;
   padding: 0 10px 23px 61px;
+  position: relative;
   font-weight: 700;
   color: @basic-yellow;
   text-transform: uppercase;
@@ -166,5 +189,29 @@
     width: 50%;
     box-sizing: border-box;
     padding: 35px 10px 29px 125px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: -12px;
+    left: 0;
+    background-color: @contacts-icons;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 66px;
+      height: 66px;
+      top: 2px;
+      left: 36px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 90px;
+      height: 90px;
+      left: 5px;
+    }
   }
 }

@@ -1,6 +1,6 @@
 .page-footer {
   min-height: 180px;
-  padding: 35px 25px 20px 25px;
+  padding: 35px 0 22px;
   background-color: @basic-white;
   position: relative;
   z-index: @zindex-footer;
@@ -8,19 +8,24 @@
 
   @media (min-width: @tablet-width) {
     min-height: auto;
-    padding: 45px 40px 35px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 45px 0 32px;
     border-radius: 60px 60px 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 45px 60px 35px 60px;
+    padding: 45px 0 48px;
   }
 }
 
-.page-footer--form {
+.page-footer__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.page-footer--inner {
   margin-top: -30px;
 
   @media (min-width: @tablet-width) {
@@ -65,6 +70,8 @@
 
 .page-footer__copyright {
   .offset();
+  display: flex;
+  justify-content: space-between;
   line-height: 16px;
   color: @special-grey;
 }

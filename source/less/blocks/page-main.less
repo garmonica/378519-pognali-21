@@ -1,36 +1,101 @@
-.page-main__heading {
-  .offset();
-  padding: 92px 25px 15px 25px;
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 700;
+.page-main__heading-block {
+  padding: 92px 0 15px;
   background-color: @basic-blue;
-  color: @basic-white;
   border-radius: 0 0 20px 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 220px 40px 70px 75px;
-    font-size: 60px;
-    line-height: 60px;
+    padding: 220px 0 70px;
     border-radius: 0 0 60px 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 218px 530px 73px 124px;
+    padding: 218px 0 73px;
+  }
+}
+
+.page-main__heading-container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.page-main__heading {
+  .offset();
+  display: inline-block;
+  position: relative;
+  vertical-align: baseline;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 35px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 65px;
+    margin-right: 450px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: @special-orange;
+    border-radius: 4px;
+    z-index: @page-heading-decoration;
+
+    @media (min-width: @tablet-width) {
+      height: 8px;
+      bottom: -74px;
+    }
+
+    @media (min-width: @desktop-width) {
+      bottom: -77px;
+      left: 2px;
+    }
+  }
+}
+
+.page-main__home-link {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding: 21px 59px 10px 10px;
+    margin-right: 35px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    color: @basic-white;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 64px;
   }
 }
 
 .page-main__catalog-wrapper {
-  padding: 25px;
+  padding: 23px 0 25px;
 
   @media (min-width: @tablet-width) {
-    padding: 45px 40px 35px 40px;
+    padding: 45px 0 35px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
-    padding: 45px 60px 85px 60px;
+    padding: 45px 0 85px;
   }
 }

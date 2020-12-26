@@ -1,19 +1,30 @@
 .user {
-  padding: 25px 25px 10px 25px;
+  padding: 25px 0 10px;
   background-color: @light-blue;
   color: @basic-blue;
+
+  @media (min-width: @tablet-width) {
+    padding: 66px 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 64px;
+  }
+}
+
+.user__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
     align-items: flex-start;
-    padding: 66px 75px 60px 75px;
+    padding: 0 75px;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
-    padding: 73px 60px 64px 125px;
+    padding: 73px 60px 0;
   }
 }
 
@@ -22,6 +33,7 @@
   height: 100px;
   margin-left: 17px;
   text-align: center;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     width: 94px;
@@ -35,6 +47,30 @@
     top: -147px;
     right: 390px;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    width: 50%;
+    background-color: fade(@special-grey, 30%);
+
+    @media (min-width: @tablet-width) {
+      top: 17px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 50px;
+      height: 2px;
+      top: 19px;
+      background-color: fade(@basic-white, 30%);
+    }
+  }
 }
 
 .user__level-number {
@@ -43,6 +79,10 @@
   font-size: 38px;
   line-height: 38px;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    padding: 17px 0 6px;
+  }
 
   @media (min-width: @desktop-width) {
     padding: 19px 0 5px;
@@ -129,6 +169,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: 65px;
     margin-right: 140px;
   }
 }
@@ -165,7 +206,7 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding: 0 103px;
+    padding: 0 105px;
   }
 }
 
@@ -218,14 +259,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 33px 39px 7px;
+    padding: 33px 37px 7px;
     width: auto;
   }
 }
 
 .user__transport-list {
   width: 100%;
-  margin: 6px 0 14px;
+  margin: 6px 0 16px;
   justify-content: center;
 
   @media (min-width: @tablet-width) {
@@ -235,7 +276,8 @@
 
 .user__transport-link {
   @media (min-width: @tablet-width) {
-    width: 42px;
-    height: 42px;
+    width: 43px;
+    height: 44px;
+    background-color: @basic-white;
   }
 }
