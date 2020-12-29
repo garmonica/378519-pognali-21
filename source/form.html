@@ -11,8 +11,16 @@
     <header class="page-header page-header--closed page-header--nojs">
       <nav class="main-nav container">
         <a class="main-nav__logo logo" href="index.html">
-          <img class="logo__image logo__image--closed" src="img/logo-mobile.png" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
-          <img class="logo__image logo__image--opened" src="img/logo-mobile-scroll.png" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-white.png 1x, img/logo/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-white.png 1x, img/logo/logo-tablet-white@2x.png 2x">
+            <img class="logo__image logo__image--closed logo__image--shown" src="img/logo/logo-mobile-white.png" srcset="img/logo/logo-mobile-white@2x.png 2x" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-blue.png 1x, img/logo/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-blue.png 1x, img/logo/logo-tablet-blue@2x.png 2x">
+            <img class="logo__image logo__image--opened" src="img/logo/logo-mobile-blue.png" srcset="img/logo/logo-mobile-blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          </picture>
         </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <a class="main-nav__login button button--menu-login" href="blank.html">Авторизация</a>
@@ -42,13 +50,13 @@
           </ul>
           <ul class="main-nav__social social">
             <li>
-              <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
+              <a class="main-nav__social-link social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
             </li>
             <li>
-              <a class="social__link social__link--vk" href="#" aria-label="Вконтакте"></a>
+              <a class="main-nav__social-link social__link social__link--vk" href="#" aria-label="Вконтакте"></a>
             </li>
             <li>
-              <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
+              <a class="main-nav__social-link social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
             </li>
           </ul>
         </div>
@@ -67,7 +75,11 @@
             <p class="user__level-number">80</p>
             <p class="user__level-text">level</p>
           </div>
-          <img class="user__avatar" src="https://via.placeholder.com/100x100" alt="Пользователь Петя Демин">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/users/avatar-demin-desktop.jpg 1x, img/users/avatar-demin-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/users/avatar-demin-tablet.jpg 1x, img/users/avatar-demin-tablet@2x.jpg 2x">
+            <img class="user__avatar" src="img/users/avatar-demin-mobile.jpg" srcset="img/users/avatar-demin-mobile@2x.jpg 2x" width="100" height="100" alt="Пользователь Петя Демин">
+          </picture>
           <a class="user__change-avatar" href="blank.html"><span>Сменить</span> фото</a>
           <form class="user__form" action="https://echo.htmlacademy.ru" method="post">
             <div class="user__block user__block--tags">
@@ -284,22 +296,28 @@
                 </div>
               </div>
               <ul class="new-plan__countries-list">
-                <li class="new-plan__countries-item new-plan__countries-item--selected">
-                  <select class="new-plan__select-country new-plan__select-country--selected" name="selected-country">
-                    <option class="new-plan__option" value="bosnia-and-herzegovina">Босния и герцеговина</option>
-                  </select>
+                <li class="new-plan__countries-item new-plan__countries-item--selected new-plan__countries-item--selected-bosnia">
+                  <div class="new-plan__select-wrapper new-plan__select-wrapper--selected">
+                    <select class="new-plan__select-country" name="selected-country">
+                      <option class="new-plan__option" value="bosnia-and-herzegovina">Босния и герцеговина</option>
+                    </select>
+                  </div>
                   <button class="new-plan__remove" aria-label="Убрать из списка"></button>
                 </li>
-                <li class="new-plan__countries-item new-plan__countries-item--selected">
-                  <select class="new-plan__select-country new-plan__select-country--selected" name="selected-country">
-                    <option class="new-plan__option" value="czech">Чехия</option>
-                  </select>
+                <li class="new-plan__countries-item new-plan__countries-item--selected new-plan__countries-item--selected-czech">
+                  <div class="new-plan__select-wrapper new-plan__select-wrapper--selected">
+                    <select class="new-plan__select-country" name="selected-country">
+                      <option class="new-plan__option" value="czech">Чехия</option>
+                    </select>
+                  </div>
                   <button class="new-plan__remove" aria-label="Убрать из списка"></button>
                 </li>
                 <li class="new-plan__countries-item new-plan__countries-item--not-selected">
-                  <select class="new-plan__select-country new-plan__select-country--not-selected">
-                    <option class="new-plan__option">Выберите страну</option>
-                  </select>
+                  <div class="new-plan__select-wrapper new-plan__select-wrapper--not-selected">
+                    <select class="new-plan__select-country">
+                      <option class="new-plan__option">Выберите страну</option>
+                    </select>
+                  </div>
                   <div class="new-plan__country-selection country-selection">
                     <table class="country-selection__alphabet">
                       <tr>
@@ -392,11 +410,11 @@
               </div>
               <ul class="entertainment__list">
                 <li class="entertainment__item">
-                  <label class="entertainment__country" for="text-field-bosnia">Босния и Герцеговина</label>
+                  <label class="entertainment__country entertainment__country--bosnia" for="text-field-bosnia">Босния и Герцеговина</label>
                   <textarea class="entertainment__plan" name="entertainment-bosnia-and-herzegovina" id="text-field-bosnia" placeholder="План действий"></textarea>
                 </li>
                 <li class="entertainment__item">
-                  <label class="entertainment__country" for="text-field-czech">Чехия</label>
+                  <label class="entertainment__country entertainment__country--czech" for="text-field-czech">Чехия</label>
                   <textarea class="entertainment__plan" name="entertainment-czech" id="text-field-czech" placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </li>
               </ul>
@@ -412,7 +430,11 @@
     <footer class="page-footer page-footer--inner">
       <div class="page-footer__container container">
         <a class="page-footer__logo logo" href="index.html">
-          <img class="page-footer__logo-image" src="img/logo-mobile-scroll.png" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-blue.png 1x, img/logo/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-blue.png 1x, img/logo/logo-tablet-blue@2x.png 2x">
+            <img class="page-footer__logo-image logo__image" src="img/logo/logo-mobile-blue.png" srcset="img/logo/logo-mobile-blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          </picture>
         </a>
         <ul class="page-footer__social social">
           <li>
@@ -426,7 +448,9 @@
           </li>
         </ul>
         <p class="page-footer__copyright">Разработано
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Онлайн-курс «Адаптивная вёрстка сайтов и автоматизация»">лого Академии</a>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Онлайн-курс «Адаптивная вёрстка сайтов и автоматизация»">
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
         </p>
       </div>
     </footer>

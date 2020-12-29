@@ -401,9 +401,52 @@
   border-radius: 4px;
   border: 1px solid @light-grey;
   box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: 50%;
 
   @media (min-width: @tablet-width) {
+    background-position: 14px 50%;
     border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 55px 50%;
+  }
+}
+
+.new-plan__countries-item--selected-bosnia::after {
+  background-image: url("../img/flags/Bosnia-and-Herzegovina.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/Bosnia-and-Herzegovina@2x.png");
+    background-size: 35px auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/flags/Bosnia-and-Herzegovina-tablet.png");
+    background-size: 70px auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/flags/Bosnia-and-Herzegovina-tablet@2x.png");
+    }
+  }
+}
+
+.new-plan__countries-item--selected-czech::after {
+  background-image: url("../img/flags/Czechia.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/Czechia@2x.png");
+    background-size: 35px auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/flags/Czechia-tablet.png");
+    background-size: 70px auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/flags/Czechia-tablet@2x.png");
+    }
   }
 }
 
@@ -413,7 +456,26 @@
   position: relative;
 }
 
+.new-plan__select-wrapper--selected {
+  z-index: @zindex-new-plan-country-selection;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 36px;
+    top: 0;
+    bottom: 0;
+    right: 4px;
+    margin: auto;
+    background-image: url("../img/fade-mobile.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+}
+
 .new-plan__select-country {
+  width: 100%;
   padding: 11px 37px 12px 9px;
   font-family: inherit;
   font-size: 14px;
@@ -434,8 +496,9 @@
   }
 }
 
-.new-plan__select-country--selected {
+.new-plan__select-wrapper--selected {
   width: 76%;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     width: 69%;
@@ -446,7 +509,7 @@
   }
 }
 
-.new-plan__select-country--not-selected {
+.new-plan__select-wrapper--not-selected {
   width: 100%;
 
   @media (min-width: @tablet-width) {
