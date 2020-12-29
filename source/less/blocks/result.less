@@ -238,11 +238,108 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @basic-blue-light;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 26px;
+    height: 18px;
+    background-repeat: no-repeat;
+  }
+
+  &--sri-lanka::before {
+    background-image: url("../img/flags/catalog/Sri-Lanka.png");
+  }
+
+  &--thailand::before {
+    background-image: url("../img/flags/catalog/Thailand.png");
+  }
+
+  &--seychelles::before {
+    background-image: url("../img/flags/catalog/Seychelles.png");
+  }
+
+  &--belgium::before {
+    background-image: url("../img/flags/catalog/Belgium.png");
+  }
+
+  &--czech::before {
+    background-image: url("../img/flags/catalog/Czechia.png");
+  }
+
+  &--usa::before {
+    background-image: url("../img/flags/catalog/USA.png");
+  }
+
+  &--australia::before {
+    background-image: url("../img/flags/catalog/Australia.png");
+  }
+
+  &--dominica::before {
+    background-image: url("../img/flags/catalog/Dominica.png");
+  }
+
+  &--britain::before {
+    background-image: url("../img/flags/catalog/UK.png");
+  }
+
+  &--germany::before {
+    background-image: url("../img/flags/catalog/Germany.png");
+  }
 
   @media (min-width: @tablet-width) {
     padding: 6px 25px 6px 48px;
     font-size: 20px;
     line-height: 20px;
+
+    &::before {
+      left: 1px;
+      width: 35px;
+      height: 24px;
+    }
+
+    &--sri-lanka::before {
+      background-image: url("../img/flags/Sri-Lanka-catalog-tablet.png");
+    }
+
+    &--thailand::before {
+      background-image: url("../img/flags/Thailand.png");
+    }
+
+    &--seychelles::before {
+      background-image: url("../img/flags/Seychelles.png");
+    }
+
+    &--belgium::before {
+      background-image: url("../img/flags/Belgium.png");
+    }
+
+    &--czech::before {
+      background-image: url("../img/flags/Czechia.png");
+    }
+
+    &--usa::before {
+      background-image: url("../img/flags/USA.png");
+    }
+
+    &--australia::before {
+      background-image: url("../img/flags/Australia.png");
+    }
+
+    &--dominica::before {
+      background-image: url("../img/flags/Dominica.png");
+    }
+
+    &--britain::before {
+      background-image: url("../img/flags/UK.png");
+    }
+
+    &--germany::before {
+      background-image: url("../img/flags/Germany.png");
+    }
   }
 
   @media (min-width: @desktop-width) {

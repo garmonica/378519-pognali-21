@@ -11,8 +11,16 @@
     <header class="page-header page-header--closed page-header--nojs">
       <nav class="main-nav container">
         <a class="main-nav__logo logo" href="index.html">
-          <img class="logo__image logo__image--closed" src="img/logo-mobile.png" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
-          <img class="logo__image logo__image--opened" src="img/logo-mobile-scroll.png" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-white.png 1x, img/logo/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-white.png 1x, img/logo/logo-tablet-white@2x.png 2x">
+            <img class="logo__image logo__image--closed logo__image--shown" src="img/logo/logo-mobile-white.png" srcset="img/logo/logo-mobile-white@2x.png 2x" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-blue.png 1x, img/logo/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-blue.png 1x, img/logo/logo-tablet-blue@2x.png 2x">
+            <img class="logo__image logo__image--opened" src="img/logo/logo-mobile-blue.png" srcset="img/logo/logo-mobile-blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          </picture>
         </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <a class="main-nav__login button button--menu-login" href="blank.html">Авторизация</a>
@@ -42,13 +50,13 @@
           </ul>
           <ul class="main-nav__social social">
             <li>
-              <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
+              <a class="main-nav__social-link social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
             </li>
             <li>
-              <a class="social__link social__link--vk" href="#" aria-label="Вконтакте"></a>
+              <a class="main-nav__social-link social__link social__link--vk" href="#" aria-label="Вконтакте"></a>
             </li>
             <li>
-              <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
+              <a class="main-nav__social-link social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
             </li>
           </ul>
         </div>
@@ -526,7 +534,11 @@
             <ul class="result__list">
               <li class="result__item">
                 <div class="result__avatar">
-                  <img class="result__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар пользователя Таня Фирсова">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="img/catalog/firsova-desktop.jpg 1x, img/catalog/firsova-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/firsova-tablet.jpg 1x, img/catalog/firsova-tablet@2x.jpg 2x">
+                    <img class="result__img" src="img/catalog/firsova-mobile.jpg" srcset="img/catalog/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Аватар пользователя Таня Фирсова">
+                  </picture>
                 </div>
                 <div class="result__wrapper">
                   <h3 class="result__name">Таня Фирсова</h3>
@@ -543,13 +555,13 @@
                   <p class="result__description">хочет посетить:</p>
                   <ul class="result__countries-list">
                     <li class="result__country">
-                      <a class="result__country-title" href="#">Шри-Ланка</a>
+                      <a class="result__country-title result__country-title--sri-lanka" href="#">Шри-Ланка</a>
                     </li>
                     <li class="result__country">
-                      <a class="result__country-title" href="#">Тайланд</a>
+                      <a class="result__country-title result__country-title--thailand" href="#">Тайланд</a>
                     </li>
                     <li class="result__country">
-                      <a class="result__country-title" href="#">Сейшелы</a>
+                      <a class="result__country-title result__country-title--seychelles" href="#">Сейшелы</a>
                     </li>
                   </ul>
                 </div>
@@ -592,10 +604,13 @@
                   </div>
                 </div>
               </li>
-
               <li class="result__item">
                 <div class="result__avatar">
-                  <img class="result__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар пользователя Петя Демин">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="img/catalog/demin-desktop.jpg 1x, img/catalog/demin-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/demin-tablet.jpg 1x, img/catalog/demin-tablet@2x.jpg 2x">
+                    <img class="result__img" src="img/catalog/demin-mobile.jpg" srcset="img/catalog/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Аватар пользователя Петя Демин">
+                  </picture>
                 </div>
                 <div class="result__wrapper">
                   <h3 class="result__name">Петя Демин</h3>
@@ -611,10 +626,10 @@
                   <p class="result__description">хочет посетить:</p>
                   <ul class="result__countries-list">
                     <li class="result__country">
-                      <a class="result__country-title" href="#">Бельгия</a>
+                      <a class="result__country-title result__country-title--belgium" href="#">Бельгия</a>
                     </li>
                     <li class="result__country">
-                      <a class="result__country-title" href="#">Чехия</a>
+                      <a class="result__country-title result__country-title--czech" href="#">Чехия</a>
                     </li>
                   </ul>
                 </div>
@@ -657,10 +672,13 @@
                   </div>
                 </div>
               </li>
-
               <li class="result__item">
                 <div class="result__avatar">
-                  <img class="result__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар пользователя Марк Смолов">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="img/catalog/smolov-desktop.jpg 1x, img/catalog/smolov-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/smolov-tablet.jpg 1x, img/catalog/smolov-tablet@2x.jpg 2x">
+                    <img class="result__img" src="img/catalog/smolov-mobile.jpg" srcset="img/catalog/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Аватар пользователя Марк Смолов">
+                  </picture>
                 </div>
                 <div class="result__wrapper">
                   <h3 class="result__name">Марк Смолов</h3>
@@ -676,13 +694,13 @@
                   <p class="result__description">хочет посетить:</p>
                   <ul class="result__countries-list">
                     <li class="result__country">
-                      <a class="result__country-title" href="#">США</a>
+                      <a class="result__country-title result__country-title--usa" href="#">США</a>
                     </li>
                     <li class="result__country">
-                      <a class="result__country-title" href="#">Австралия</a>
+                      <a class="result__country-title result__country-title--australia" href="#">Австралия</a>
                     </li>
                     <li class="result__country">
-                      <a class="result__country-title" href="#">Доминика</a>
+                      <a class="result__country-title result__country-title--dominica" href="#">Доминика</a>
                     </li>
                   </ul>
                 </div>
@@ -727,7 +745,11 @@
               </li>
               <li class="result__item">
                 <div class="result__avatar">
-                  <img class="result__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар пользователя Лариса Роговая">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="img/catalog/rogovaya-desktop.jpg 1x, img/catalog/rogovaya-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/rogovaya-tablet.jpg 1x, img/catalog/rogovaya-tablet@2x.jpg 2x">
+                    <img class="result__img" src="img/catalog/rogovaya-mobile.jpg" srcset="img/catalog/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Аватар пользователя Лариса Роговая">
+                  </picture>
                 </div>
                 <div class="result__wrapper">
                   <h3 class="result__name">Лариса Роговая</h3>
@@ -742,10 +764,10 @@
                   <p class="result__description">хочет посетить:</p>
                   <ul class="result__countries-list">
                     <li class="result__country">
-                      <a class="result__country-title" href="#">Великобритания</a>
+                      <a class="result__country-title result__country-title--britain" href="#">Великобритания</a>
                     </li>
                     <li class="result__country">
-                      <a class="result__country-title" href="#">Германия</a>
+                      <a class="result__country-title result__country-title--germany" href="#">Германия</a>
                     </li>
                   </ul>
                 </div>
@@ -817,7 +839,11 @@
     <footer class="page-footer page-footer--inner">
       <div class="page-footer__container container">
         <a class="page-footer__logo logo" href="index.html">
-          <img class="page-footer__logo-image" src="img/logo-mobile-scroll.png" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-blue.png 1x, img/logo/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-blue.png 1x, img/logo/logo-tablet-blue@2x.png 2x">
+            <img class="page-footer__logo-image logo__image" src="img/logo/logo-mobile-blue.png" srcset="img/logo/logo-mobile-blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          </picture>
         </a>
         <ul class="page-footer__social social">
           <li>
@@ -831,7 +857,9 @@
           </li>
         </ul>
         <p class="page-footer__copyright">Разработано
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Онлайн-курс «Адаптивная вёрстка сайтов и автоматизация»">лого Академии</a>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Онлайн-курс «Адаптивная вёрстка сайтов и автоматизация»">
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
         </p>
       </div>
     </footer>

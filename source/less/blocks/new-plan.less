@@ -457,7 +457,17 @@
 }
 
 .new-plan__select-wrapper--selected {
+  width: 76%;
+  position: relative;
   z-index: @zindex-new-plan-country-selection;
+
+  @media (min-width: @tablet-width) {
+    width: 69%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 73%;
+  }
 
   &::before {
     content: "";
@@ -493,19 +503,6 @@
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
-  }
-}
-
-.new-plan__select-wrapper--selected {
-  width: 76%;
-  position: relative;
-
-  @media (min-width: @tablet-width) {
-    width: 69%;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 73%;
   }
 }
 
