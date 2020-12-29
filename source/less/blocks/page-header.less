@@ -19,7 +19,7 @@
 
 .page-header--closed {
   padding-bottom: 26px;
-  background-color: @basic-blue;
+  background-color: transparent;
 
   .main-nav__logo {
     margin-bottom: 0;
@@ -113,10 +113,11 @@
 .page-header--scroll {
   padding-top: 27px;
   background-color: @basic-white;
+  transition: ease 0.2s;
 
   @media (min-width: @desktop-width) {
-    padding-top: 21px;
-    padding-bottom: 19px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 
   .logo__image--opened {
@@ -128,13 +129,23 @@
   }
 
   .site-nav__link {
-    color: @menu-blue;
+    color: @basic-blue;
   }
 
   .main-nav__toggle {
     &::before,
     &::after {
       background-color: @grey-menu-toggle;
+    }
+  }
+
+  .main-nav__list {
+    @media (min-width: @desktop-width) {
+      &::before {
+        left: 56px;
+        width: 44px;
+        background-color: @basic-blue;
+      }
     }
   }
 }

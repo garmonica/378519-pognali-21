@@ -11,8 +11,16 @@
     <header class="page-header page-header--closed page-header--nojs">
       <nav class="main-nav container">
         <a class="main-nav__logo logo">
-          <img class="logo__image logo__image--closed logo__image--shown" src="img/logo-mobile.png" width="100" height="15" alt="Логотип сервиса для путешествий «Погнали»">
-          <img class="logo__image logo__image--opened" src="img/logo-mobile-scroll.png" width="100" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-white.png 1x, img/logo/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-white.png 1x, img/logo/logo-tablet-white@2x.png 2x">
+            <img class="logo__image logo__image--closed logo__image--shown" src="img/logo/logo-mobile-white.png" srcset="img/logo/logo-mobile-white@2x.png 2x" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-blue.png 1x, img/logo/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-blue.png 1x, img/logo/logo-tablet-blue@2x.png 2x">
+            <img class="logo__image logo__image--opened" src="img/logo/logo-mobile-blue.png" srcset="img/logo/logo-mobile-blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          </picture>
         </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <a class="main-nav__login button button--menu-login" href="blank.html">Авторизация</a>
@@ -42,13 +50,13 @@
           </ul>
           <ul class="main-nav__social social">
             <li>
-              <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
+              <a class="main-nav__social-link social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
             </li>
             <li>
-              <a class="social__link social__link--vk" href="#" aria-label="Вконтакте"></a>
+              <a class="main-nav__social-link social__link social__link--vk" href="#" aria-label="Вконтакте"></a>
             </li>
             <li>
-              <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
+              <a class="main-nav__social-link social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
             </li>
           </ul>
         </div>
@@ -104,7 +112,7 @@
         </div>
       </section>
       <section class="about">
-        <div class="container">
+        <div class="about__container container">
           <h2 class="about__heading">О сервисе</h2>
           <p class="about__text">
             Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий<br> и черпайте вдохновение в чужих.
@@ -123,30 +131,39 @@
           </p>
           <ul class="routes__list">
             <li class="routes__item">
-              <img class="routes__image" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Побережье Таиланда">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/countries/thailand-tablet.jpg 1x, img/countries/thailand-tablet@2x.jpg 2x">
+                <img class="routes__image" src="img/countries/thailand-mobile.jpg" srcset="img/countries/thailand-mobile@2x.jpg 2x" width="270" height="110" alt="Побережье Таиланда">
+              </picture>
               <div class="routes__content">
                 <div class="routes__country">
-                  <h3 class="routes__title">Таиланд</h3>
+                  <h3 class="routes__title routes__title--thailand">Таиланд</h3>
                   <p class="routes__description">Джунгли зовут!</p>
                 </div>
                 <p class="routes__users-number">18321</p>
               </div>
             </li>
             <li class="routes__item">
-              <img class="routes__image" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Улица в городе Франции">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/countries/france-tablet.jpg 1x, img/countries/france-tablet@2x.jpg 2x">
+                <img class="routes__image" src="img/countries/france-mobile.jpg" srcset="img/countries/france-mobile@2x.jpg 2x" width="270" height="110" alt="Улица в городе Франции">
+              </picture>
               <div class="routes__content">
                 <div class="routes__country">
-                  <h3 class="routes__title">Франция</h3>
+                  <h3 class="routes__title routes__title--france">Франция</h3>
                   <p class="routes__description">Трэ бьен, манифик!</p>
                 </div>
                 <p class="routes__users-number">12518</p>
               </div>
             </li>
             <li class="routes__item">
-              <img class="routes__image" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Набережная в городе Чехии">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/countries/czech-tablet.jpg 1x, img/countries/czech-tablet@2x.jpg 2x">
+                <img class="routes__image" src="img/countries/czech-mobile.jpg" srcset="img/countries/czech-mobile@2x.jpg 2x" width="270" height="110" alt="Набережная в городе Чехии">
+              </picture>
               <div class="routes__content">
                 <div class="routes__country">
-                  <h3 class="routes__title">Чехия</h3>
+                  <h3 class="routes__title routes__title--czech">Чехия</h3>
                   <p class="routes__description">Закоулки<br> старой Европы</p>
                 </div>
                 <p class="routes__users-number">5326</p>
@@ -168,7 +185,10 @@
           <ul class="companions__list">
             <li class="companions__item">
               <div class="companions__photo">
-                <img class="companions__img" src="https://via.placeholder.com/270x270" alt="Пользователь Таня Фирсова">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/users/firsova-tablet.jpg 1x, img/users/firsova-tablet@2x.jpg 2x">
+                  <img class="companions__img" src="img/users/firsova-mobile.jpg" srcset="img/users/firsova-mobile@2x.jpg 2x" width="270" height="270" alt="Пользователь Таня Фирсова">
+                </picture>
               </div>
               <div class="companions__level">
                 <p class="companions__level-number">99</p>
@@ -176,9 +196,9 @@
               </div>
               <div class="companions__content">
                 <div class="companions__flags">
-                  <img class="companions__flag-image" src="https://via.placeholder.com/35x25" alt="Флаг Шри-Ланки">
-                  <img class="companions__flag-image" src="https://via.placeholder.com/35x25" alt="Флаг Таиланда">
-                  <img class="companions__flag-image" src="https://via.placeholder.com/35x25" alt="Флаг Сейшел">
+                  <img class="companions__flag-image" src="img/flags/Sri-Lanka.png" srcset="img/flags/Sri-Lanka@2x.png 2x" width="35" height="25" alt="Флаг Шри-Ланки">
+                  <img class="companions__flag-image" src="img/flags/Thailand.png" srcset="img/flags/Thailand@2x.png 2x" width="35" height="25" alt="Флаг Таиланда">
+                  <img class="companions__flag-image" src="img/flags/Seychelles.png" srcset="img/flags/Seychelles@2x.png 2x" width="35" height="25" alt="Флаг Сейшел">
                 </div>
                 <p class="companions__name">Таня Фирсова</p>
                 <div class="companions__tags">
@@ -215,7 +235,10 @@
             </li>
             <li class="companions__item">
               <div class="companions__photo">
-                <img class="companions__img" src="https://via.placeholder.com/270x270" alt="Пользователь Таня Фирсова">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/users/demin-tablet.jpg 1x, img/users/demin-tablet@2x.jpg 2x">
+                  <img class="companions__img" src="img/users/demin-mobile.jpg" srcset="img/users/demin-mobile@2x.jpg 2x" width="270" height="270" alt="Пользователь Петя Демин">
+                </picture>
               </div>
               <div class="companions__level">
                 <p class="companions__level-number">80</p>
@@ -223,8 +246,8 @@
               </div>
               <div class="companions__content">
                 <div class="companions__flags">
-                  <img class="companions__flag-image" src="https://via.placeholder.com/35x25" alt="Флаг Бельгии">
-                  <img class="companions__flag-image" src="https://via.placeholder.com/35x25" alt="Флаг Чехии">
+                  <img class="companions__flag-image" src="img/flags/Belgium.png" srcset="img/flags/Belgium@2x.png 2x" width="35" height="25" alt="Флаг Бельгии">
+                  <img class="companions__flag-image" src="img/flags/Czechia.png" srcset="img/flags/Czechia@2x.png 2x" width="35" height="25" alt="Флаг Чехии">
                 </div>
                 <p class="companions__name">Петя Демин</p>
                 <div class="companions__tags">
@@ -320,7 +343,11 @@
     <footer class="page-footer">
       <div class="page-footer__container container">
         <a class="page-footer__logo logo">
-          <img class="page-footer__logo-image logo__image" src="img/logo-mobile-scroll.png" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-blue.png 1x, img/logo/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-blue.png 1x, img/logo/logo-tablet-blue@2x.png 2x">
+            <img class="page-footer__logo-image logo__image" src="img/logo/logo-mobile-blue.png" srcset="img/logo/logo-mobile-blue@2x.png 2x" width="96" height="15" alt="Логотип сервиса для путешествий «Погнали»">
+          </picture>
         </a>
         <ul class="page-footer__social social">
           <li>
@@ -334,7 +361,9 @@
           </li>
         </ul>
         <p class="page-footer__copyright">Разработано
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Онлайн-курс «Адаптивная вёрстка сайтов и автоматизация»">лого Академии</a>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Онлайн-курс «Адаптивная вёрстка сайтов и автоматизация»">
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
         </p>
       </div>
     </footer>

@@ -13,7 +13,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 45px 0 48px;
+    padding: 47px 0 44px;
   }
 }
 
@@ -51,7 +51,7 @@
   .offset();
   display: flex;
   justify-content: center;
-  margin-bottom: 57px;
+  margin-bottom: 37px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -72,6 +72,34 @@
   .offset();
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 13px;
   line-height: 16px;
   color: @special-grey;
+  border-top: 1px solid @grey-border-footer;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 10px;
+    padding-top: 0;
+    font-size: 20px;
+    line-height: 20px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 45px;
+  }
+}
+
+.page-footer__copyright-link {
+  display: block;
+  width: 27px;
+  height: 34px;
+  background-image: url("../img/html-academy-logo.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 5px;
+    margin-left: 24px;
+  }
 }

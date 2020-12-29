@@ -1,18 +1,43 @@
 .companions {
-  padding: 65px 0 30px;
-  background-color: @menu-blue;
+  margin-top: -30px;
+  padding: 95px 0 30px;
+  background-color: @basic-blue;
   position: relative;
   z-index: @zindex-companions;
   border-radius: 0 0 30px 30px;
+  background-image: url("../img/bg/bg-companions-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 0 61px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg/bg-companions-mobile@2x.png");
+    background-size: 295px auto;
+  }
 
   @media (min-width: @tablet-width) {
     margin-top: -60px;
     padding: 198px 0 87px;
     border-radius: 0 0 60px 60px;
+
+    background-image: url("../img/bg/bg-companions-tablet.png");
+    background-position: 35% 130px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg/bg-companions-tablet@2x.png");
+      background-size: 654px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding: 185px 0 134px;
+
+    background-image: url("../img/bg/bg-companions-desktop.png");
+    background-position: 60px 130px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg/bg-companions-desktop@2x.png");
+      background-size: 630px auto;
+    }
   }
 }
 
@@ -128,10 +153,15 @@
 }
 
 .companions__item {
+  max-width: 400px;
+  margin: 0 auto;
   margin-bottom: 10px;
   position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
+    margin: 0 0 10px;
     width: 285px;
   }
 
@@ -144,7 +174,6 @@
   width: auto;
   height: 270px;
   display: block;
-  border-radius: 10px 10px 0 0;
   position: relative;
   overflow: hidden;
   background-color: lightpink;
@@ -156,10 +185,6 @@
 }
 
 .companions__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   margin: auto;
   width: 100%;
   height: 100%;
@@ -261,6 +286,10 @@
   .offset();
   list-style: none;
   justify-content: center;
+}
+
+.companions__transport-link {
+  outline: 1px solid grey;
 }
 
 .companions__show-all {

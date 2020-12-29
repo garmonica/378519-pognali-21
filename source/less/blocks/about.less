@@ -1,17 +1,43 @@
 .about {
+  min-height: 353px;
+  box-sizing: border-box;
   padding: 31px 0 83px;
   border-radius: 0 0 30px 30px;
   background-color: @basic-blue;
   position: relative;
   z-index: @zindex-about;
+  background-image: url("../img/bg/bg-about-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg/bg-about-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 
   @media (min-width: @tablet-width) {
-    padding: 31px 0 90px;
+    padding: 37px 0 90px;
     border-radius: 0 0 60px 60px;
+    background-image: url("../img/bg/bg-about-tablet.png");
+    background-position: 85% 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg/bg-about-tablet@2x.png");
+      background-size: 720px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 31px 0 165px;
+    margin-top: -60px;
+    padding: 187px 0 165px;
+
+    background-image: url("../img/bg/bg-about-desktop.png");
+    background-position: 50% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg/bg-about-desktop@2x.png");
+      background-size: 1320px auto;
+    }
   }
 }
 
