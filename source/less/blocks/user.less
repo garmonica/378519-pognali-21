@@ -1,7 +1,7 @@
 .user {
   padding: 25px 0 10px;
   background-color: @light-blue;
-  color: @basic-blue;
+  color: @basic-blue-dark;
 
   @media (min-width: @tablet-width) {
     padding: 66px 0 60px;
@@ -102,6 +102,7 @@
 }
 
 .user__avatar {
+  display: block;
   margin-right: 18px;
   border-radius: 50%;
 
@@ -118,7 +119,7 @@
     height: 190px;
     top: -190px;
     right: 155px;
-    border-radius: 7px 7px 0 0;
+    border-radius: 15px 15px 0 0;
   }
 }
 
@@ -131,7 +132,7 @@
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
-  color: @basic-blue;
+  color: @basic-blue-dark;
   text-align: center;
   background-color: @special-blue-light;
   border-radius: 20px;
@@ -275,6 +276,8 @@
 }
 
 .user__transport-link {
+  outline: 1px solid grey;
+
   @media (min-width: @tablet-width) {
     width: 43px;
     height: 44px;
