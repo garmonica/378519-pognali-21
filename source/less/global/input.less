@@ -14,6 +14,7 @@
   box-sizing: border-box;
   border-radius: 4px;
   appearance: textfield;
+  outline: none;
 
   @media (min-width: @tablet-width) {
     padding: 22px 50px;
@@ -22,6 +23,24 @@
 
   @media (min-width: @desktop-width) {
     padding: 22px 50px 23px;
+  }
+
+  &:hover {
+    border: 1px solid @blue-border-hover;
+  }
+
+  &:hover ~ .input__button::before,
+  &:hover ~ .input__button::after {
+    background-color: @blue-border-hover;
+  }
+
+  &:focus {
+    border: 1px solid @basic-blue-dark;
+  }
+
+  &:focus ~ .input__button::before,
+  &:focus ~ .input__button::after {
+    background-color: @basic-blue-dark;
   }
 }
 
@@ -67,6 +86,21 @@
 
     @media (min-width: @desktop-width) {
       left: 18px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: @grey-input-btn-hover;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: @grey-input-btn-down;
     }
   }
 }

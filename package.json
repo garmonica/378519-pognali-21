@@ -39,6 +39,7 @@
     "node": "14.15.0"
   },
   "dependencies": {
+    "gulp-cli": "^2.3.0",
     "normalize.less": "^1.0.0"
   }
 }

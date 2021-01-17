@@ -160,7 +160,8 @@
   font-weight: 500;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: fade(@basic-black, 30%);
+  color: @basic-black;
+  opacity: 30%;
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
@@ -174,5 +175,14 @@
   @media (min-width: @desktop-width) {
     margin-right: 42px;
     letter-spacing: 0.08em;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 10%;
   }
 }

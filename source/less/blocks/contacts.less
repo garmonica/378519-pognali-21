@@ -36,34 +36,78 @@
   }
 
   @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
+    border-radius: 50%;
     padding: 0;
 
     &::before {
-      width: 50px;
-      height: 50px;
+      display: none;
+    }
+
+    &:active .contacts__icon {
+      opacity: 30%;
     }
   }
 }
 
 .contacts__link--phone {
   @media (min-width: @desktop-width) {
-    &::before {
-      top: 0;
-      left: 0;
-      background-color: @special-orange;
+    background-color: @special-orange;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: @special-orange-dark;
     }
   }
 }
 
 .contacts__link--email {
   @media (min-width: @desktop-width) {
-    &::before {
-      top: 0;
-      left: 0;
-      background-color: @special-yellow-dark;
+    background-color: @special-yellow-dark;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: @special-orange;
     }
+  }
+}
+
+.contacts__icon {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.contacts__icon-menu {
+  fill: @basic-yellow;
+  position: absolute;
+  top: 16px;
+  left: 14px;
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 23px;
+    top: 25px;
+    left: 78px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.contacts__icon-menu--email {
+  @media (min-width: @tablet-width) {
+    width: 28px;
+    height: 19px;
   }
 }
 

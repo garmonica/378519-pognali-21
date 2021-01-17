@@ -1,6 +1,6 @@
 .new-plan {
   margin-top: -30px;
-  padding: 28px 0 63px;
+  padding: 28px 0 66px;
   background-color: @special-blue;
   color: @basic-blue-light;
   border-radius: 30px 30px 0 0;
@@ -110,8 +110,9 @@
   }
 }
 
-.new-plan__indicator-text {
+.new-plan__indicator-link {
   display: none;
+  text-decoration: none;
 
   @media (min-width: @desktop-width) {
     display: inline;
@@ -129,7 +130,7 @@
     cursor: default;
   }
 
-  .new-plan__indicator-text {
+  .new-plan__indicator-link {
     color: @basic-black;
   }
 }
@@ -148,7 +149,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 40px;
-    padding: 45px 40px 46px 40px;
+    padding: 45px 40px 56px 40px;
     border-radius: 30px;
   }
 
@@ -162,7 +163,7 @@
 .new-plan__step:nth-child(2) {
   @media (min-width: @tablet-width) {
     margin-bottom: 50px;
-    padding: 45px 40px 42px 43px;
+    padding: 45px 40px 46px 43px;
   }
 
   @media (min-width: @desktop-width) {
@@ -259,7 +260,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 23px;
@@ -369,6 +370,7 @@
   .offset();
   padding-top: 5px;
   list-style: none;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-top: -6px;
@@ -380,6 +382,22 @@
     margin-top: 0;
     padding-top: 62px;
   }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 139px;
+      width: 1px;
+      height: 100%;
+      background-color: @grey-border;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 224px;
+    }
+  }
 }
 
 .new-plan__countries-item {
@@ -390,63 +408,77 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 15px;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    right: 49px;
+    width: 8px;
+    height: 11px;
+    background: url("../img/next-down-arrow.svg") no-repeat;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &--selected::before,
+  &--not-selected::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 49px;
+    margin: auto;
+    width: 6px;
+    height: 6px;
+    border: 1px solid @basic-blue-light;
+    border-radius: 50%;
+    z-index: @zindex-new-plan;
+
+    @media (min-width: @tablet-width) {
+      width: 12px;
+      height: 12px;
+      right: 133px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 218px;
+    }
+  }
+
+  &--selected::before {
+    background-color: @basic-blue-light;
+  }
+
+  &--not-selected::before {
+    border-color: @light-grey;
+    background-color: @basic-white;
+  }
 }
 
-.new-plan__countries-item--selected::after {
-  content: "";
+.new-plan__flag {
   position: absolute;
-  width: 24%;
+  width: 53px;
   height: 100%;
   right: 0;
   border-radius: 4px;
   border: 1px solid @light-grey;
   box-sizing: border-box;
-  background-repeat: no-repeat;
-  background-position: 50%;
+  background-size: 35px 24px;
 
   @media (min-width: @tablet-width) {
-    background-position: 14px 50%;
+    width: 70px;
+    height: 47px;
+    background-size: 100% auto;
     border: none;
+    top: 11px;
+    right: 44px;
   }
 
   @media (min-width: @desktop-width) {
-    background-position: 55px 50%;
-  }
-}
-
-.new-plan__countries-item--selected-bosnia::after {
-  background-image: url("../img/flags/Bosnia-and-Herzegovina.png");
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/flags/Bosnia-and-Herzegovina@2x.png");
-    background-size: 35px auto;
-  }
-
-  @media (min-width: @tablet-width) {
-    background-image: url("../img/flags/Bosnia-and-Herzegovina-tablet.png");
-    background-size: 70px auto;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/flags/Bosnia-and-Herzegovina-tablet@2x.png");
-    }
-  }
-}
-
-.new-plan__countries-item--selected-czech::after {
-  background-image: url("../img/flags/Czechia.png");
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/flags/Czechia@2x.png");
-    background-size: 35px auto;
-  }
-
-  @media (min-width: @tablet-width) {
-    background-image: url("../img/flags/Czechia-tablet.png");
-    background-size: 70px auto;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/flags/Czechia-tablet@2x.png");
-    }
+    right: 115px;
   }
 }
 
@@ -456,31 +488,66 @@
   position: relative;
 }
 
-.new-plan__select-wrapper--selected {
-  width: 76%;
+.new-plan__select-wrapper {
   position: relative;
-  z-index: @zindex-new-plan-country-selection;
 
-  @media (min-width: @tablet-width) {
-    width: 69%;
-  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 14px;
+    margin: auto;
+    width: 7px;
+    height: 11px;
+    background: url("../img/icon-arrow.svg") center / 100% auto no-repeat;
+    transform: rotate(90deg);
+    opacity: 30%;
+    z-index: @zindex-new-plan;
+    pointer-events: none;
 
-  @media (min-width: @desktop-width) {
-    width: 73%;
+    @media (min-width: @tablet-width) {
+      width: 9px;
+      height: 16px;
+      right: 28px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 11px;
+      height: 21px;
+      right: 30px;
+    }
   }
 
   &::before {
     content: "";
     position: absolute;
-    width: 52px;
-    height: 36px;
     top: 0;
     bottom: 0;
-    right: 4px;
+    right: 5px;
     margin: auto;
-    background-image: url("../img/fade-mobile.png");
-    background-repeat: no-repeat;
-    background-position: 50%;
+    width: 52px;
+    height: 36px;
+    background: url("../img/fade-mobile.png") 100% 50% no-repeat;
+    z-index: @zindex-new-plan;
+    pointer-events: none;
+
+    @media (min-width: @tablet-width) {
+      right: 30px;
+    }
+  }
+}
+
+.new-plan__select-wrapper--selected {
+  width: 100%;
+  margin-right: 53px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 166px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 270px;
   }
 }
 
@@ -494,9 +561,13 @@
   color: @basic-blue-light;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  background-color: @basic-white;
   border: 1px solid @light-grey;
   border-radius: 4px;
   appearance: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
 
   @media (min-width: @tablet-width) {
     padding: 23px 59px 25px 23px;
@@ -504,18 +575,27 @@
     line-height: 20px;
     letter-spacing: 0.1em;
   }
+
+  &:hover,
+  &:focus {
+    border-color: @blue-border-hover;
+  }
 }
 
 .new-plan__select-wrapper--not-selected {
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    width: 69%;
+    margin-right: 166px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 73%;
+    margin-right: 270px;
   }
+}
+
+.new-plan__select-close {
+  display: none;
 }
 
 .new-plan__remove {
@@ -528,7 +608,7 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  z-index: @zindex-new-plan-remove;
+  z-index: @zindex-new-plan;
 
   @media (min-width: @tablet-width) {
     top: 0;
@@ -540,6 +620,21 @@
 
   @media (min-width: @desktop-width) {
     right: 4px;
+
+    &:hover,
+    &:focus {
+      &::before,
+      &::after {
+        background-color: fade(@basic-black, 30%);
+      }
+    }
+
+    &:active {
+      &::before,
+      &::after {
+        background-color: fade(@basic-black, 5%);
+      }
+    }
   }
 
   &::before,
@@ -568,9 +663,67 @@
   }
 }
 
+.new-plan__new-country-wrapper {
+  margin-bottom: 25px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 51px;
+    padding-right: 166px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 54px;
+    padding-right: 270px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 49px;
+    margin: auto;
+    width: 6px;
+    height: 6px;
+    background-color: @light-blue;
+    border: 1px solid @light-grey;
+    border-radius: 50%;
+    z-index: @zindex-new-plan;
+
+    @media (min-width: @tablet-width) {
+      width: 12px;
+      height: 12px;
+      right: 133px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 218px;
+    }
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      top: -20px;
+      right: 139px;
+      width: 1px;
+      height: 125px;
+      background-image: linear-gradient(@grey-border 50%, transparent 100%);
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 224px;
+      height: 240px;
+      background-image: none;
+      background-color: @grey-border;
+    }
+  }
+}
+
 .new-plan__new-country {
   width: 100%;
-  margin-bottom: 25px;
   padding: 12px;
   position: relative;
   font-family: inherit;
@@ -580,15 +733,13 @@
   letter-spacing: 0.1em;
   color: inherit;
   text-transform: uppercase;
-  background-color: @light-blue;
+  background-color: transparent;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   text-align: left;
 
   @media (min-width: @tablet-width) {
-    width: 69%;
-    margin-bottom: 51px;
     padding: 25px;
     font-size: 20px;
     line-height: 20px;
@@ -596,8 +747,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 73%;
-    margin-bottom: 54px;
     letter-spacing: 0.1em;
   }
 
@@ -607,7 +756,8 @@
     position: absolute;
     width: 14px;
     height: 2px;
-    background-color: @grey-add;
+    background-color: @basic-black;
+    opacity: 20%;
     top: 0;
     right: 15px;
     bottom: 0;
@@ -622,28 +772,173 @@
   &::after {
     transform: rotate(90deg);
   }
+
+  &:hover,
+  &:focus {
+    background-color: @light-blue;
+
+    &::before,
+    &::after {
+      opacity: 30%;
+    }
+  }
+
+  &:active {
+    background-color: @light-blue;
+
+    &::before,
+    &::after {
+      opacity: 10%;
+    }
+  }
 }
 
 .new-plan__country-selection {
-  display: none;
+  width: 100%;
   position: absolute;
-  top: 39px;
+  top: 42px;
   z-index: @zindex-new-plan-country-selection;
 
   @media (min-width: @tablet-width) {
     min-height: 415px;
-    width: 100%;
-    padding-left: 30px;
+    min-width: 575px;
+    padding: 0 22px 0 27px;
     box-sizing: border-box;
-    display: none;
     justify-content: space-between;
-    align-items: center;
     top: 70px;
     box-shadow: 0 8px 16px @country-selection-shadow;
   }
 
   @media (min-width: @desktop-width) {
-    width: 73%;
+    min-width: auto;
+    width: 730px;
+    padding: 0 55px 0 10px;
+  }
+}
+
+.new-plan__countries-item--opened {
+  // кнопка закрыть выпадающий список
+  .new-plan__select-close {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 6px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    @media (min-width: @tablet-width) {
+      right: 20px;
+      opacity: 30%;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 1px;
+      height: 10px;
+      background-color: @basic-white;
+      transform: rotate(45deg);
+
+      @media (min-width: @tablet-width) {
+        height: 25px;
+      }
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    @media (min-width: @desktop-width) {
+      &:hover,
+      &:focus {
+        opacity: 100%;
+      }
+
+      &:active {
+        opacity: 10%;
+      }
+    }
+  }
+
+  // обертка алфавита и списка стран
+  .new-plan__country-selection {
+    display: block;
+    box-shadow: 0 2px 16px @country-selection-shadow;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      box-shadow: 0 2px 16px @country-selection-shadow-tablet;
+    }
+  }
+
+  &::before {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
+  // обертка селекта и кнопки закрыть
+  .new-plan__select-wrapper {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  // селект
+  .new-plan__select-country {
+    padding-left: 16px;
+    background-color: @basic-blue-light;
+    color: @basic-white;
+    letter-spacing: 0.02em;
+    border-radius: 4px 4px 0 0;
+    border-color: @basic-blue-light;
+    border-bottom: 2px solid @basic-blue-light;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 24px;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  // кнопка убрать из списка
+  .new-plan__remove {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+}
+
+.new-plan__countries-item--closed {
+  .new-plan__country-selection {
+    display: none;
+  }
+}
+
+.new-plan__countries-item--nojs {
+  .new-plan__country-selection {
+    display: block;
+    position: static;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+    }
   }
 }
 
@@ -651,6 +946,7 @@
   border: 1px solid @light-grey;
 
   @media (min-width: @tablet-width) {
+    min-width: 171px;
     border: none;
     border-left: 1px solid fade(@blue-table, 50%);
   }
@@ -667,6 +963,7 @@
 .new-plan__previous-step {
   display: block;
   margin-top: 10px;
+  position: relative;
   font-size: 17px;
   line-height: 30px;
   color: @basic-blue-light;
@@ -684,8 +981,17 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 26px 3px 30px 36px;
+    padding: 28px 3px 28px 36px;
     letter-spacing: normal;
+
+    &:hover,
+    &:focus {
+      opacity: 70%;
+    }
+
+    &:active {
+      opacity: 30%;
+    }
   }
 }
 

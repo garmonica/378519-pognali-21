@@ -27,8 +27,38 @@
   }
 
   @media (min-width: @desktop-width) {
+    display: inline-block;
+    vertical-align: baseline;
+    position: relative;
+    overflow: hidden;
     font-size: 20px;
     line-height: 20px;
     color: @basic-white;
+
+    &:hover[href] .site-nav__link-text,
+    &:focus[href] .site-nav__link-text {
+      transform: translateY(-100%);
+      color: @basic-yellow;
+    }
+
+    &:active[href] .site-nav__link-text {
+      color: fade(@basic-yellow, 30%);
+    }
+  }
+}
+
+.site-nav__link-text {
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+    vertical-align: baseline;
+    position: relative;
+    transition: transform 0.3s;
+
+    &::before {
+      position: absolute;
+      top: 100%;
+      content: attr(data-hover);
+      transform: translate3d(0, 0, 0);
+    }
   }
 }

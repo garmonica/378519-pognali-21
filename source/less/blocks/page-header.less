@@ -1,6 +1,7 @@
 .page-header {
   position: fixed;
   width: 100%;
+  min-width: 320px;
   box-sizing: border-box;
   background-color: @basic-white;
   color: @basic-white;
@@ -45,6 +46,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding: 49px 0;
+
     .main-nav__login,
     .main-nav__list,
     .main-nav__wrapper {
@@ -54,6 +57,16 @@
 }
 
 .page-header--opened {
+  padding-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 49px 0;
+  }
+
   .logo__image--opened {
     display: block;
   }
@@ -85,13 +98,16 @@
   position: static;
   background-color: @basic-white;
   color: @basic-white;
+  padding-top: 26px;
 
-  .main-nav__logo {
-    margin-bottom: 75px;
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+  }
 
-    @media (min-width: @desktop-width) {
-      margin-bottom: 0;
-    }
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    background-color: transparent;
+    padding: 49px 0;
   }
 
   .logo__image--opened,
@@ -108,12 +124,32 @@
   .main-nav__toggle {
     display: none;
   }
+
+  @media (min-width: @desktop-width) {
+    .main-nav__login,
+    .main-nav__list,
+    .main-nav__wrapper {
+      display: flex;
+    }
+
+    .logo__image--opened {
+      display: none;
+    }
+
+    .logo__image--closed {
+      display: block;
+    }
+  }
 }
 
 .page-header--scroll {
-  padding-top: 27px;
+  padding-top: 26px;
   background-color: @basic-white;
   transition: ease 0.2s;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+  }
 
   @media (min-width: @desktop-width) {
     padding-top: 14px;

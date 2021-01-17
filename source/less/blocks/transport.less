@@ -5,12 +5,29 @@
 }
 
 .transport__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 32px;
   height: 32px;
   position: relative;
   text-decoration: none;
   border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.transport__link .transport__icon {
+  fill: @grey-transport;
+}
+
+.transport__link--active .transport__icon {
+  fill: @basic-blue-light;
+}
+
+.transport__link:hover .transport__tooltip {
+  display: block;
+  z-index: @zindex-transport-tooltip;
 }
 
 .transport__tooltip {
@@ -18,16 +35,25 @@
   padding: 15px 20px;
   display: none;
   position: absolute;
-  top: 35px;
+  top: 45px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
   font-size: 20px;
   line-height: 20px;
   color: @basic-white;
   text-align: center;
   background-color: @blue-tooltip;
   border-radius: 4px;
-}
 
-.transport__link:hover .transport__tooltip {
-  display: block;
-  z-index: @zindex-transport-tooltip;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    border: 7px solid transparent;
+    border-bottom: 8px solid @blue-tooltip;
+  }
 }

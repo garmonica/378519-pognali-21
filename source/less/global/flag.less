@@ -1,0 +1,151 @@
+.flag {
+  position: relative;
+  width: 35px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 70px;
+    height: 47px;
+  }
+}
+
+.flag:hover .flag__tooltip {
+  display: block;
+  z-index: @zindex-transport-tooltip;
+}
+
+.flag__tooltip {
+  .offset();
+  min-width: 110px;
+  padding: 15px 20px;
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+  font-size: 20px;
+  line-height: 20px;
+  color: @basic-white;
+  text-align: center;
+  background-color: @blue-tooltip;
+  border-radius: 4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    border: 7px solid transparent;
+    border-bottom: 8px solid @blue-tooltip;
+  }
+}
+
+.flag--thailand {
+  background-image: url("../img/flags/Thailand.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/Thailand@2x.png");
+  }
+}
+
+.flag--france {
+  background-image: url("../img/flags/France.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/France@2x.png");
+  }
+}
+
+.flag--czech {
+  background-image: url("../img/flags/Czech.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/Czech@2x.png");
+  }
+}
+
+.flag--sri-lanka {
+  background-image: url("../img/flags/Sri-Lanka.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/Sri-Lanka@2x.png");
+  }
+}
+
+.flag--seychelles {
+  background-image: url("../img/flags/Seychelles.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/Seychelles@2x.png");
+  }
+}
+
+.flag--belgium {
+  background-image: url("../img/flags/Belgium.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/Belgium@2x.png");
+  }
+}
+
+.flag--bosnia-and-herzegovina {
+  background-image: url("../img/flags/Bosnia-and-Herzegovina.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/Bosnia-and-Herzegovina@2x.png");
+  }
+}
+
+.flag--sri-lanka-catalog {
+  background-image: url("../img/flags/Sri-Lanka-catalog.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/Sri-Lanka-catalog@2x.png");
+  }
+}
+
+.flag--usa {
+  background-image: url("../img/flags/USA.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/USA@2x.png");
+  }
+}
+
+.flag--australia {
+  background-image: url("../img/flags/Australia.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/Australia@2x.png");
+  }
+}
+
+.flag--dominica {
+  background-image: url("../img/flags/Dominica.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/Dominica@2x.png");
+  }
+}
+
+.flag--britain {
+  background-image: url("../img/flags/UK.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/UK@2x.png");
+  }
+}
+
+.flag--germany {
+  background-image: url("../img/flags/Germany.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/flags/Germany@2x.png");
+  }
+}

@@ -19,18 +19,36 @@
 }
 
 .user-nav__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
+
+  &:active .user-nav__icon {
+    opacity: 30%;
+  }
 }
 
 .user-nav__link--phone {
   background-color: @special-orange;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: @special-orange-dark;
+  }
 }
 
 .user-nav__link--email {
   background-color: @special-yellow-dark;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: @special-orange;
+  }
 }
 
 .user-nav__login {
@@ -38,4 +56,14 @@
   flex-grow: 1;
   font-size: 17px;
   line-height: 20px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: @special-yellow-dark;
+  }
+
+  &:active {
+    color: fade(@basic-blue, 30%);
+  }
 }

@@ -1,51 +1,124 @@
 .country-selection {
   color: @basic-blue-light;
+  border-radius: 0 0 4px 4px;
   background-color: @basic-white;
 }
 
 .country-selection__alphabet {
+  width: 100%;
   border-collapse: collapse;
+  background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 34px;
+    margin-right: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-collapse: separate;
+    border-spacing: 16px 15px;
+    margin: 20px 87px 23px 0;
+  }
 }
 
 .country-selection__letter {
+  .offset();
   width: 43px;
   height: 39px;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
   border: 1px solid @light-grey;
 
   @media (min-width: @tablet-width) {
     width: 49px;
-    height: 68px;
-    font-size: 20px;
-    line-height: 20px;
+    height: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
   }
 }
 
-.country-selection__letter--selected {
+.country-selection__letter-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: @basic-blue-light;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-radius: 4px;
+    border: 1px solid @light-grey;
+
+    &:hover,
+    &:focus {
+      border-color: @blue-border-hover;
+    }
+
+    &:focus {
+      background-color: @basic-blue-light;
+      color: @basic-white;
+    }
+  }
+}
+
+.country-selection__letter-link--selected {
   background-color: @light-blue;
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-blue-light;
+    color: @basic-white;
+  }
 }
 
 .country-selection__list {
   .offset();
+  margin-top: -1px;
   padding: 15px 0 19px;
   list-style: none;
+  border-radius: 0 0 4px 4px;
+  background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
-    padding: 32px 0 19px 0;
+    margin-top: 0;
+    padding: 32px 0 19px 12px;
     font-size: 20px;
     line-height: 20px;
+    border-radius: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 14px;
   }
 }
 
 .country-selection__item {
   padding: 4px 0 0 18px;
-  color: @special-grey;
 
   @media (min-width: @tablet-width) {
     padding: 5px 0 5px 11px;
+  }
+}
+
+.country-selection__link {
+  color: @special-grey;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: @basic-blue-light;
+  }
+
+  &:active {
+    opacity: 30%;
   }
 }
