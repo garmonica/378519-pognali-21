@@ -1,3 +1,4 @@
+
 .page-main__heading-block {
   padding: 92px 0 15px;
   background-color: @basic-blue-dark;
@@ -11,6 +12,10 @@
   @media (min-width: @desktop-width) {
     padding: 218px 0 73px;
   }
+}
+
+.page-main__heading-block--catalog {
+  position: relative;
 }
 
 .page-main__heading-container {
@@ -70,7 +75,8 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    padding: 21px 59px 10px 10px;
+    min-width: 116px;
+    padding: 21px 59px 13px 10px;
     margin-right: 35px;
     font-size: 20px;
     line-height: 20px;
@@ -78,10 +84,20 @@
     color: @basic-white;
     text-transform: uppercase;
     text-decoration: none;
+    background: url("../img/icon-arrow-bend.svg") 100% 23px no-repeat;
   }
 
   @media (min-width: @desktop-width) {
     margin-right: 64px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
   }
 }
 

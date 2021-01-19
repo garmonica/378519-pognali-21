@@ -41,22 +41,87 @@
   }
 }
 
+.checkbox__input + .checkbox__label--preferences:hover::before,
+.checkbox__input:focus + .checkbox__label--preferences::before {
+  opacity: 60%;
+}
+
+.checkbox__input + .checkbox__label--preferences:active::before {
+  opacity: 30%;
+}
+
+.checkbox__input + .checkbox__label--preferences:active::after {
+  opacity: 20%;
+}
+
 .checkbox__label--transport {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 32px;
   height: 32px;
-  margin-right: 1px;
   border-radius: 50%;
   background-color: @basic-white;
+  text-transform: none;
 
   @media (min-width: @tablet-width) {
     width: 43px;
     height: 43px;
-    margin-left: 2px;
   }
 
-  @media (min-width: @desktop-width) {
-    margin-left: 0;
+  &:hover,
+  .checkbox__input:focus + & {
+    box-shadow: 0 2px 6px @transport-shadow;
+  }
+
+  &:active {
+    box-shadow: none;
+    background-color: @blue-checkbox-down;
+  }
+}
+
+.checkbox__transport-icon {
+  width: 17px;
+  height: auto;
+  fill: @grey-transport;
+
+  @media (min-width: @tablet-width) {
+    width: 21px;
+    height: auto;
+  }
+}
+
+.checkbox__tooltip {
+  top: 55px;
+  cursor: default;
+}
+
+.checkbox__label--transport:hover {
+  .checkbox__transport-icon {
+    fill: @grey-dark-transport;
+  }
+}
+
+.checkbox__label--transport:active .checkbox__transport-icon {
+  fill: @basic-blue-light;
+  opacity: 10%;
+}
+
+.checkbox__input:checked + .checkbox__label--transport {
+  .checkbox__transport-icon {
+    fill: @basic-blue-light;
+  }
+}
+
+.checkbox__input:checked + .checkbox__label--transport:hover {
+  .checkbox__transport-icon {
+    opacity: 70%;
+  }
+}
+
+.checkbox__input:checked + .checkbox__label--transport:active {
+  .checkbox__transport-icon {
+    opacity: 30%;
   }
 }
 
@@ -106,9 +171,10 @@
 .checkbox__input + .checkbox__label--new-plan::before {
   top: 2px;
   left: 0;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border: 1px solid @light-grey;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     width: 34px;
@@ -124,4 +190,18 @@
     top: 15px;
     left: 13px;
   }
+}
+
+.checkbox__input + .checkbox__label--new-plan:hover::before,
+.checkbox__input:focus + .checkbox__label--new-plan::before {
+  border: 1px solid @blue-border-hover;
+}
+
+.checkbox__input + .checkbox__label--new-plan:active::before {
+  background-color: @blue-checkbox-down;
+  border: none;
+}
+
+.checkbox__input + .checkbox__label--new-plan:active::after {
+  opacity: 30%;
 }

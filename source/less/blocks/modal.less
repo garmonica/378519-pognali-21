@@ -3,7 +3,7 @@
   width: 270px;
   box-sizing: border-box;
   height: 443px;
-  padding: 30px 25px;
+  padding: 32px 0 0;
   background-color: @basic-white;
   box-shadow: 0 2px 8px @modal-shadow;
   border-radius: 20px;
@@ -14,24 +14,76 @@
   left: 0;
   margin: auto;
   z-index: @zindex-modal;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    height: 526px;
+    padding-top: 50px;
+    box-shadow: 0 4px 22px @modal-shadow;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 750px;
+    left: 38px;
+    border-radius: 30px;
+  }
+}
+
+.modal--show {
+  display: block;
 }
 
 .modal__heading {
   .offset();
+  margin-bottom: 30px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
   color: @special-orange;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 49px;
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 .modal__list {
   .offset();
+  margin-bottom: 35px;
+  padding: 0 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+    padding: 0 94px 0 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 54px;
+    padding: 0 62px 0 57px;
+  }
 }
 
 .modal__item {
+  padding: 10px 0 12px;
   font-weight: 300;
   color: @special-grey;
+  border-top: 1px solid fade(@basic-black, 5%);
+  border-bottom: 1px solid fade(@basic-black, 5%);
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0 14px;
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.modal__item + .modal__item {
+  margin-top: -1px;
 }
 
 .modal__price {
@@ -39,7 +91,9 @@
 }
 
 .modal__button {
+  display: block;
   width: 100%;
+  padding: 18px 0 16px;
   font-family: inherit;
   font-size: 16px;
   line-height: 24px;
@@ -48,4 +102,23 @@
   text-transform: uppercase;
   background-color: @modal-button;
   border: none;
+  cursor: pointer;
+  outline: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 0 47px;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @light-blue;
+  }
+
+  &:active {
+    background-color: @light-blue;
+    color: fade(@basic-blue-light, 30%);
+  }
 }

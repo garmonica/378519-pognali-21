@@ -5,7 +5,7 @@
   list-style: none;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 39px;
+    margin-bottom: 45px;
     border-top: 1px solid @grey-border;
   }
 
@@ -17,30 +17,59 @@
 }
 
 .entertainment__item {
-  margin-bottom: 11px;
+  position: relative;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
-    padding-bottom: 46px;
+    padding-bottom: 52px;
+  }
+
+  & + & {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -264px;
+      left: -13px;
+      width: 12px;
+      height: 281px;
+      border: 2px solid @basic-blue-light;
+      border-right: none;
+
+      @media (min-width: @tablet-width) {
+        top: -207px;
+        left: auto;
+        right: 6px;
+        width: 2px;
+        height: 252px;
+        border: none;
+        background-color: @basic-blue-light;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: -240px;
+        right: 225px;
+      }
+    }
   }
 }
 
 .entertainment__country {
   display: block;
+  position: relative;
   padding: 9px 0 18px 11px;
   font-size: 18px;
   line-height: 18px;
   font-weight: 500;
   letter-spacing: 0.01em;
   color: @basic-blue-light;
-  position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 33px 0 40px;
+    padding: 33px 130px 40px 0;
     font-size: 30px;
     line-height: 30px;
     font-weight: 700;
@@ -51,6 +80,30 @@
     padding: 0 0 38px;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: -3px;
+    width: 6px;
+    height: 6px;
+    background-color: @basic-blue-light;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      top: 43px;
+      left: auto;
+      right: 0;
+      width: 14px;
+      height: 14px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 10px;
+      right: 219px;
+    }
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -58,44 +111,41 @@
     right: 0;
     width: 72px;
     height: 24px;
+    background: url("../img/fade-mobile.png") center right/72px 24px no-repeat;
 
     @media (min-width: @tablet-width) {
-      top: 25px;
-      right: 33px;
-      width: 70px;
-      height: 47px;
-    }
-
-    @media (min-width: @desktop-width) {
-      top: -4px;
-      right: 115px;
-    }
-  }
-
-  &--bosnia::after {
-    background: url("../img/flags/Bosnia-and-Herzegovina.png") center right/35px 24px no-repeat,
-      url("../img/fade-mobile.png") center left/72px 24px no-repeat;
-
-    @media (min-width: @tablet-width) {
-      background: url("../img/flags/Bosnia-and-Herzegovina-tablet.png") center right/70px 47px no-repeat;
-    }
-  }
-
-  &--czech::after {
-    background: url("../img/flags/Czechia.png") center right/35px 24px no-repeat,
-      url("../img/fade-mobile.png") center left/72px 24px no-repeat;
-
-    @media (min-width: @tablet-width) {
-      background: url("../img/flags/Czechia-tablet.png") center right/70px 47px no-repeat;
+      display: none;
     }
   }
 }
 
+.entertainment__flag {
+  width: 35px;
+  height: 24px;
+  position: absolute;
+  top: 7px;
+  right: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 70px;
+    height: 47px;
+    top: 25px;
+    right: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -4px;
+    right: 115px;
+  }
+}
+
 .entertainment__plan {
+  display: block;
   padding: 8px 13px;
   width: 100%;
   height: 220px;
   box-sizing: border-box;
+  position: relative;
   resize: none;
   font-family: inherit;
   font-size: 16px;
@@ -103,21 +153,69 @@
   color: @special-grey;
   border: 1px solid @light-grey;
   border-radius: 4px;
+  outline: none;
 
   &::placeholder {
     color: fade(@special-grey, 30%);
   }
 
   @media (min-width: @tablet-width) {
-    width: 94%;
     height: 142px;
-    padding: 16px 20px;
+    padding: 16px 30px 16px 20px;
     font-size: 20px;
     line-height: 24px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 73%;
     padding: 21px 18px 21px 24px;
+  }
+
+  &:hover {
+    border-color: @blue-border-hover;
+  }
+
+  &:focus {
+    border-color: @basic-blue-dark;
+  }
+}
+
+.entertainment__plan-wrapper {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 94%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 73%;
+  }
+}
+
+.entertainment__error-message {
+  display: none;
+}
+
+.entertainment__plan-wrapper--error {
+  .entertainment__plan {
+    border-color: @red-error;
+  }
+
+  .entertainment__error-message {
+    display: block;
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    left: 1px;
+    margin: auto;
+    padding: 8px 13px;
+    color: @red-error;
+    background-color: @pink-light;
+    border-radius: 0 0 4px 4px;
+
+    @media (min-width: @tablet-width) {
+      padding: 16px 20px;
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }

@@ -134,6 +134,15 @@
     background-image: url("../img/icon-down.svg");
     background-repeat: no-repeat;
     background-position: 100% 19px;
+
+    &:hover,
+    &:focus {
+      opacity: 60%;
+    }
+
+    &:active {
+      opacity: 30%;
+    }
   }
 
   span {
@@ -176,12 +185,21 @@
   }
 
   .preferences__item {
+    width: auto;
+    height: auto;
+    margin-right: 1px;
     padding: 11px 0 0 0;
 
     @media (min-width: @tablet-width) {
+      margin-left: 2px;
       margin-right: 0;
       min-width: auto;
       padding-top: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 0;
+      margin-right: 2px;
     }
   }
 }
@@ -239,7 +257,8 @@
 }
 
 .preferences__level-input {
-  flex-grow: 1;
+  width: 50%;
+  box-sizing: border-box;
   padding: 9px 10px;
   font-family: inherit;
   font-size: 14px;
@@ -261,6 +280,16 @@
   @media (min-width: @desktop-width) {
     padding: 10px;
   }
+
+  &:hover {
+    border: 1px solid @blue-border-hover;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border: 1px solid @basic-blue-dark;
+  }
 }
 
 .preferences__level-input::-webkit-outer-spin-button,
@@ -274,7 +303,6 @@
 }
 
 .preferences__level-input--max {
-  margin-left: -1px;
   border-radius: 0 4px 4px 0;
 }
 
@@ -309,12 +337,15 @@
 }
 
 .preferences__level-bar {
-  width: 100%;
+  width: 70%;
+  margin-left: 30%;
   height: 2px;
   background-color: @basic-blue-light;
 
   @media (min-width: @tablet-width) {
     height: 3px;
+    width: 63%;
+    margin-left: 36%;
   }
 }
 
@@ -334,14 +365,40 @@
     height: 13px;
     top: 3px;
   }
+
+  @media (min-width: @tablet-width) {
+    &:hover,
+    &:focus {
+      transform: scale(1.46);
+      outline: none;
+      transition: 0.2s;
+    }
+
+    &:active {
+      transform: scale(1.46);
+      box-shadow: 0 3px 7px fade(@basic-black, 24%);
+    }
+  }
 }
 
 .preferences__level-toggle--min {
   left: 30%;
+
+  @media (min-width: @tablet-width) {
+    left: 36%;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 31%;
+  }
 }
 
 .preferences__level-toggle--max {
   left: 96%;
+
+  @media (min-width: @desktop-width) {
+    left: 94%;
+  }
 }
 
 .preferences__submit {
@@ -368,5 +425,17 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 23px;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      box-shadow: 0 3px 6px fade(@basic-black, 14%);
+    }
+
+    &:active {
+      color: fade(@basic-blue-dark, 30%);
+      background-color: @yellow-border;
+      box-shadow: none;
+    }
   }
 }

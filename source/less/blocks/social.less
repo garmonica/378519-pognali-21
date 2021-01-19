@@ -3,7 +3,37 @@
 }
 
 .social__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 45px;
   height: 45px;
+
+  &:hover .social-icon,
+  &:focus .social-icon {
+    opacity: 60%;
+  }
+
+  &:active .social-icon {
+    opacity: 30%;
+  }
+}
+
+.social-icon {
+  @media (min-width: @tablet-width) {
+    &--facebook {
+      width: 14px;
+      height: 28px;
+    }
+
+    &--vk {
+      width: 31px;
+      height: 16px;
+    }
+
+    &--instagram {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }

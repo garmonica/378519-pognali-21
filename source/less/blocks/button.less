@@ -1,6 +1,7 @@
 .button {
   display: block;
   padding: 22px;
+  position: relative;
   font-size: 18px;
   line-height: 18px;
   text-decoration: none;
@@ -9,6 +10,7 @@
   text-align: center;
   background-color: @basic-yellow;
   border-radius: 10px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     padding: 27px 33px 28px;
@@ -38,6 +40,7 @@
 
   @media (min-width: @tablet-width) {
     width: 41%;
+    margin-bottom: 0;
     padding: 28px 33px;
     font-size: 24px;
     line-height: 24px;
@@ -82,6 +85,17 @@
     margin: 0 76px 0 132px;
     padding: 23px 62px 25px 34px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: @basic-blue;
+    color: @basic-white;
+  }
+
+  &:active {
+    background-color: @basic-blue;
+    color: fade(@basic-white, 30%);
+  }
 }
 
 .button--invite {
@@ -96,5 +110,98 @@
 
   @media (min-width: @desktop-width) {
     padding: 15px 32px;
+  }
+}
+
+.button--interested {
+  display: block;
+  min-width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: inherit;
+  background-color: @basic-yellow;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: @basic-blue-light;
+  z-index: @zindex-interested;
+
+  @media (min-width: @tablet-width) {
+    min-width: 80px;
+    border-radius: 0 20px 20px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 151px 0 36px;
+    display: inline;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+}
+
+.button--interested-text {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.button--show-all,
+.button--interested,
+.button--next-step,
+.button--submit {
+  &:hover,
+  &:focus {
+    background-color: @special-yellow-dark;
+  }
+
+  &:active {
+    background-color: @special-yellow-dark;
+    color: fade(@basic-blue-light, 30%);
+  }
+}
+
+.button--next-step,
+.button--submit {
+  .button__icon-arrow {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+}
+
+.button__icon-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 22px;
+  margin: auto;
+
+  @media (min-width: @tablet-width) {
+    right: 34px;
+  }
+}
+
+.button__icon-arrow--previous-step {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    top: 0;
+    left: -34px;
+    right: auto;
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 13px;
+    height: auto;
+    left: 0;
   }
 }

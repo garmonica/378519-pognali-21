@@ -56,22 +56,33 @@
 
   @media (min-width: @desktop-width) {
     order: 5;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: @special-yellow-dark;
+    }
+
+    &:active {
+      color: fade(@basic-blue, 30%);
+    }
   }
 }
 
 .main-nav__list {
   .offset();
-  margin-top: 75px;
+  margin-top: 71px;
   margin-bottom: 55px;
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    margin: 75px 0 135px;
+    margin: 90px 0 135px;
     padding-left: 57px;
   }
 
   @media (min-width: @desktop-width) {
     .offset();
+    padding-top: 5px;
     padding-left: 145px;
     display: flex;
     width: auto;
@@ -80,7 +91,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 10px;
+      top: 15px;
       left: 40px;
       width: 60px;
       height: 2px;
@@ -131,8 +142,6 @@
 }
 
 .main-nav__social-link {
-  outline: 1px solid grey;
-
   @media (min-width: @tablet-width) {
     margin-right: 15px;
   }
