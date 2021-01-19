@@ -168,48 +168,54 @@
             <img class="user__avatar" src="img/users/avatar-demin-mobile.jpg" srcset="img/users/avatar-demin-mobile@2x.jpg 2x" width="100" height="100" alt="Пользователь Петя Демин">
           </picture>
           <a class="user__change-avatar" href="blank.html"><span>Сменить</span> фото</a>
-          <form class="user__form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="user__block user__block--tags">
-              <h3 class="user__title user__title--tags">Тэги</h3>
+          <div class="user__block user__block--tags">
+            <h3 class="user__title user__title--tags">Тэги</h3>
+            <form action="https://echo.htmlacademy.ru" method="post">
               <textarea class="user__tags" aria-label="Поле для ввода тэгов" placeholder="#бургер #бар #футбол #концерт #крафт"></textarea>
-            </div>
-          </form>
+            </form>
+          </div>
           <div class="user__block user__block--transport">
             <h3 class="user__title">Транспорт</h3>
-            <ul class="user__transport-list transport">
-              <li class="user__transport-item transport__item">
-                <a class="user__transport-link user__transport-link--active transport__link transport__link--active" href="#">
-                  <svg class="user__transport-icon transport__icon" width="21" height="23">
-                    <use xlink:href="#icon-plane"></use>
-                  </svg>
-                  <p class="transport__tooltip">Авиаперелет</p>
-                </a>
-              </li>
-              <li class="user__transport-item transport__item">
-                <a class="user__transport-link user__transport-link--active transport__link  transport__link--active" href="#">
-                  <svg class="user__transport-icon transport__icon" width="18" height="21">
-                    <use xlink:href="#icon-bus"></use>
-                  </svg>
-                  <p class="transport__tooltip">Автотранспорт</p>
-                </a>
-              </li>
-              <li class="user__transport-item transport__item">
-                <a class="user__transport-link transport__link" href="#">
-                  <svg class="user__transport-icon transport__icon" width="25" height="24">
-                    <use xlink:href="#icon-bicycle"></use>
-                  </svg>
-                  <p class="transport__tooltip">Велосипед</p>
-                </a>
-              </li>
-              <li class="user__transport-item transport__item">
-                <a class="user__transport-link user__transport-link--active transport__link transport__link--active" href="#">
-                  <svg class="user__transport-icon transport__icon" width="21" height="24">
-                    <use xlink:href="#icon-run"></use>
-                  </svg>
-                  <p class="transport__tooltip">Пешком</p>
-                </a>
-              </li>
-            </ul>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <ul class="user__transport-list transport">
+                <li class="user__transport-item transport__item checkbox">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="transport-avia" id="avia-field" checked>
+                  <label class="checkbox__label checkbox__label--transport" for="avia-field">
+                    <svg class="checkbox__transport-icon" width="21" height="23">
+                      <use xlink:href="#icon-plane"></use>
+                    </svg>
+                  </label>
+                  <span class="checkbox__tooltip transport__tooltip">Авиаперелет</span>
+                </li>
+                <li class="user__transport-item transport__item checkbox">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="transport-motor-transport" id="motor-transport-field" checked>
+                  <label class="checkbox__label checkbox__label--transport" for="motor-transport-field">
+                    <svg class="checkbox__transport-icon" width="18" height="21">
+                      <use xlink:href="#icon-bus"></use>
+                    </svg>
+                  </label>
+                  <span class="checkbox__tooltip transport__tooltip">Автотранспорт</span>
+                </li>
+                <li class="user__transport-item transport__item">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="transport-bicycle" id="bicycle-field">
+                  <label class="checkbox__label checkbox__label--transport" for="bicycle-field">
+                    <svg class="checkbox__transport-icon" width="25" height="24">
+                      <use xlink:href="#icon-bicycle"></use>
+                    </svg>
+                  </label>
+                  <span class="checkbox__tooltip transport__tooltip">Велосипед</span>
+                </li>
+                <li class="user__transport-item transport__item">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="transport-on-foot" id="on-foot-field" checked>
+                  <label class="checkbox__label checkbox__label--transport" for="on-foot-field">
+                    <svg class="checkbox__transport-icon" width="21" height="24">
+                      <use xlink:href="#icon-run"></use>
+                    </svg>
+                  </label>
+                  <span class="checkbox__tooltip transport__tooltip">Пешком</span>
+                </li>
+              </ul>
+            </form>
           </div>
         </div>
       </section>
@@ -605,6 +611,7 @@
                   <label class="entertainment__country entertainment__country--bosnia" for="text-field-bosnia">Босния и Герцеговина</label>
                     <div class="entertainment__plan-wrapper">
                       <textarea class="entertainment__plan" name="entertainment-bosnia-and-herzegovina" id="text-field-bosnia" placeholder="План действий"></textarea>
+                      <div class="entertainment__error-message">Это поле должно быть заполнено</div>
                     </div>
                   <div class="entertainment__flag flag flag--bosnia-and-herzegovina">
                     <span class="visually-hidden">Флаг Боснии и герцеговины</span>
@@ -614,6 +621,7 @@
                   <label class="entertainment__country entertainment__country--czech" for="text-field-czech">Чехия</label>
                     <div class="entertainment__plan-wrapper">
                       <textarea class="entertainment__plan" name="entertainment-czech" id="text-field-czech" placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                      <div class="entertainment__error-message">Это поле должно быть заполнено</div>
                     </div>
                   <div class="entertainment__flag flag flag--czech">
                     <span class="visually-hidden">Флаг Чехии</span>

@@ -904,42 +904,42 @@
                 </div>
                 <div class="preferences__block preferences__block--transport">
                   <button class="preferences__toggle" type="button">Транспорт<span>:</span></button>
-                  <ul class="preferences__list preferences__list--transport">
-                    <li class="preferences__item checkbox">
+                  <ul class="preferences__list preferences__list--transport transport">
+                    <li class="preferences__item transport__item checkbox">
                       <input class="checkbox__input visually-hidden" type="checkbox" name="transport-avia" id="avia-field" checked>
                       <label class="checkbox__label checkbox__label--transport" for="avia-field">
                         <svg class="checkbox__transport-icon" width="21" height="23">
                           <use xlink:href="#icon-plane"></use>
                         </svg>
-                        <span class="visually-hidden">Авиаперелет</span>
                       </label>
+                      <span class="checkbox__tooltip transport__tooltip">Авиаперелет</span>
                     </li>
-                    <li class="preferences__item checkbox">
+                    <li class="preferences__item transport__item checkbox">
                       <input class="checkbox__input visually-hidden" type="checkbox" name="transport-motor-transport" id="motor-transport-field" checked>
                       <label class="checkbox__label checkbox__label--transport" for="motor-transport-field">
                         <svg class="checkbox__transport-icon" width="18" height="21">
                           <use xlink:href="#icon-bus"></use>
                         </svg>
-                        <span class="visually-hidden">Автотранспорт</span>
                       </label>
+                      <span class="checkbox__tooltip transport__tooltip">Автотранспорт</span>
                     </li>
-                    <li class="preferences__item checkbox">
+                    <li class="preferences__item transport__item checkbox">
                       <input class="checkbox__input visually-hidden" type="checkbox" name="transport-bicycle" id="bicycle-field">
                       <label class="checkbox__label checkbox__label--transport" for="bicycle-field">
                         <svg class="checkbox__transport-icon" width="25" height="24">
                           <use xlink:href="#icon-bicycle"></use>
                         </svg>
-                        <span class="visually-hidden">Велосипед</span>
                       </label>
+                      <span class="checkbox__tooltip transport__tooltip">Велосипед</span>
                     </li>
-                    <li class="preferences__item checkbox">
+                    <li class="preferences__item transport__item checkbox">
                       <input class="checkbox__input visually-hidden" type="checkbox" name="transport-on-foot" id="on-foot-field" checked>
                       <label class="checkbox__label checkbox__label--transport" for="on-foot-field">
                         <svg class="checkbox__transport-icon" width="21" height="24">
                           <use xlink:href="#icon-run"></use>
                         </svg>
-                        <span class="visually-hidden">Пешком</span>
                       </label>
+                      <span class="checkbox__tooltip transport__tooltip">Пешком</span>
                     </li>
                   </ul>
                 </div>
@@ -979,75 +979,49 @@
                   <h3 class="result__name">
                     <a class="result__name-link result__name-link--offline" href="blank.html">Таня Фирсова</a>
                   </h3>
-                  <div class="result__tags">
-                    <a class="result__tags-link" href="#">#ЗОЖ</a>
-                    <a class="result__tags-link" href="#">#ПП</a>
-                    <a class="result__tags-link" href="#">#Фитнес</a>
-                    <a class="result__tags-link" href="#">#пляж</a>
-                    <a class="result__tags-link" href="#">#авокадо</a>
-                    <a class="result__tags-link" href="#">#смузи</a>
-                  </div>
+                  <ul class="result__tags">
+                    <li class="result__tags-item">#ЗОЖ</li>
+                    <li class="result__tags-item">#ПП</li>
+                    <li class="result__tags-item">#Фитнес</li>
+                    <li class="result__tags-item">#пляж</li>
+                    <li class="result__tags-item">#авокадо</li>
+                    <li class="result__tags-item">#смузи</li>
+                  </ul>
                 </div>
                 <div class="result__visit">
                   <p class="result__description">хочет посетить:</p>
                   <ul class="result__countries-list">
-                    <li class="result__country">
-                      <a class="result__country-title" href="#">Шри-Ланка
-                        <div class="result__flag flag flag--sri-lanka-catalog">
-                          <span class="visually-hidden">Флаг Шри-Ланки</span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="result__country">
-                      <a class="result__country-title" href="#">Тайланд
-                        <div class="result__flag flag flag--thailand">
-                          <span class="visually-hidden">Флаг Тайланда</span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="result__country">
-                      <a class="result__country-title" href="#">Сейшелы
-                        <div class="result__flag flag flag--seychelles">
-                          <span class="visually-hidden">Флаг Сейшел</span>
-                        </div>
-                      </a>
-                    </li>
+                    <li class="result__country flag flag--sri-lanka-catalog">Шри-Ланка</li>
+                    <li class="result__country flag flag--thailand">Тайланд</li>
+                    <li class="result__country flag flag--seychelles">Сейшелы</li>
                   </ul>
                 </div>
                 <div class="result__transport">
                   <p class="result__description">транспорт:</p>
                   <ul class="result__transport-list transport">
-                    <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link transport__link--active" href="#">
-                        <svg class="result__transport-icon transport__icon" width="21" height="23">
-                          <use xlink:href="#icon-plane"></use>
-                        </svg>
-                        <p class="transport__tooltip">Авиаперелет</p>
-                      </a>
+                    <li class="result__transport-item transport__item transport__item--active">
+                      <svg class="result__transport-icon transport__icon" width="21" height="23">
+                        <use xlink:href="#icon-plane"></use>
+                      </svg>
+                      <span class="transport__tooltip">Авиаперелет</span>
                     </li>
                     <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link" href="#">
-                        <svg class="result__transport-icon transport__icon" width="18" height="21">
-                          <use xlink:href="#icon-bus"></use>
-                        </svg>
-                        <p class="transport__tooltip">Автотранспорт</p>
-                      </a>
+                      <svg class="result__transport-icon transport__icon" width="18" height="21">
+                        <use xlink:href="#icon-bus"></use>
+                      </svg>
+                      <span class="transport__tooltip">Автотранспорт</span>
                     </li>
                     <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link" href="#">
-                        <svg class="result__transport-icon transport__icon" width="25" height="24">
-                          <use xlink:href="#icon-bicycle"></use>
-                        </svg>
-                        <p class="transport__tooltip">Велосипед</p>
-                      </a>
+                      <svg class="result__transport-icon transport__icon" width="25" height="24">
+                        <use xlink:href="#icon-bicycle"></use>
+                      </svg>
+                      <span class="transport__tooltip">Велосипед</span>
                     </li>
                     <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link" href="#">
-                        <svg class="result__transport-icon transport__icon" width="21" height="24">
-                          <use xlink:href="#icon-run"></use>
-                        </svg>
-                        <p class="transport__tooltip">Пешком</p>
-                      </a>
+                      <svg class="result__transport-icon transport__icon" width="21" height="24">
+                        <use xlink:href="#icon-run"></use>
+                      </svg>
+                      <span class="transport__tooltip">Пешком</span>
                     </li>
                   </ul>
                 </div>
@@ -1083,67 +1057,47 @@
                   <h3 class="result__name">
                     <a class="result__name-link result__name-link--offline" href="blank.html">Петя Демин</a>
                   </h3>
-                  <div class="result__tags">
-                    <a class="result__tags-link" href="#">#бургер</a>
-                    <a class="result__tags-link" href="#">#бар</a>
-                    <a class="result__tags-link" href="#">#футбол</a>
-                    <a class="result__tags-link" href="#">#концерт</a>
-                    <a class="result__tags-link" href="#">#крафт</a>
-                  </div>
+                  <ul class="result__tags">
+                    <li class="result__tags-item">#бургер</li>
+                    <li class="result__tags-item">#бар</li>
+                    <li class="result__tags-item">#футбол</li>
+                    <li class="result__tags-item">#концерт</li>
+                    <li class="result__tags-item">#крафт</li>
+                  </ul>
                 </div>
                 <div class="result__visit">
                   <p class="result__description">хочет посетить:</p>
                   <ul class="result__countries-list">
-                    <li class="result__country">
-                      <a class="result__country-title" href="#">Бельгия
-                        <div class="result__flag flag flag--belgium">
-                          <span class="visually-hidden">Флаг Бельгии</span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="result__country">
-                      <a class="result__country-title" href="#">Чехия
-                        <div class="result__flag flag flag--czech">
-                          <span class="visually-hidden">Флаг Чехии</span>
-                        </div>
-                      </a>
-                    </li>
+                    <li class="result__country flag flag--belgium">Бельгия</li>
+                    <li class="result__country flag flag--czech">Чехия</li>
                   </ul>
                 </div>
                 <div class="result__transport">
                   <p class="result__description">транспорт:</p>
                   <ul class="result__transport-list transport">
-                    <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link transport__link--active" href="#">
-                        <svg class="result__transport-icon transport__icon" width="21" height="23">
-                          <use xlink:href="#icon-plane"></use>
-                        </svg>
-                        <p class="transport__tooltip">Авиаперелет</p>
-                      </a>
+                    <li class="result__transport-item transport__item transport__item--active">
+                      <svg class="result__transport-icon transport__icon" width="21" height="23">
+                        <use xlink:href="#icon-plane"></use>
+                      </svg>
+                      <span class="transport__tooltip">Авиаперелет</span>
+                    </li>
+                    <li class="result__transport-item transport__item transport__item--active">
+                      <svg class="result__transport-icon transport__icon" width="18" height="21">
+                        <use xlink:href="#icon-bus"></use>
+                      </svg>
+                      <span class="transport__tooltip">Автотранспорт</span>
                     </li>
                     <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link transport__link--active" href="#">
-                        <svg class="result__transport-icon transport__icon" width="18" height="21">
-                          <use xlink:href="#icon-bus"></use>
-                        </svg>
-                        <p class="transport__tooltip">Автотранспорт</p>
-                      </a>
+                      <svg class="result__transport-icon transport__icon" width="25" height="24">
+                        <use xlink:href="#icon-bicycle"></use>
+                      </svg>
+                      <span class="transport__tooltip">Велосипед</span>
                     </li>
-                    <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link" href="#">
-                        <svg class="result__transport-icon transport__icon" width="25" height="24">
-                          <use xlink:href="#icon-bicycle"></use>
-                        </svg>
-                        <p class="transport__tooltip">Велосипед</p>
-                      </a>
-                    </li>
-                    <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link transport__link--active" href="#">
-                        <svg class="result__transport-icon transport__icon" width="21" height="24">
-                          <use xlink:href="#icon-run"></use>
-                        </svg>
-                        <p class="transport__tooltip">Пешком</p>
-                      </a>
+                    <li class="result__transport-item transport__item transport__item--active">
+                      <svg class="result__transport-icon transport__icon" width="21" height="24">
+                        <use xlink:href="#icon-run"></use>
+                      </svg>
+                      <span class="transport__tooltip">Пешком</span>
                     </li>
                   </ul>
                 </div>
@@ -1179,74 +1133,48 @@
                   <h3 class="result__name">
                     <a class="result__name-link result__name-link--offline" href="blank.html">Марк Смолов</a>
                   </h3>
-                  <div class="result__tags">
-                    <a class="result__tags-link" href="#">#рэп</a>
-                    <a class="result__tags-link" href="#">#тату</a>
-                    <a class="result__tags-link" href="#">#хайпбист</a>
-                    <a class="result__tags-link" href="#">#кроссовки</a>
-                    <a class="result__tags-link" href="#">#суприм</a>
-                  </div>
+                  <ul class="result__tags">
+                    <li class="result__tags-item">#рэп</li>
+                    <li class="result__tags-item">#тату</li>
+                    <li class="result__tags-item">#хайпбист</li>
+                    <li class="result__tags-item">#кроссовки</li>
+                    <li class="result__tags-item">#суприм</li>
+                  </ul>
                 </div>
                 <div class="result__visit">
                   <p class="result__description">хочет посетить:</p>
                   <ul class="result__countries-list">
-                    <li class="result__country">
-                      <a class="result__country-title" href="#">США
-                        <div class="result__flag flag flag--usa">
-                          <span class="visually-hidden">Флаг США</span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="result__country">
-                      <a class="result__country-title" href="#">Австралия
-                        <div class="result__flag flag flag--australia">
-                          <span class="visually-hidden">Флаг Австралии</span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="result__country">
-                      <a class="result__country-title" href="#">Доминика
-                        <div class="result__flag flag flag--dominica">
-                          <span class="visually-hidden">Флаг Доминики</span>
-                        </div>
-                      </a>
-                    </li>
+                    <li class="result__country flag flag--usa">США</li>
+                    <li class="result__country flag flag--australia">Австралия</li>
+                    <li class="result__country flag flag--dominica">Доминика</li>
                   </ul>
                 </div>
                 <div class="result__transport">
                   <p class="result__description">транспорт:</p>
                   <ul class="result__transport-list transport">
-                    <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link transport__link--active" href="#">
-                        <svg class="result__transport-icon transport__icon" width="21" height="23">
-                          <use xlink:href="#icon-plane"></use>
-                        </svg>
-                        <p class="transport__tooltip">Авиаперелет</p>
-                      </a>
+                    <li class="result__transport-item transport__item transport__item--active">
+                      <svg class="result__transport-icon transport__icon" width="21" height="23">
+                        <use xlink:href="#icon-plane"></use>
+                      </svg>
+                      <span class="transport__tooltip">Авиаперелет</span>
                     </li>
                     <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link" href="#">
-                        <svg class="result__transport-icon transport__icon" width="18" height="21">
-                          <use xlink:href="#icon-bus"></use>
-                        </svg>
-                        <p class="transport__tooltip">Автотранспорт</p>
-                      </a>
+                      <svg class="result__transport-icon transport__icon" width="18" height="21">
+                        <use xlink:href="#icon-bus"></use>
+                      </svg>
+                      <span class="transport__tooltip">Автотранспорт</span>
+                    </li>
+                    <li class="result__transport-item transport__item transport__item--active">
+                      <svg class="result__transport-icon transport__icon" width="25" height="24">
+                        <use xlink:href="#icon-bicycle"></use>
+                      </svg>
+                      <span class="transport__tooltip">Велосипед</span>
                     </li>
                     <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link transport__link--active" href="#">
-                        <svg class="result__transport-icon transport__icon" width="25" height="24">
-                          <use xlink:href="#icon-bicycle"></use>
-                        </svg>
-                        <p class="transport__tooltip">Велосипед</p>
-                      </a>
-                    </li>
-                    <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link" href="#">
-                        <svg class="result__transport-icon transport__icon" width="21" height="24">
-                          <use xlink:href="#icon-run"></use>
-                        </svg>
-                        <p class="transport__tooltip">Пешком</p>
-                      </a>
+                      <svg class="result__transport-icon transport__icon" width="21" height="24">
+                        <use xlink:href="#icon-run"></use>
+                      </svg>
+                      <span class="transport__tooltip">Пешком</span>
                     </li>
                   </ul>
                 </div>
@@ -1282,66 +1210,46 @@
                   <h3 class="result__name">
                     <a class="result__name-link result__name-link--online" href="blank.html">Лариса Роговая</a>
                   </h3>
-                  <div class="result__tags">
-                    <a class="result__tags-link" href="#">#образование</a>
-                    <a class="result__tags-link" href="#">#карьера</a>
-                    <a class="result__tags-link" href="#">#учеба</a>
-                    <a class="result__tags-link" href="#">#линкедин</a>
-                  </div>
+                  <ul class="result__tags">
+                    <li class="result__tags-item">#образование</li>
+                    <li class="result__tags-item">#карьера</li>
+                    <li class="result__tags-item">#учеба</li>
+                    <li class="result__tags-item">#линкедин</li>
+                  </ul>
                 </div>
                 <div class="result__visit">
                   <p class="result__description">хочет посетить:</p>
                   <ul class="result__countries-list">
-                    <li class="result__country">
-                      <a class="result__country-title" href="#">Великобритания
-                        <div class="result__flag flag flag--britain">
-                          <span class="visually-hidden">Флаг Великобритании</span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="result__country">
-                      <a class="result__country-title" href="#">Германия
-                        <div class="result__flag flag flag--germany">
-                          <span class="visually-hidden">Флаг Германии</span>
-                        </div>
-                      </a>
-                    </li>
+                    <li class="result__country flag flag--britain">Великобритания</li>
+                    <li class="result__country flag flag--germany">Германия</li>
                   </ul>
                 </div>
                 <div class="result__transport">
                   <p class="result__description">транспорт:</p>
                   <ul class="result__transport-list transport">
-                    <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link transport__link--active" href="#">
-                        <svg class="result__transport-icon transport__icon" width="21" height="23">
-                          <use xlink:href="#icon-plane"></use>
-                        </svg>
-                        <p class="transport__tooltip">Авиаперелет</p>
-                      </a>
+                    <li class="result__transport-item transport__item transport__item--active">
+                      <svg class="result__transport-icon transport__icon" width="21" height="23">
+                        <use xlink:href="#icon-plane"></use>
+                      </svg>
+                      <span class="transport__tooltip">Авиаперелет</span>
+                    </li>
+                    <li class="result__transport-item transport__item transport__item--active">
+                      <svg class="result__transport-icon transport__icon" width="18" height="21">
+                        <use xlink:href="#icon-bus"></use>
+                      </svg>
+                      <span class="transport__tooltip">Автотранспорт</span>
                     </li>
                     <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link transport__link--active" href="#">
-                        <svg class="result__transport-icon transport__icon" width="18" height="21">
-                          <use xlink:href="#icon-bus"></use>
-                        </svg>
-                        <p class="transport__tooltip">Автотранспорт</p>
-                      </a>
+                      <svg class="result__transport-icon transport__icon" width="25" height="24">
+                        <use xlink:href="#icon-bicycle"></use>
+                      </svg>
+                      <span class="transport__tooltip">Велосипед</span>
                     </li>
                     <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link" href="#">
-                        <svg class="result__transport-icon transport__icon" width="25" height="24">
-                          <use xlink:href="#icon-bicycle"></use>
-                        </svg>
-                        <p class="transport__tooltip">Велосипед</p>
-                      </a>
-                    </li>
-                    <li class="result__transport-item transport__item">
-                      <a class="result__transport-link transport__link" href="#">
-                        <svg class="result__transport-icon transport__icon" width="21" height="24">
-                          <use xlink:href="#icon-run"></use>
-                        </svg>
-                        <p class="transport__tooltip">Пешком</p>
-                      </a>
+                      <svg class="result__transport-icon transport__icon" width="21" height="24">
+                        <use xlink:href="#icon-run"></use>
+                      </svg>
+                      <span class="transport__tooltip">Пешком</span>
                     </li>
                   </ul>
                 </div>

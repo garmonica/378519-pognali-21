@@ -108,39 +108,6 @@
   }
 }
 
-.interested__wrapper--error {
-  &::before {
-    content: "Введите e-mail";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    padding: 21px 24px;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: 700;
-    text-align: left;
-    background-color: @basic-white;
-    color: @red-error;
-    border-radius: 10px;
-    z-index: @zindex-interested;
-
-    @media (min-width: @tablet-width) {
-      padding: 26px 115px 28px 37px;
-      font-size: 24px;
-      line-height: 24px;
-      border-radius: 20px;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding: 26px 111px 24px 33px;
-    }
-  }
-}
-
 .interested__input {
   position: relative;
   padding: 21px 24px;
@@ -183,6 +150,23 @@
       &::placeholder {
         color: @basic-white;
       }
+    }
+  }
+}
+
+.interested__input--error {
+  color: @red-error;
+
+  &:hover,
+  &::placeholder {
+    color: @red-error;
+  }
+
+  &:focus {
+    color: @red-error;
+
+    &::placeholder {
+      color: @red-error;
     }
   }
 }

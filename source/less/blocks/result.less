@@ -95,7 +95,7 @@
 
 .result__name {
   .offset();
-  min-height: 80px;
+  min-height: 85px;
   padding: 0 60px 0 104px;
   position: relative;
 
@@ -167,21 +167,26 @@
 }
 
 .result__tags {
-  margin-bottom: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  .offset();
+  margin-bottom: 10px;
   padding: 0 50px 0 26px;
+  list-style: none;
 
   @media (min-width: @tablet-width) {
     padding: 0 85px 0 6px;
   }
 }
 
-.result__tags-link {
+.result__tags-item {
+  margin-right: 4px;
   font-size: 15px;
   line-height: 18px;
   color: @special-grey;
-  text-decoration: none;
 
   @media (min-width: @tablet-width) {
+    margin-right: 6px;
     font-size: 20px;
     line-height: 23px;
   }
@@ -294,41 +299,28 @@
   }
 }
 
-.result__country-title {
-  display: block;
+.result__country {
   .offset();
   padding: 6px 20px 6px 45px;
   font-size: 15px;
   line-height: 16px;
   font-weight: 500;
   text-transform: uppercase;
-  text-decoration: none;
   color: @basic-blue-light;
-  position: relative;
+  background-size: 26px 18px;
+  background-position: 5px 50%;
 
   @media (min-width: @tablet-width) {
     padding: 6px 25px 6px 48px;
     font-size: 20px;
     line-height: 20px;
+    background-size: 35px 24px;
+    background-position: 0 2px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 6px 25px 11px 54px;
-  }
-}
-
-.result__flag {
-  position: absolute;
-  top: 3px;
-  left: 4px;
-  width: 26px;
-  height: 18px;
-  background-repeat: no-repeat;
-
-  @media (min-width: @tablet-width) {
-    left: 1px;
-    width: 35px;
-    height: 24px;
+    background-position: 2px 4px;
   }
 }
 
@@ -362,30 +354,22 @@
   }
 }
 
-.result__transport-link {
+.result__transport-item {
   width: 32px;
   height: 32px;
   margin-right: 1px;
   background-color: @light-blue;
-
-  &::before {
-    background-size: 16px auto;
-  }
 
   @media (min-width: @tablet-width) {
     width: 30px;
     height: 30px;
     margin-bottom: 2px;
     background-color: transparent;
-
-    &::before {
-      background-size: 20px 22px;
-    }
   }
 }
 
 .result__transport-icon {
-  width: 17px;
+  width: 16px;
   height: auto;
 
   @media (min-width: @tablet-width) {

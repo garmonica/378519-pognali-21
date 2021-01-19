@@ -1,14 +1,19 @@
 .flag {
   position: relative;
-  width: 35px;
-  height: 24px;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 35px 24px;
   background-position: 50%;
 
+  @media (min-resolution: 2dppx) {
+    background-size: 35px 24px;
+  }
+
   @media (min-width: @tablet-width) {
-    width: 70px;
-    height: 47px;
+    background-size: 70px 47px;
+
+    @media (min-resolution: 2dppx) {
+      background-size: 70px 47px;
+    }
   }
 }
 
@@ -25,7 +30,6 @@
   position: absolute;
   top: 45px;
   left: 50%;
-  margin-right: -50%;
   transform: translate(-50%, 0);
   font-size: 20px;
   line-height: 20px;
@@ -37,9 +41,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: -15px;
+    top: -14px;
     left: 50%;
-    margin-right: -50%;
     transform: translate(-50%, 0);
     border: 7px solid transparent;
     border-bottom: 8px solid @blue-tooltip;

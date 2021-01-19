@@ -133,6 +133,11 @@
   cursor: help;
   width: 36px;
   height: 25px;
+  background-size: 35px 24px;
+
+  @media (min-resolution: 2dppx) {
+    background-size: 35px 24px;
+  }
 }
 
 .companions__list {
@@ -277,7 +282,7 @@
 
 .companions__name {
   .offset();
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 24px;
@@ -339,15 +344,21 @@
 }
 
 .companions__tags {
-  margin-bottom: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .offset();
+  margin-bottom: 12px;
+  list-style: none;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
   }
 }
 
-.companions__tags-link {
-  text-decoration: none;
+.companions__tags-item {
+  margin-right: 2px;
+  margin-left: 3px;
   line-height: 18px;
   color: @special-grey;
 

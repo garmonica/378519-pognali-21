@@ -4,7 +4,7 @@
   color: @basic-blue-dark;
 
   @media (min-width: @tablet-width) {
-    padding: 66px 0 60px;
+    padding: 66px 0 34px;
   }
 
   @media (min-width: @desktop-width) {
@@ -18,7 +18,6 @@
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
-    align-items: flex-start;
     padding: 0 75px;
   }
 
@@ -184,31 +183,23 @@
   }
 }
 
-.user__form {
+.user__block {
+  margin-bottom: 25px;
+  position: relative;
   width: 100%;
+  box-sizing: border-box;
+}
+
+.user__block--tags {
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 
   @media (min-width: @desktop-width) {
     width: auto;
     flex-grow: 1;
-  }
-
-  @media (min-width: @desktop-width) {
     margin-left: 65px;
     margin-right: 140px;
-  }
-}
-
-.user__block {
-  margin-bottom: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-
-  @media (min-width: @tablet-width) {
-    .offset();
   }
 }
 
@@ -217,7 +208,6 @@
     order: -1;
     width: auto;
     flex-grow: 1;
-    align-self: center;
     margin: 0 65px 0 60px;
   }
 
@@ -237,7 +227,6 @@
   position: absolute;
   top: -10px;
   left: 50%;
-  margin-right: -50%;
   transform: translate(-50%, 0);
   font-size: 16px;
   line-height: 18px;
@@ -268,7 +257,9 @@
 }
 
 .user__tags {
+  display: block;
   width: 100%;
+  height: 89px;
   box-sizing: border-box;
   padding: 24px 25px 28px;
   font-family: inherit;
@@ -282,6 +273,7 @@
   border-radius: 10px;
 
   @media (min-width: @tablet-width) {
+    height: 95px;
     padding: 31px 39px 17px;
     font-size: 20px;
     line-height: 22px;
@@ -289,7 +281,6 @@
 
   @media (min-width: @desktop-width) {
     padding: 33px 37px 17px;
-    width: auto;
   }
 
   &::placeholder {
@@ -316,59 +307,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 23px 105px 24px;
+    padding: 24px 105px 27px;
   }
 }
 
-.user__transport-link {
-  background-color: @basic-white;
-
-  @media (min-width: @tablet-width) {
-    width: 43px;
-    height: 44px;
-  }
-
-  .user__transport-icon {
-    width: 18px;
-    height: auto;
-
-    @media (min-width: @tablet-width) {
-      width: auto;
-      height: auto;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    box-shadow: 0 2px 6px @transport-shadow;
-
-    .user__transport-icon {
-      fill: @grey-dark-transport;
-    }
-  }
-
-  &:active {
-    box-shadow: none;
-    background-color: @blue-checkbox-down;
-
-    .user__transport-icon {
-      opacity: 10%;
-      fill: @basic-blue-light;
-    }
-  }
-
-  &--active:hover,
-  &--active:focus {
-    .user__transport-icon {
-      opacity: 70%;
-      fill: @basic-blue-light;
-    }
-  }
-
-  &--active:active {
-    .user__transport-icon {
-      opacity: 30%;
-      fill: @basic-blue-light;
-    }
-  }
+.user__transport-item {
+  width: auto;
+  height: auto;
 }

@@ -29,29 +29,31 @@
     padding-bottom: 52px;
   }
 
-  &:not(:first-child)::before {
-    content: "";
-    position: absolute;
-    top: -265px;
-    left: -13px;
-    width: 12px;
-    height: 281px;
-    border: 2px solid @basic-blue-light;
-    border-right: none;
+  & + & {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -264px;
+      left: -13px;
+      width: 12px;
+      height: 281px;
+      border: 2px solid @basic-blue-light;
+      border-right: none;
 
-    @media (min-width: @tablet-width) {
-      top: -207px;
-      left: auto;
-      right: 6px;
-      width: 2px;
-      height: 252px;
-      border: none;
-      background-color: @basic-blue-light;
-    }
+      @media (min-width: @tablet-width) {
+        top: -207px;
+        left: auto;
+        right: 6px;
+        width: 2px;
+        height: 252px;
+        border: none;
+        background-color: @basic-blue-light;
+      }
 
-    @media (min-width: @desktop-width) {
-      top: -240px;
-      right: 225px;
+      @media (min-width: @desktop-width) {
+        top: -240px;
+        right: 225px;
+      }
     }
   }
 }
@@ -118,11 +120,15 @@
 }
 
 .entertainment__flag {
+  width: 35px;
+  height: 24px;
   position: absolute;
   top: 7px;
   right: 0;
 
   @media (min-width: @tablet-width) {
+    width: 70px;
+    height: 47px;
     top: 25px;
     right: 33px;
   }
@@ -185,13 +191,17 @@
   }
 }
 
+.entertainment__error-message {
+  display: none;
+}
+
 .entertainment__plan-wrapper--error {
   .entertainment__plan {
     border-color: @red-error;
   }
 
-  &::after {
-    content: "Это поле должно быть заполнено";
+  .entertainment__error-message {
+    display: block;
     position: absolute;
     bottom: 1px;
     right: 1px;

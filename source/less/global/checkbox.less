@@ -60,18 +60,13 @@
   align-items: center;
   width: 32px;
   height: 32px;
-  margin-right: 1px;
   border-radius: 50%;
   background-color: @basic-white;
+  text-transform: none;
 
   @media (min-width: @tablet-width) {
     width: 43px;
     height: 43px;
-    margin-left: 2px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 0;
   }
 
   &:hover,
@@ -86,7 +81,19 @@
 }
 
 .checkbox__transport-icon {
+  width: 17px;
+  height: auto;
   fill: @grey-transport;
+
+  @media (min-width: @tablet-width) {
+    width: 21px;
+    height: auto;
+  }
+}
+
+.checkbox__tooltip {
+  top: 55px;
+  cursor: default;
 }
 
 .checkbox__label--transport:hover {

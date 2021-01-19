@@ -185,12 +185,21 @@
   }
 
   .preferences__item {
+    width: auto;
+    height: auto;
+    margin-right: 1px;
     padding: 11px 0 0 0;
 
     @media (min-width: @tablet-width) {
+      margin-left: 2px;
       margin-right: 0;
       min-width: auto;
       padding-top: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 0;
+      margin-right: 2px;
     }
   }
 }
@@ -248,7 +257,8 @@
 }
 
 .preferences__level-input {
-  flex-grow: 1;
+  width: 50%;
+  box-sizing: border-box;
   padding: 9px 10px;
   font-family: inherit;
   font-size: 14px;
