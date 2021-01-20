@@ -97,6 +97,38 @@
   }
 }
 
+.preferences__block--closed {
+  .preferences__list {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.preferences__block--nojs {
+  .preferences__list {
+    display: block;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  .preferences__list--transport {
+    display: flex;
+  }
+}
+
 .preferences__toggle {
   .offset();
   width: 100%;
@@ -111,9 +143,7 @@
   border: none;
   text-align: left;
   cursor: pointer;
-  background-image: url("../img/icon-down.svg");
-  background-repeat: no-repeat;
-  background-position: 100% 17px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     width: 19%;
@@ -124,16 +154,12 @@
     font-weight: 500;
     cursor: default;
     outline: none;
-    background: none;
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
     padding: 13px 0 0;
     cursor: pointer;
-    background-image: url("../img/icon-down.svg");
-    background-repeat: no-repeat;
-    background-position: 100% 19px;
 
     &:hover,
     &:focus {
@@ -155,6 +181,21 @@
     @media (min-width: @desktop-width) {
       display: none;
     }
+  }
+}
+
+.preferences__icon-down {
+  position: absolute;
+  right: 0;
+  top: 17px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    top: 19px;
   }
 }
 
@@ -226,7 +267,7 @@
 
   @media (min-width: @tablet-width) {
     order: 3;
-    width: auto;
+    width: 24%;
     margin: 9px 0 14px;
     padding: 0;
   }

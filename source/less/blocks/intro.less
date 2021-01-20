@@ -1,5 +1,6 @@
 .intro {
   padding: 90px 0 38px 0;
+  background-color: @basic-blue-dark;
   background-image: url("../img/bg/bg-mobile.jpg"),
     linear-gradient(@basic-blue-dark 558px, @basic-blue 558px, @basic-blue 100%);
   background-repeat: no-repeat;
@@ -14,6 +15,7 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 58px;
     padding: 158px 0 38px 0;
+    background-color: @basic-blue;
     background-image: url("../img/bg/bg-tablet.jpg"),
       linear-gradient(transparent 0, transparent 100%);
     background-position: 50% 383px;
@@ -28,9 +30,9 @@
   @media (min-width: @desktop-width) {
     padding: 158px 0 124px 0;
     margin-bottom: 0;
+    background-color: @basic-blue-dark;
     background-image: url("../img/bg/bg-desktop.png");
     background-position: 50% 100%;
-    background-color: @basic-blue-dark;
     border-radius: 0 0 60px 60px;
     position: relative;
     z-index: @zindex-intro;
