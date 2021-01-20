@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Страница - Сервис для путешествий «Погнали»</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="img/favicon.png" type="image/png">
   </head>
   <body class="page__body page__body--inner">
-    <svg style="display: none;">
+<!--     <svg style="display: none;">
       <symbol id="icon-phone" viewbox="0 0 15 17">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5.09C5.7.09 2.9.56 1.88 1.5 1.04 2.28.76 3.66.66 4.54l-.01.12c0 .34.3.62.65.62l2.57-.2h.07c.35-.02.64-.29.64-.63V3.24c0-.38.32-.68.72-.68h6.4c.4 0 .72.3.72.68v1.21c0 .34.29.61.64.62l.07.01 2.57.2c.36 0 .65-.28.65-.62l-.01-.12c-.1-.88-.38-2.26-1.22-3.04C14.1.56 11.3.1 8.5.1zm0 8.03c-.72 0-1.3.55-1.3 1.23 0 .69.58 1.24 1.3 1.24.72 0 1.3-.55 1.3-1.24 0-.68-.58-1.23-1.3-1.23zm-.98-2.78v-.77a.8.8 0 00-.82-.78.8.8 0 00-.82.78v.77l-4.4 4.45c-.31.28-.5.67-.5 1.1v1.24c0 .69.58 1.24 1.3 1.24h.33v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h8.5v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h.32c.73 0 1.31-.55 1.31-1.24V10.9c0-.43-.19-.82-.5-1.1l-4.4-4.45v-.77a.8.8 0 00-.82-.78.8.8 0 00-.82.78v.77H7.52zm.98 1.54c1.45 0 2.62 1.1 2.62 2.47a2.55 2.55 0 01-2.62 2.47 2.55 2.55 0 01-2.62-2.47A2.55 2.55 0 018.5 6.88z"/>
       </symbol>
@@ -30,11 +30,11 @@
       <symbol id="icon-mail" viewbox="0 0 16 14">
         <path d="M1.26 2.6l6 3.76c.2.13.46.19.72.19.27 0 .53-.06.73-.19l6-3.76c.39-.25.76-1.2.04-1.2H1.22c-.72 0-.35.95.04 1.2zm13.63 2.06L8.71 8.4a1.2 1.2 0 01-.73.2 1.2 1.2 0 01-.72-.2L1.1 4.66c-.31-.2-.31.03-.31.2v6.8c0 .4.45.94.8.94h12.8c.35 0 .8-.54.8-.93v-6.8c0-.18 0-.4-.31-.21z" fill="#161C35"/>
       </symbol>
-    </svg>
+    </svg> -->
     <!-- модификаторы у page-header:
     opened - меню открыто
     closed - меню закрыто
-    nojs - при неработающем js -->
+    nojs - при неработающем js, кнопка закрытия отсутствует -->
     <header class="page-header page-header--closed page-header--nojs">
       <nav class="main-nav container">
         <a class="main-nav__logo logo" href="index.html" tabindex="1">
@@ -77,23 +77,23 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__contacts contacts">
             <li class="contacts__item">
-              <a class="contacts__link contacts__link--phone" href="tel:+78005558628" tabindex="5">
+              <a class="contacts__link contacts__link--phone" href="tel:+78005558628" tabindex="5" aria-label="Позвонить по телефону 88005558628">
                 <svg class="contacts__icon" width="18" height="18">
-                  <use xlink:href="#icon-call"></use>
+                  <use xlink:href="img/sprite.svg#icon-call"></use>
                 </svg>
                 <svg class="contacts__icon-menu" width="17" height="15">
-                  <use xlink:href="#icon-phone"></use>
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
                 </svg>
                 <span class="contacts__text">8 800 555-86-28</span>
               </a>
             </li>
             <li class="contacts__item">
-              <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru" tabindex="6">
+              <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru" tabindex="6" aria-label="Написать по электронной почте на адрес mail@htmlacademy.ru">
                 <svg class="contacts__icon" width="16" height="14">
-                  <use xlink:href="#icon-mail"></use>
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
                 </svg>
                 <svg class="contacts__icon-menu contacts__icon-menu--email" width="19" height="13">
-                  <use xlink:href="#icon-envelope"></use>
+                  <use xlink:href="img/sprite.svg#icon-envelope"></use>
                 </svg>
                 <span class="contacts__text">mail@htmlacademy.ru</span>
               </a>
@@ -103,21 +103,21 @@
             <li>
               <a class="main-nav__social-link social__link" href="#" aria-label="Фейсбук">
                 <svg class="main-nav__social-icon main-nav__social-icon--facebook" width="11" height="21">
-                  <use xlink:href="#icon-facebook"></use>
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a class="main-nav__social-link social__link" href="#" aria-label="Вконтакте">
                 <svg class="main-nav__social-icon main-nav__social-icon--vk" width="22" height="12">
-                  <use xlink:href="#icon-vk"></use>
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a class="main-nav__social-link social__link" href="#" aria-label="Инстаграм">
                 <svg class="main-nav__social-icon main-nav__social-icon--instagram" width="17" height="17">
-                  <use xlink:href="#icon-instagram"></use>
+                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
@@ -152,21 +152,21 @@
           <li>
             <a class="page-footer__social-link social__link" href="#" aria-label="Фейсбук">
               <svg class="social-icon social-icon--facebook" width="11" height="21">
-                <use xlink:href="#icon-facebook"></use>
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li>
             <a class="page-footer__social-link social__link" href="#" aria-label="Вконтакте">
               <svg class="social-icon social-icon--vk" width="22" height="12">
-                <use xlink:href="#icon-vk"></use>
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li>
             <a class="page-footer__social-link social__link" href="#" aria-label="Инстаграм">
               <svg class="social-icon social-icon--instagram" width="17" height="17">
-                <use xlink:href="#icon-instagram"></use>
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
@@ -176,6 +176,6 @@
         </a>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

@@ -133,10 +133,12 @@
   cursor: help;
   width: 36px;
   height: 25px;
-  background-size: 35px 24px;
+  background-color: @light-grey;
+  background-size: cover;
+  border-radius: 3px;
 
   @media (min-resolution: 2dppx) {
-    background-size: 35px 24px;
+    background-size: cover;
   }
 }
 
@@ -200,6 +202,11 @@
   @media (min-width: @tablet-width) {
     height: 286px;
     border-radius: 20px 20px 0 0;
+  }
+
+  &:focus .companions__img {
+    transform: scale(1.17);
+    transition: 0.5s;
   }
 }
 

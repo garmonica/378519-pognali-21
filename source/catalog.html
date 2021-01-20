@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Попутчики - Сервис для путешествий «Погнали»</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="img/favicon.png" type="image/png">
   </head>
   <body class="page__body page__body--inner">
-    <svg style="display: none;">
+<!--     <svg style="display: none;">
       <symbol id="icon-phone" viewbox="0 0 15 17">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5.09C5.7.09 2.9.56 1.88 1.5 1.04 2.28.76 3.66.66 4.54l-.01.12c0 .34.3.62.65.62l2.57-.2h.07c.35-.02.64-.29.64-.63V3.24c0-.38.32-.68.72-.68h6.4c.4 0 .72.3.72.68v1.21c0 .34.29.61.64.62l.07.01 2.57.2c.36 0 .65-.28.65-.62l-.01-.12c-.1-.88-.38-2.26-1.22-3.04C14.1.56 11.3.1 8.5.1zm0 8.03c-.72 0-1.3.55-1.3 1.23 0 .69.58 1.24 1.3 1.24.72 0 1.3-.55 1.3-1.24 0-.68-.58-1.23-1.3-1.23zm-.98-2.78v-.77a.8.8 0 00-.82-.78.8.8 0 00-.82.78v.77l-4.4 4.45c-.31.28-.5.67-.5 1.1v1.24c0 .69.58 1.24 1.3 1.24h.33v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h8.5v.77c0 .43.37.77.82.77a.8.8 0 00.82-.77v-.77h.32c.73 0 1.31-.55 1.31-1.24V10.9c0-.43-.19-.82-.5-1.1l-4.4-4.45v-.77a.8.8 0 00-.82-.78.8.8 0 00-.82.78v.77H7.52zm.98 1.54c1.45 0 2.62 1.1 2.62 2.47a2.55 2.55 0 01-2.62 2.47 2.55 2.55 0 01-2.62-2.47A2.55 2.55 0 018.5 6.88z"/>
       </symbol>
@@ -57,11 +57,14 @@
       <symbol id="icon-run" viewBox="0 0 21 24">
         <path d="M15 5.8c1 0 1.7-.9 1.7-2S15.9 2 15 2s-1.8.9-1.8 2S14 5.7 15 5.7zm-1 4.7c.1.4.4.6.7.7.4.2.7.2 1 .1l3-.8-.5-1.8-2.8.8-1.2-2a1.7 1.7 0 00-1.1-.8l-3.3-.8a1.6 1.6 0 00-1.1.2c-.4.2-.6.5-.8.9L6.5 10 8 11l1.4-3.2 1.7.4-4.4 8.1H3v2h3.8c.6 0 1.2-.4 1.5-1l1.7-3 4.4 1 1.6 5.2 1.6-.6-1.5-5.3a2 2 0 00-.5-.8l-.8-.5-2.7-.5 1.6-2.9.3.6z"/>
       </symbol>
-    </svg>
+      <symbol id="icon-down" viewBox="0 0 10 5">
+        <path d="M5 5L0.669872 0.5L9.33013 0.5L5 5Z" fill="#192144"/>
+      </symbol>
+    </svg> -->
     <!-- модификаторы у page-header:
     opened - меню открыто
     closed - меню закрыто
-    nojs - при неработающем js -->
+    nojs - при неработающем js, кнопка закрытия отсутствует -->
     <header class="page-header page-header--closed page-header--nojs">
       <nav class="main-nav container">
         <a class="main-nav__logo logo" href="index.html" tabindex="1">
@@ -104,23 +107,23 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__contacts contacts">
             <li class="contacts__item">
-              <a class="contacts__link contacts__link--phone" href="tel:+78005558628" tabindex="4">
+              <a class="contacts__link contacts__link--phone" href="tel:+78005558628" tabindex="4" aria-label="Позвонить по телефону 88005558628">
                 <svg class="contacts__icon" width="18" height="18">
-                  <use xlink:href="#icon-call"></use>
+                  <use xlink:href="img/sprite.svg#icon-call"></use>
                 </svg>
                 <svg class="contacts__icon-menu" width="17" height="15">
-                  <use xlink:href="#icon-phone"></use>
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
                 </svg>
                 <span class="contacts__text">8 800 555-86-28</span>
               </a>
             </li>
             <li class="contacts__item">
-              <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru" tabindex="5">
+              <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru" tabindex="5" aria-label="Написать по электронной почте на адрес mail@htmlacademy.ru">
                 <svg class="contacts__icon" width="16" height="14">
-                  <use xlink:href="#icon-mail"></use>
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
                 </svg>
                 <svg class="contacts__icon-menu contacts__icon-menu--email" width="19" height="13">
-                  <use xlink:href="#icon-envelope"></use>
+                  <use xlink:href="img/sprite.svg#icon-envelope"></use>
                 </svg>
                 <span class="contacts__text">mail@htmlacademy.ru</span>
               </a>
@@ -130,21 +133,21 @@
             <li>
               <a class="main-nav__social-link social__link" href="#" aria-label="Фейсбук">
                 <svg class="main-nav__social-icon main-nav__social-icon--facebook" width="11" height="21">
-                  <use xlink:href="#icon-facebook"></use>
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a class="main-nav__social-link social__link" href="#" aria-label="Вконтакте">
                 <svg class="main-nav__social-icon main-nav__social-icon--vk" width="22" height="12">
-                  <use xlink:href="#icon-vk"></use>
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a class="main-nav__social-link social__link" href="#" aria-label="Инстаграм">
                 <svg class="main-nav__social-icon main-nav__social-icon--instagram" width="17" height="17">
-                  <use xlink:href="#icon-instagram"></use>
+                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
@@ -159,7 +162,7 @@
           <a class="page-main__home-link" href="index.html">На главную</a>
         </div>
       </div>
-      <section class="filter filter--closed">
+      <section class="filter filter--closed filter--nojs">
         <div class="filter__container container">
           <h2 class="filter__heading">Фильтрация по странам:</h2>
           <ul class="filter__category-list">
@@ -852,7 +855,11 @@
             <form class="preferences__form" action="https://echo.htmlacademy.ru" method="get" target="_blank">
               <div class="preferences__wrapper">
                 <div class="preferences__block">
-                  <button class="preferences__toggle" type="button">Хобби<span>:</span></button>
+                  <button class="preferences__toggle" type="button">Хобби<span>:</span>
+                    <svg class="preferences__icon-down" width="10" height="5">
+                      <use xlink:href="img/sprite.svg#icon-down"></use>
+                    </svg>
+                  </button>
                   <ul class="preferences__list">
                     <li class="preferences__item checkbox">
                       <input class="checkbox__input visually-hidden" type="checkbox" name="hobby-gym" id="gym-field" checked>
@@ -869,7 +876,11 @@
                   </ul>
                 </div>
                 <div class="preferences__block">
-                  <button class="preferences__toggle" type="button">Музыка<span>:</span></button>
+                  <button class="preferences__toggle" type="button">Музыка<span>:</span>
+                    <svg class="preferences__icon-down" width="10" height="5">
+                      <use xlink:href="img/sprite.svg#icon-down"></use>
+                    </svg>
+                  </button>
                   <ul class="preferences__list">
                     <li class="preferences__item checkbox">
                       <input class="checkbox__input visually-hidden" type="checkbox" name="music-rock" id="rock-field" checked>
@@ -886,7 +897,11 @@
                   </ul>
                 </div>
                 <div class="preferences__block">
-                  <button class="preferences__toggle" type="button">Еда<span>:</span></button>
+                  <button class="preferences__toggle" type="button">Еда<span>:</span>
+                    <svg class="preferences__icon-down" width="10" height="5">
+                      <use xlink:href="img/sprite.svg#icon-down"></use>
+                    </svg>
+                  </button>
                   <ul class="preferences__list">
                     <li class="preferences__item checkbox">
                       <input class="checkbox__input visually-hidden" type="checkbox" name="food-meat-eater" id="meat-eater-field" checked>
@@ -903,40 +918,44 @@
                   </ul>
                 </div>
                 <div class="preferences__block preferences__block--transport">
-                  <button class="preferences__toggle" type="button">Транспорт<span>:</span></button>
+                  <button class="preferences__toggle" type="button">Транспорт<span>:</span>
+                    <svg class="preferences__icon-down" width="10" height="5">
+                      <use xlink:href="img/sprite.svg#icon-down"></use>
+                    </svg>
+                  </button>
                   <ul class="preferences__list preferences__list--transport transport">
                     <li class="preferences__item transport__item checkbox">
-                      <input class="checkbox__input visually-hidden" type="checkbox" name="transport-avia" id="avia-field" checked>
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="transport-avia" id="avia-field" aria-label="Тип передвижения авиаперелет" checked>
                       <label class="checkbox__label checkbox__label--transport" for="avia-field">
                         <svg class="checkbox__transport-icon" width="21" height="23">
-                          <use xlink:href="#icon-plane"></use>
+                          <use xlink:href="img/sprite.svg#icon-plane"></use>
                         </svg>
                       </label>
                       <span class="checkbox__tooltip transport__tooltip">Авиаперелет</span>
                     </li>
                     <li class="preferences__item transport__item checkbox">
-                      <input class="checkbox__input visually-hidden" type="checkbox" name="transport-motor-transport" id="motor-transport-field" checked>
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="transport-motor-transport" id="motor-transport-field" aria-label="Тип передвижения автотранспорт" checked>
                       <label class="checkbox__label checkbox__label--transport" for="motor-transport-field">
                         <svg class="checkbox__transport-icon" width="18" height="21">
-                          <use xlink:href="#icon-bus"></use>
+                          <use xlink:href="img/sprite.svg#icon-bus"></use>
                         </svg>
                       </label>
                       <span class="checkbox__tooltip transport__tooltip">Автотранспорт</span>
                     </li>
                     <li class="preferences__item transport__item checkbox">
-                      <input class="checkbox__input visually-hidden" type="checkbox" name="transport-bicycle" id="bicycle-field">
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="transport-bicycle" id="bicycle-field" aria-label="Тип передвижения велосипед">
                       <label class="checkbox__label checkbox__label--transport" for="bicycle-field">
                         <svg class="checkbox__transport-icon" width="25" height="24">
-                          <use xlink:href="#icon-bicycle"></use>
+                          <use xlink:href="img/sprite.svg#icon-bicycle"></use>
                         </svg>
                       </label>
                       <span class="checkbox__tooltip transport__tooltip">Велосипед</span>
                     </li>
                     <li class="preferences__item transport__item checkbox">
-                      <input class="checkbox__input visually-hidden" type="checkbox" name="transport-on-foot" id="on-foot-field" checked>
+                      <input class="checkbox__input visually-hidden" type="checkbox" name="transport-on-foot" id="on-foot-field" aria-label="Тип передвижения пешком" checked>
                       <label class="checkbox__label checkbox__label--transport" for="on-foot-field">
                         <svg class="checkbox__transport-icon" width="21" height="24">
-                          <use xlink:href="#icon-run"></use>
+                          <use xlink:href="img/sprite.svg#icon-run"></use>
                         </svg>
                       </label>
                       <span class="checkbox__tooltip transport__tooltip">Пешком</span>
@@ -944,7 +963,11 @@
                   </ul>
                 </div>
                 <div class="preferences__block preferences__block--level">
-                  <button class="preferences__toggle" type="button">Левел<span>:</span></button>
+                  <button class="preferences__toggle" type="button">Левел<span>:</span>
+                    <svg class="preferences__icon-down" width="10" height="5">
+                      <use xlink:href="img/sprite.svg#icon-down"></use>
+                    </svg>
+                  </button>
                   <div class="preferences__level-output">
                     <input class="preferences__level-input preferences__level-input--min" type="number" name="min-level" min="0" max="100" value="30" step="10" aria-label="Значение минимального уровня">
                     <input class="preferences__level-input preferences__level-input--max" type="number" name="max-level" min="0" max="100" value="100" step="10" aria-label="Значение максимального уровня">
@@ -965,7 +988,7 @@
             <h2 class="visually-hidden">Результат подбора</h2>
             <ul class="result__list">
               <li class="result__item">
-                <a class="result__avatar" href="blank.html">
+                <a class="result__avatar" href="blank.html"  aria-label="Перейти на страницу пользователя Таня Фирсова">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/firsova-desktop.webp 1x, img/catalog/firsova-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/firsova-tablet.webp 1x, img/catalog/firsova-tablet@2x.webp 2x">
@@ -1001,25 +1024,25 @@
                   <ul class="result__transport-list transport">
                     <li class="result__transport-item transport__item transport__item--active">
                       <svg class="result__transport-icon transport__icon" width="21" height="23">
-                        <use xlink:href="#icon-plane"></use>
+                        <use xlink:href="img/sprite.svg#icon-plane"></use>
                       </svg>
                       <span class="transport__tooltip">Авиаперелет</span>
                     </li>
                     <li class="result__transport-item transport__item">
                       <svg class="result__transport-icon transport__icon" width="18" height="21">
-                        <use xlink:href="#icon-bus"></use>
+                        <use xlink:href="img/sprite.svg#icon-bus"></use>
                       </svg>
                       <span class="transport__tooltip">Автотранспорт</span>
                     </li>
                     <li class="result__transport-item transport__item">
                       <svg class="result__transport-icon transport__icon" width="25" height="24">
-                        <use xlink:href="#icon-bicycle"></use>
+                        <use xlink:href="img/sprite.svg#icon-bicycle"></use>
                       </svg>
                       <span class="transport__tooltip">Велосипед</span>
                     </li>
                     <li class="result__transport-item transport__item">
                       <svg class="result__transport-icon transport__icon" width="21" height="24">
-                        <use xlink:href="#icon-run"></use>
+                        <use xlink:href="img/sprite.svg#icon-run"></use>
                       </svg>
                       <span class="transport__tooltip">Пешком</span>
                     </li>
@@ -1027,7 +1050,7 @@
                 </div>
                 <div class="result__button-wrapper">
                   <a class="result__invite button button--invite" href="blank.html">Позвать!</a>
-                  <button class="result__heart result__heart--active">
+                  <button class="result__heart result__heart--active" aria-label="Поставить лайк пользователю">
                     <span class="result__likes-number">1,5 М</span>
                   </button>
                 </div>
@@ -1036,14 +1059,14 @@
                   <div class="result__level-value">
                     <p class="result__level-number">99</p>
                     <p class="result__level-text">level</p>
-                    <svg class="result__level-icon" width="45" height="45">
-                      <use xlink:href="#level-catalog-99"></use>
+                    <svg class="result__level-icon" width="45" height="45" fill="none">
+                      <use xlink:href="img/sprite.svg#level-catalog-99"></use>
                     </svg>
                   </div>
                 </div>
               </li>
               <li class="result__item">
-                <a class="result__avatar" href="blank.html">
+                <a class="result__avatar" href="blank.html" aria-label="Перейти на страницу пользователя Петя Демин">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/demin-desktop.webp 1x, img/catalog/demin-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/demin-tablet.webp 1x, img/catalog/demin-tablet@2x.webp 2x">
@@ -1077,25 +1100,25 @@
                   <ul class="result__transport-list transport">
                     <li class="result__transport-item transport__item transport__item--active">
                       <svg class="result__transport-icon transport__icon" width="21" height="23">
-                        <use xlink:href="#icon-plane"></use>
+                        <use xlink:href="img/sprite.svg#icon-plane"></use>
                       </svg>
                       <span class="transport__tooltip">Авиаперелет</span>
                     </li>
                     <li class="result__transport-item transport__item transport__item--active">
                       <svg class="result__transport-icon transport__icon" width="18" height="21">
-                        <use xlink:href="#icon-bus"></use>
+                        <use xlink:href="img/sprite.svg#icon-bus"></use>
                       </svg>
                       <span class="transport__tooltip">Автотранспорт</span>
                     </li>
                     <li class="result__transport-item transport__item">
                       <svg class="result__transport-icon transport__icon" width="25" height="24">
-                        <use xlink:href="#icon-bicycle"></use>
+                        <use xlink:href="img/sprite.svg#icon-bicycle"></use>
                       </svg>
                       <span class="transport__tooltip">Велосипед</span>
                     </li>
                     <li class="result__transport-item transport__item transport__item--active">
                       <svg class="result__transport-icon transport__icon" width="21" height="24">
-                        <use xlink:href="#icon-run"></use>
+                        <use xlink:href="img/sprite.svg#icon-run"></use>
                       </svg>
                       <span class="transport__tooltip">Пешком</span>
                     </li>
@@ -1103,7 +1126,7 @@
                 </div>
                 <div class="result__button-wrapper">
                   <a class="result__invite button button--invite" href="blank.html">Позвать!</a>
-                  <button class="result__heart">
+                  <button class="result__heart" aria-label="Поставить лайк пользователю">
                     <span class="result__likes-number">1500</span>
                   </button>
                 </div>
@@ -1112,14 +1135,14 @@
                   <div class="result__level-value">
                     <p class="result__level-number">80</p>
                     <p class="result__level-text">level</p>
-                    <svg class="result__level-icon" width="45" height="45">
-                      <use xlink:href="#level-catalog-80"></use>
+                    <svg class="result__level-icon" width="45" height="45" fill="none">
+                      <use xlink:href="img/sprite.svg#level-catalog-80"></use>
                     </svg>
                   </div>
                 </div>
               </li>
               <li class="result__item">
-                <a class="result__avatar" href="blank.html">
+                <a class="result__avatar" href="blank.html" aria-label="Перейти на страницу пользователя Марк Смолов">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/smolov-desktop.webp 1x, img/catalog/smolov-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/smolov-tablet.webp 1x, img/catalog/smolov-tablet@2x.webp 2x">
@@ -1154,25 +1177,25 @@
                   <ul class="result__transport-list transport">
                     <li class="result__transport-item transport__item transport__item--active">
                       <svg class="result__transport-icon transport__icon" width="21" height="23">
-                        <use xlink:href="#icon-plane"></use>
+                        <use xlink:href="img/sprite.svg#icon-plane"></use>
                       </svg>
                       <span class="transport__tooltip">Авиаперелет</span>
                     </li>
                     <li class="result__transport-item transport__item">
                       <svg class="result__transport-icon transport__icon" width="18" height="21">
-                        <use xlink:href="#icon-bus"></use>
+                        <use xlink:href="img/sprite.svg#icon-bus"></use>
                       </svg>
                       <span class="transport__tooltip">Автотранспорт</span>
                     </li>
                     <li class="result__transport-item transport__item transport__item--active">
                       <svg class="result__transport-icon transport__icon" width="25" height="24">
-                        <use xlink:href="#icon-bicycle"></use>
+                        <use xlink:href="img/sprite.svg#icon-bicycle"></use>
                       </svg>
                       <span class="transport__tooltip">Велосипед</span>
                     </li>
                     <li class="result__transport-item transport__item">
                       <svg class="result__transport-icon transport__icon" width="21" height="24">
-                        <use xlink:href="#icon-run"></use>
+                        <use xlink:href="img/sprite.svg#icon-run"></use>
                       </svg>
                       <span class="transport__tooltip">Пешком</span>
                     </li>
@@ -1180,7 +1203,7 @@
                 </div>
                 <div class="result__button-wrapper">
                   <a class="result__invite button button--invite" href="blank.html">Позвать!</a>
-                  <button class="result__heart">
+                  <button class="result__heart" aria-label="Поставить лайк пользователю">
                     <span class="result__likes-number">170</span>
                   </button>
                 </div>
@@ -1189,14 +1212,14 @@
                   <div class="result__level-value">
                     <p class="result__level-number">25</p>
                     <p class="result__level-text">level</p>
-                    <svg class="result__level-icon" width="45" height="45" x="46%">
-                      <use xlink:href="#level-catalog-25" x="46%"></use>
+                    <svg class="result__level-icon" width="45" height="45" fill="none" x="46%">
+                      <use xlink:href="img/sprite.svg#level-catalog-25" x="46%"></use>
                     </svg>
                   </div>
                 </div>
               </li>
               <li class="result__item">
-                <a class="result__avatar" href="blank.html">
+                <a class="result__avatar" href="blank.html" aria-label="Перейти на страницу пользователя Лариса Роговая">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/rogovaya-desktop.webp 1x, img/catalog/rogovaya-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/rogovaya-tablet.webp 1x, img/catalog/rogovaya-tablet@2x.webp 2x">
@@ -1229,25 +1252,25 @@
                   <ul class="result__transport-list transport">
                     <li class="result__transport-item transport__item transport__item--active">
                       <svg class="result__transport-icon transport__icon" width="21" height="23">
-                        <use xlink:href="#icon-plane"></use>
+                        <use xlink:href="img/sprite.svg#icon-plane"></use>
                       </svg>
                       <span class="transport__tooltip">Авиаперелет</span>
                     </li>
                     <li class="result__transport-item transport__item transport__item--active">
                       <svg class="result__transport-icon transport__icon" width="18" height="21">
-                        <use xlink:href="#icon-bus"></use>
+                        <use xlink:href="img/sprite.svg#icon-bus"></use>
                       </svg>
                       <span class="transport__tooltip">Автотранспорт</span>
                     </li>
                     <li class="result__transport-item transport__item">
                       <svg class="result__transport-icon transport__icon" width="25" height="24">
-                        <use xlink:href="#icon-bicycle"></use>
+                        <use xlink:href="img/sprite.svg#icon-bicycle"></use>
                       </svg>
                       <span class="transport__tooltip">Велосипед</span>
                     </li>
                     <li class="result__transport-item transport__item">
                       <svg class="result__transport-icon transport__icon" width="21" height="24">
-                        <use xlink:href="#icon-run"></use>
+                        <use xlink:href="img/sprite.svg#icon-run"></use>
                       </svg>
                       <span class="transport__tooltip">Пешком</span>
                     </li>
@@ -1255,7 +1278,7 @@
                 </div>
                 <div class="result__button-wrapper">
                   <a class="result__invite button button--invite" href="blank.html">Позвать!</a>
-                  <button class="result__heart">
+                  <button class="result__heart" aria-label="Поставить лайк пользователю">
                     <span class="result__likes-number">23</span>
                   </button>
                 </div>
@@ -1264,8 +1287,8 @@
                   <div class="result__level-value">
                     <p class="result__level-number">50</p>
                     <p class="result__level-text">level</p>
-                    <svg class="result__level-icon" width="45" height="45">
-                      <use xlink:href="#level-catalog-50" x="46%"></use>
+                    <svg class="result__level-icon" width="45" height="45" fill="none">
+                      <use xlink:href="img/sprite.svg#level-catalog-50" x="46%"></use>
                     </svg>
                   </div>
                 </div>
@@ -1290,12 +1313,12 @@
               <div class="result__page-direction">
                 <a class="result__previous" aria-label="Предыдущая страница">
                   <svg class="result__page-arrow" width="10" height="18">
-                    <use xlink:href="#page-arrow"></use>
+                    <use xlink:href="img/sprite.svg#page-arrow"></use>
                   </svg>
                 </a>
                 <a class="result__next" href="#" aria-label="Следующая страница">
                   <svg class="result__page-arrow result__page-arrow--next" width="10" height="18">
-                    <use xlink:href="#page-arrow"></use>
+                    <use xlink:href="img/sprite.svg#page-arrow"></use>
                   </svg>
                 </a>
               </div>
@@ -1320,21 +1343,21 @@
           <li>
             <a class="page-footer__social-link social__link" href="#" aria-label="Фейсбук">
               <svg class="social-icon social-icon--facebook" width="11" height="21">
-                <use xlink:href="#icon-facebook"></use>
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li>
             <a class="page-footer__social-link social__link" href="#" aria-label="Вконтакте">
               <svg class="social-icon social-icon--vk" width="22" height="12">
-                <use xlink:href="#icon-vk"></use>
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li>
             <a class="page-footer__social-link social__link" href="#" aria-label="Инстаграм">
               <svg class="social-icon social-icon--instagram" width="17" height="17">
-                <use xlink:href="#icon-instagram"></use>
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
@@ -1344,6 +1367,6 @@
         </a>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

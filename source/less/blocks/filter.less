@@ -164,10 +164,41 @@
 }
 
 .filter--nojs {
-  .filter__wrapper,
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+
+    .filter__wrapper,
+    .filter__category-list,
+    .filter__country-selection {
+      position: static;
+      background-color: transparent;
+    }
+  }
+
+  .filter__wrapper {
+    display: block;
+    position: static;
+    padding: 0;
+
+    @media (min-width: @tablet-width) {
+      padding: 50px 15px 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 60px 0 0;
+    }
+  }
+
   .filter__category-list {
     display: block;
     position: static;
+    padding-left: 25px;
+    padding-bottom: 0;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      padding-left: 0;
+    }
   }
 
   .filter__toggle {
@@ -327,7 +358,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 60px 0;
+    padding: 50px 0 60px;
   }
 }
 
