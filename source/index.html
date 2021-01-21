@@ -6,6 +6,7 @@
     <title>Главная - Сервис для путешествий «Погнали»</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font">
   </head>
   <body class="page__body">
     <!-- модификаторы у page-header:
@@ -417,13 +418,13 @@
       <section class="interested">
         <div class="container">
           <h2 class="interested__heading">Заинтересовались?</h2>
-          <p class="interested__text"><span>Зарегистрируйтесь, это&nbsp;быстро и бесплатно!</span><br> Уже зарегистрированы? Тогда скорее <a class="interested__login" href="blank.html">авторизуйтесь</a>.</p>
+          <p class="interested__text"><span>Зарегистрируйтесь, это&nbsp;быстро и бесплатно!&ensp;</span><br> Уже зарегистрированы? Тогда скорее <a class="interested__login" href="blank.html">авторизуйтесь</a>.</p>
           <form action="https://echo.htmlacademy.ru" method="post">
             <div class="interested__wrapper">
               <label class="visually-hidden" for="email-field">Введите адрес электронной почты</label>
               <input class="interested__input" type="email" name="user-email" id="email-field" placeholder="E-mail" required>
-              <button class="button--interested" type="submit" aria-label="Зарегистрироваться">
-                <span class="button--interested-text">Регистрация</span>
+              <button class="button button--interested" type="submit" aria-label="Зарегистрироваться">
+                <span class="button__text">Регистрация</span>
                 <svg class="button__icon-arrow" width="11" height="12">
                   <use xlink:href="img/sprite.svg#icon-arrow-button"></use>
                 </svg>

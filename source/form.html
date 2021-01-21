@@ -6,6 +6,7 @@
     <title>Направления - Сервис для путешествий «Погнали»</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font">
   </head>
   <body class="page__body page__body--inner">
     <!-- модификаторы у page-header:
@@ -155,7 +156,7 @@
                   </label>
                   <span class="checkbox__tooltip transport__tooltip">Автотранспорт</span>
                 </li>
-                <li class="user__transport-item transport__item">
+                <li class="user__transport-item transport__item checkbox">
                   <input class="checkbox__input visually-hidden" type="checkbox" name="transport-bicycle" id="bicycle-field" aria-label="Тип передвижения велосипед">
                   <label class="checkbox__label checkbox__label--transport" for="bicycle-field">
                     <svg class="checkbox__transport-icon" width="25" height="24">
@@ -164,7 +165,7 @@
                   </label>
                   <span class="checkbox__tooltip transport__tooltip">Велосипед</span>
                 </li>
-                <li class="user__transport-item transport__item">
+                <li class="user__transport-item transport__item checkbox">
                   <input class="checkbox__input visually-hidden" type="checkbox" name="transport-on-foot" id="on-foot-field" aria-label="Тип передвижения пешком" checked>
                   <label class="checkbox__label checkbox__label--transport" for="on-foot-field">
                     <svg class="checkbox__transport-icon" width="21" height="24">
@@ -530,7 +531,7 @@
                   </svg>
                 </a>
                 <a class="new-plan__previous-step" href="#step-one">На шаг назад
-                  <svg class="button__icon-arrow button__icon-arrow--previous-step" width="11" height="12">
+                  <svg class="new-plan__previous-icon" width="11" height="12">
                     <use xlink:href="img/sprite.svg#icon-arrow-button"></use>
                   </svg>
                 </a>
@@ -595,7 +596,7 @@
                 </button>
                 <a class="new-plan__previous-step" href="#step-two">
                 На шаг назад
-                  <svg class="button__icon-arrow button__icon-arrow--previous-step" width="11" height="12">
+                  <svg class="new-plan__previous-icon" width="11" height="12">
                     <use xlink:href="img/sprite.svg#icon-arrow-button"></use>
                   </svg>
                 </a>
