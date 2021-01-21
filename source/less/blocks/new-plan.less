@@ -204,8 +204,10 @@
     line-height: 36px;
   }
 
-  br {
-    @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
+    margin-left: -5px;
+
+    br {
       display: none;
     }
   }
@@ -992,6 +994,26 @@
     &:active {
       opacity: 30%;
     }
+  }
+}
+
+.new-plan__previous-icon {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -34px;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 13px;
+    height: auto;
+    left: 0;
   }
 }
 
